@@ -47,8 +47,9 @@ class ContactController extends Controller
        
         $contact->email=$request->email;
         $contact->phone=$request->phone;
+        $contact->subject=$request->subject;
         $contact->message=$request-> message ;
-       dd($contact);
+      // dd($contact);
        $contact->save();   
  
           /* $contact = Contact::create([
@@ -58,7 +59,24 @@ class ContactController extends Controller
             'message' =>$request->message,
         ]);  
      */
-        return "Conctact saved";
+
+    \Mail::send('contact_email',
+    array(
+        'name' => $request->get('fullname'),
+        'email' => $request->get('email'),
+        'subject' => $request->get('subject'),
+        'phone_number' => $request->get('phone'),
+        'user_message' => $request->get('message'),
+    ), function($message) use ($request)
+      {
+         $message->from($request->email);
+         
+        $message->subject($request->subject);
+         $message->to('ssimple189@gmail.com');
+      });
+
+      return redirect::route('getAll', ['msg' => "Message envoyée avec succès"]);
+         
     }
 
     /**

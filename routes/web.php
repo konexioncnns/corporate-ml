@@ -25,6 +25,7 @@ use Inertia\Inertia;
 |
 */
 Route::get('getAll', [TrainingController::class,'getAll'])->name('getAll');
+Route::get('/formation/{id}', [TrainingController::class,'getOne'])->name('formationDetail');
 Route::get('indexform', [FormationController::class,'index'])->name('indexform');
 
 Route::get('langue/{code}', [LanguageController::class,'switchLang'])->name('langue');
@@ -50,7 +51,7 @@ Route::inertia('/services','Services')->name('services') ;
 Route::inertia('/search','SearchPage')->name('search') ;
 Route::inertia('/posts','Publication')->name('posts') ;
 Route::inertia('/cart','Cart')->name('posts') ;
-Route::get('/formation/{id}', [HomeController::class,'formationDetail'])->name('formationDetail');
+
 Route::get('/h', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),

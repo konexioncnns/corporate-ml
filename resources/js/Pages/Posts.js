@@ -8,6 +8,7 @@ import {
     CardMedia,
     Container,
     Grid,
+    Pagination,
     Typography,
 } from "@mui/material";
 import { RibbonContainer, RightCornerLargeRibbon , RightCornerRibbon } from "react-ribbons";
@@ -104,12 +105,17 @@ const Posts = () => {
  )
 
                })}
+
+
              
                       
                    
               
             </Grid>
+            
+
            </Container>
+           <Pagination justifyContent="center" alignItems="center" count={posts.lenght} color="error" />
         </Box>
     );
 };

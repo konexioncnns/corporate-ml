@@ -13,4 +13,9 @@ class TrainingController extends Controller
     $data = Formation::all()->toArray();
        return Inertia::render('Formations',['data'=>$data]);
    }
+
+   public function getOne($id){
+      $data = Formation::findOrFail($id);
+         return Inertia::render('FormationDetail',['data'=>$data->only('title','formateur','description','overview','programme')]);
+     }
 }

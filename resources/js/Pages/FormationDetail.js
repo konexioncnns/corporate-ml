@@ -5,6 +5,7 @@ import { Box } from '@mui/system'
 import React,{SyntheticEvent} from 'react'
 import { useParams } from 'react-router-dom'
 import { LabelButton } from '../components/LabelButton'
+import parse from 'html-react-parser';
 function Objectifs(){
   return(
     <Box>
@@ -28,13 +29,14 @@ function Prerequis(){
     </Typography>
   )
 }
-const FormationDetail = () => {
+const FormationDetail = ({data}) => {
   const [value, setValue] = React.useState('1');
   const {id} = useParams()
 console.log('id est:',id)
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  console.log("Formation: ", data);
 
   return (
    <Box mx={10} sx={{bgColor:'white'}} >
@@ -44,10 +46,10 @@ console.log('id est:',id)
                 <Box display="flex" bgcolor="red" alignItems="center" justifyContent="space-between">
                 <Box>
                 <Typography variant='h4' color="white" fontFamily="Inter">
-                   Formation ITIL 4
+                  {data.title}
                  </Typography >
                  <Typography fontSize={13} color="white" fontFamily="Inter-regular">
-                   Formateur:Tiemoko sidibe
+                   Formateur: {`${data.formateur.firstname} ${data.formateur.lastname}`}
                  </Typography>
                 </Box>
                  <Box justifyContent="space-between">
@@ -58,25 +60,10 @@ console.log('id est:',id)
                  </Box>
 
                 </Box>
-                 <Typography textAlign='left' variant='body2' fontFamily="Inter-Regular" lineHeight={2} letterSpacing={1} >
+                 <Typography mt={3} textAlign='left' variant='body2' fontFamily="Inter-Regular" lineHeight={2} letterSpacing={1} >
 
-Formation avec certification
-ISO 37301 : management de la conformité
-Un système de management de la conformité ou Compliance Management System (CMS) 
-conforme à la norme ISO 37301:2021 offre de multiples bénéfices.
- Il permet à une entreprise de minimiser ou de compenser les coûts,
-  les risques et les préjudices causés par le non-respect des normes. 
-  De surcroît, il garantit la pérennité de l'entreprise et suscite la fiabilité, 
-  tout en encourageant les bonnes pratiques de gouvernance, la transparence 
-  et l'éthique dans les échanges commerciaux.
-  ISO 37301 : management de la conformité
-Un système de management de la conformité ou Compliance Management System (CMS) 
-conforme à la norme ISO 37301:2021 offre de multiples bénéfices.
- Il permet à une entreprise de minimiser ou de compenser les coûts,
-  les risques et les préjudices causés par le non-respect des normes. 
-  De surcroît, il garantit la pérennité de l'entreprise et suscite la fiabilité, 
-  tout en encourageant les bonnes pratiques de gouvernance, la transparence 
-  et l'éthique dans les échanges commerciaux.
+                
+                 <ul>{parse(data.description)}</ul>
 
                  </Typography>
 
@@ -92,10 +79,14 @@ conforme à la norme ISO 37301:2021 offre de multiples bénéfices.
           </TabList>
         </Box>
         <Box  sx={{border:"0.5px solid",borderColor:"#c4bcbc" }}>
-        <TabPanel value="1">{Objectifs()}</TabPanel>
-        <TabPanel value="2">Programme</TabPanel>
+        <TabPanel value="1" >
+          <div dangerouslySetInnerHTML={{__html:data.overview}} >
+
+          </div>
+        </TabPanel>
+        <TabPanel value="2"><div  dangerouslySetInnerHTML={{__html:data.programme}}></div></TabPanel>
         <TabPanel value="3">{Prerequis()}</TabPanel>
-        <TabPanel value="4">Formateur</TabPanel>
+        <TabPanel value="4"> {`${data.formateur.firstname} ${data.formateur.lastname}`}</TabPanel>
         <TabPanel value="5">Pour qui ?</TabPanel>
         </Box>
       </TabContext>

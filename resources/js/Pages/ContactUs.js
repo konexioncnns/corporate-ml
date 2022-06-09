@@ -189,7 +189,8 @@ const ContactUs = () => {
                                             ml={2}
                                             fontFamily="Inter-Regular"
                                         >
-                                            1190 rue Poirier, Brossard, Québec, J4W 2A7
+                                            1190 rue Poirier, Brossard, Québec,
+                                            J4W 2A7
                                         </Typography>
                                     </Box>
                                     <Divider sx={{ color: "red" }} />
@@ -276,38 +277,43 @@ const ContactUs = () => {
                                         }
                                     />
                                     <Box
-      component="form"
-      sx={{
-        '& .MuiTextField-root': {m:0.5, width: '46%' },
-      }}
-      noValidate
-      autoComplete="off"
-    >
-
-                                    <TextField
-                                        label="Email"
-                                      
-                                        variant="outlined"
-                                        fullWidth
-                                        sx={{ marginBottom: "20px !important" }}
-                                        name="email"
-                                        value={data.email}
-                                        onChange={(e) =>
-                                            setData("email", e.target.value)
-                                        }
-                                    />
-                                    <TextField
-                                        label="Phone number"
-                                        variant="outlined"
-                                        fullWidth
-                                        sx={{ marginBottom: "20px !important" }}
-                                        name="phone"
-                                        value={data.phone}
-                                        onChange={(e) =>
-                                            setData("phone", e.target.value)
-                                        }
-                                    />
-</Box>
+                                        component="form"
+                                        sx={{
+                                            "& .MuiTextField-root": {
+                                                m: 0.5,
+                                                width: "46%",
+                                            },
+                                        }}
+                                        noValidate
+                                        autoComplete="off"
+                                    >
+                                        <TextField
+                                            label="Email"
+                                            variant="outlined"
+                                            fullWidth
+                                            sx={{
+                                                marginBottom: "20px !important",
+                                            }}
+                                            name="email"
+                                            value={data.email}
+                                            onChange={(e) =>
+                                                setData("email", e.target.value)
+                                            }
+                                        />
+                                        <TextField
+                                            label="Phone number"
+                                            variant="outlined"
+                                            fullWidth
+                                            sx={{
+                                                marginBottom: "20px !important",
+                                            }}
+                                            name="phone"
+                                            value={data.phone}
+                                            onChange={(e) =>
+                                                setData("phone", e.target.value)
+                                            }
+                                        />
+                                    </Box>
                                     <TextField
                                         label="Subject"
                                         variant="outlined"
@@ -337,8 +343,10 @@ const ContactUs = () => {
                                         variant="contained"
                                         type="submit"
                                         color="error"
-                                        sx={{ mb:2,fontFamily:"Inter-Regular"}}
-                                         
+                                        sx={{
+                                            mb: 2,
+                                            fontFamily: "Inter-Regular",
+                                        }}
                                         onClick={handleSubmit}
                                     >
                                         Envoyer le message
