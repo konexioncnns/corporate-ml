@@ -26,12 +26,11 @@ const lang = new Lang({ messages })
 
 const menus = [
     {id:1,title:lang.get('messages.home'),path:"/"},
-    {id:2,title:lang.get('messages.about'),path:"/about"},
     {id:3,title:lang.get('messages.training'),path:"/formation"},
-    {id:4,title:lang.get('messages.contact'),path:"/contact"},
+    {id:4,title:lang.get('messages.contact'),path:"/contactus"},
     {id:5,title:lang.get('messages.services'),path:"/services"},
     {id:6,title:lang.get('messages.catalog'),path:"/catalogue"},
-    {id:7,title:lang.get('messages.posts'),path:"/posts"},
+    {id:7,title:lang.get('messages.posts'),path:"/articles"},
     {id:8,title:lang.get('messages.login'),path:"/login"},
     {id:9,title:lang.get('messages.register'),path:"/register"}
 ]

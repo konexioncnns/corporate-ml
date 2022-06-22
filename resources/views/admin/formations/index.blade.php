@@ -14,76 +14,31 @@
 
     <thead>
         <tr>
-            <th>N</th>
-            <th>Titre formation</th>
-            <th>Categorie</th>
+        
+            <th>Titre fr</th>
+            <th>Description fr</th>
+            <th>Title en</th>
+            <th>Description en</th>
             <th>Status</th>
-            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
+    @foreach($formation as $key => $value )
         <tr>
-            <td>Trident</td>
-            <td>Internet
-                Explorer 4.0
-            </td>
-            <td>Win 95+</td>
-            <td> 4</td>
-            <td>X</td>
-        </tr>
-        <tr>
-            <td>Trident</td>
-            <td>Internet
-                Explorer 5.0
-            </td>
-            <td>Win 95+</td>
-            <td>5</td>
-            <td>C</td>
-        </tr>
-        <tr>
-            <td>Trident</td>
-            <td>Internet
-                Explorer 5.5
-            </td>
-            <td>Win 95+</td>
-            <td>5.5</td>
-            <td>A</td>
-        </tr>
-        <tr>
-            <td>Trident</td>
-            <td>Internet
-                Explorer 6
-            </td>
-            <td>Win 98+</td>
-            <td>6</td>
-            <td>A</td>
-        </tr>
-        <tr>
-            <td>Trident</td>
-            <td>Internet Explorer 7</td>
-            <td>Win XP SP2+</td>
-            <td>7</td>
-            <td>A</td>
-        </tr>
-        <tr>
-            <td>Trident</td>
-            <td>AOL browser (AOL desktop)</td>
-            <td>Win XP</td>
-            <td>6</td>
-            <td>A</td>
-        </tr>
+        <td>{{$value['title']['fr'] }}
+            <td>{{$value['description']['fr'] }}
+            <td>{{$value['title']['en'] }}</td>
+            <td>{{$value['description']['en'] }}</td>
 
+            <td> {{ $value['status']}} </td>
+        </tr>
+      
+       
+
+        @endforeach
 
     </tbody>
-    <tfoot>
-        <tr>
-            <th>Rendering engine</th>
-            <th>Browser</th>
-            <th>Platform(s)</th>
-            <th>Engine version</th>
-            <th>CSS grade</th>
-        </tr>
-    </tfoot>
+    
 </table>
 
 

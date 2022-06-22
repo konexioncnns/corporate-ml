@@ -2,9 +2,10 @@
 import  {Box,Typography} from '@mui/material'
 import LayoutProfile from "@/Layouts/LayoutProfile";
 import img from "../../assets/images/itil4cfr.png";
+import ProfileLayout from '@/Layouts/ProfileLayout';
 const  Formation =()=>{
     return(
-     <LayoutProfile>
+     <ProfileLayout>
          <Box>
              <Typography>Mes formations</Typography>
              <Box display="flex" alignItems="center" width="100%" ml={2}>
@@ -23,7 +24,7 @@ const  Formation =()=>{
                  </Typography>
              </Box>
          </Box>
-     </LayoutProfile>
+     </ProfileLayout>
     )
 }
 export default  Formation

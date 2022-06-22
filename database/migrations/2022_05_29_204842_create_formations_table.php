@@ -18,12 +18,12 @@ return new class extends Migration
         Schema::create('formations', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('description');
+            $table->text('description');
             $table->foreignIdFor(Formateur::class);
             $table->foreignIdFor(Domaine::class);
-            $table->string('overview');
-            $table->string('public');
-            $table->string('programme');
+            $table->text('overview');
+            $table->text('public');
+            $table->text('programme');
             $table->string('image');
             $table->double('price');
             $table->string('status')->default('Active');

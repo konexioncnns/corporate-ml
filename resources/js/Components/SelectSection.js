@@ -17,7 +17,7 @@ import {
     Select,
     Typography,
 } from "@mui/material";
-
+import img from "../assets/images/formation.png"
 import React from "react";
 import Data from "../constants/Data";
 import ts from "../assets/images/search.png";
@@ -45,18 +45,19 @@ export const SelectSection = () => {
                 display="flex"
                 justifyContent="center"
                 bgcolor="#F1F3F4"
-                /*    sx={{
-                                    backgroundImage: `url(${bgimg})`,
-                                    backgroundRepeat: "no-repeat",
-                                    backgroundSize: "cover",
-                                    backgroundAttachment: "fixed",
-
-                                }} */
+                sx={{
+         
+                    height:"50vh",
+                    /* backgroundImage: `url(${img})`, */
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    backgroundAttachment:'fixed',
+                    
+                   
+                }}
             >
-                <Box href="http:1simple1.com">
-                    <CardMedia component="img" image={ts} />
-                </Box>
-            </Box>
+               
+           
             <Container>
                 <Grid container alignItems="center">
                     <Grid item xs={12} lg={5}>
@@ -236,6 +237,7 @@ export const SelectSection = () => {
                     </Grid>
                 </Grid>
             </Container>
+            </Box>
         </Box>
     );
 };

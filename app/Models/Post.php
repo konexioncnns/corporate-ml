@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory,HasTranslations;
-    public $translatable = ['title','description'];
+    public $translatable = ['title','description','body'];
     protected $fillable = ['title','description','image','status'];
 
     protected $with =['category'];

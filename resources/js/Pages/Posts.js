@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
     Box,
     Button,
@@ -7,25 +7,46 @@ import {
     CardHeader,
     CardMedia,
     Container,
-    Grid,
-    Pagination,
+    Grid, 
+    Pagination, 
+    Stack, 
     Typography,
 } from "@mui/material";
+
 import { RibbonContainer, RightCornerLargeRibbon , RightCornerRibbon } from "react-ribbons";
 import iso from "../assets/images/iso2.png";
-import { usePage } from '@inertiajs/inertia-react'
-import { PostAddSharp } from "@mui/icons-material";
+import { InertiaLink,Link, useForm, usePage } from '@inertiajs/inertia-react'
+import { PostAddSharp } from "@mui/icons-material"; 
 import Lang from "lang.js";
+import { Inertia } from "@inertiajs/inertia";
 const currentLang = new Lang();
 const Posts = () => {
-    const {posts  } = usePage().props 
+   const {posts  } = usePage().props  
    
+    const [post, setData] = useState( );
+   /* 
     console.log(posts)
+    useEffect(() => {
+      console.log("Redux:",first)
+    }, []) */
+     
+    useEffect(() => {
+        setData(posts);
+        console.log("Data with fetch:", posts)
+
+    }, [])
+    const [page, setPage] = React.useState(1);
+    const handleChange = (event, value) => {
+        setPage(value);
+       window.location.href=`http://127.0.0.1:8000/articles?page=${value}`
+      };
+    
+    
     return (
         <Box mb={20}>
             <Box>
-                <Typography color="red" fontFamily="Inter">
-                    Retrouvez notre selection de publications TI élaborées pqr
+                <Typography color="red" variant="h4" fontFamily="Inter">
+                    Retrouvez notre selection de publications TI élaborées par
                     notre equipe
                 </Typography>
             </Box>{" "}
@@ -47,7 +68,7 @@ const Posts = () => {
                 </Box>
            <Grid container spacing={5}>
                
-               {posts.map((item,i)=>{
+               {  post ? post.data.map((item,i)=>{
  return(
     <Grid item xs={12} sm={3} key={i}>
    
@@ -104,7 +125,9 @@ const Posts = () => {
 </Grid>
  )
 
-               })}
+               }):"Loading..."
+            
+            }
 
 
              
@@ -115,7 +138,12 @@ const Posts = () => {
             
 
            </Container>
-           <Pagination justifyContent="center" alignItems="center" count={posts.lenght} color="error" />
+           
+           <Box mt={4} display="flex" alignItems="center" flexDirection="column">
+           <Pagination size="large" color="error" count={ posts.total / posts.per_page} page={ posts.current_page} onChange={handleChange} />
+      
+    </Box>
+           
         </Box>
     );
 };

@@ -1,19 +1,21 @@
 <?php
+use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Application;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LanguageController;
-use Illuminate\Foundation\Application;
-use App\Http\Controllers\Admin\FormationController;
-use App\Http\Controllers\Admin\FormateurController;
-use App\Http\Controllers\Admin\DomaineController;
-use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\PostController;
-use App\Http\Controllers\Admin\SpecialiteController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\Admin\DomaineController;
+use App\Http\Controllers\Frontend\BlogController;
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Front\CurrencyController;
+use App\Http\Controllers\Admin\FormateurController;
+use App\Http\Controllers\Admin\FormationController;
+use App\Http\Controllers\Admin\SpecialiteController;
+use App\Http\Controllers\Frontend\CheckoutController;
 use App\Http\Controllers\Frontend\TrainingController;
-use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,14 +26,25 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('getAll', [TrainingController::class,'getAll'])->name('getAll');
+
+
+Route::get('/user/orders', [CheckoutController::class,'getorders'])->name('getorders')->middleware("auth");
+ Route::get('/user/order/{order_id}', [CheckoutController::class,'getOrderDetail'])->name('user.orderdetais');
+Route::inertia('/checkout','Checkout2')->name('checkout') ;
+Route::post('/checkout/placeorder', [CheckoutController::class,'placeorder'])->name('placeorder');
+Route::get('/checkout/pdf/{order_number}', [CheckoutController::class,'createPDF'])->name('pdf');
+
+Route::inertia('/thankyou','Thankyou')->name('paymentsuccess') ;
+//Route::inertia('/test','Test')->name('test') ;
+
+Route::get('/formation', [TrainingController::class,'getAll'])->name('getAll');
 Route::get('/formation/{id}', [TrainingController::class,'getOne'])->name('formationDetail');
 Route::get('indexform', [FormationController::class,'index'])->name('indexform');
 
 Route::get('langue/{code}', [LanguageController::class,'switchLang'])->name('langue');
 //Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
 Route::get('/profile',[HomeController::class,'profileDetail'])->name('profile');
-Route::inertia('/profile/order','Profile/Order')->name('profile/order') ;
+Route::inertia('/profile/order','Profile/MyOrder')->name('profile/order') ;
 Route::inertia('/profile/setting','Profile/Reglages')->name('profile/setting') ;
 Route::inertia('/admins','Admin/Dashboard')->name('admins') ;
 Route::inertia('/profile/training','Profile/Formation')->name('profile/training') ;
@@ -39,16 +52,20 @@ Route::inertia('/myProfile','ProfileLayout')->name('myProfile') ;
 Route::get('/',[FormationController::class,'index']);
 Route::inertia('/about','About')->name('about') ;
 Route::inertia('/contact','Contact')->name('contact') ;
-Route::inertia('/contactus','ContactUs')->name('contactus') ;
+Route::inertia('/contactus','ContactUs2')->name('contactus') ;
 Route::inertia('/apropos','Propos')->name('apropos') ;
+Route::inertia('/blog','Blog')->name('blog') ;
 
-Route::get('/articles', [PostController::class,'index'])->name('articles');
+
+Route::get('/articles', [BlogController::class,'index'])->name('articles');
 
 Route::inertia('/catalogue','Catalogue')->name('catalogue') ;
-Route::inertia('/formation','Formations')->name('formation') ;
-Route::inertia('/home','Home')->name('home') ;;
+Route::inertia('/home','Home')->name('home') ;
+//Route::inertia('/search','SearchPageList')->name('search') ;
+
 Route::inertia('/services','Services')->name('services') ;
-Route::inertia('/search','SearchPage')->name('search') ;
+Route::get('/search',[DomaineController::class,'getAll'])->name('search') ;
+Route::get('/test',[DomaineController::class,'getAll'])->name('test') ;
 Route::inertia('/posts','Publication')->name('posts') ;
 Route::inertia('/cart','Cart')->name('posts') ;
 
@@ -96,6 +113,7 @@ Route::get('/admin/formateur/edit/{id}', [FormateurController::class,'edit'])->n
 Route::post('/admin/formateur/update', [FormateurController::class,'update'])->name('formateur.update') ; 
 Route::get('/admin/formateur/delete/{id}', [FormateurController::class,'destroy'])->name('formateur.delete');
 //Formation
+Route::get('/admin/formation/list', [FormationController::class,'list'])->name('formation.list');
 Route::get('/admin/formation/add', [FormationController::class,'create'])->name('formation.add');
 Route::post('store', [FormationController::class,'store'])->name('store');
 Route::get('/admin/domaine/delete/{id}', [FormationController::class,'destroy'])->name('domaine.delete');

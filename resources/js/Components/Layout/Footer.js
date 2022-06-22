@@ -7,7 +7,7 @@ import logo from '../../assets/images/logo.png'
  const Footer=()=> {
   return (
 
-           <Box height="400px" mt={20} bgcolor="#21262C" color="black">
+           <Box height="400px" mt={20} bgcolor="gray" color="black">
 
            <Container maxWidth="lg">
                <Grid container spacing={5}>
@@ -22,9 +22,9 @@ import logo from '../../assets/images/logo.png'
                             image={logo}
                             alt="Paella dish"
                             href="/" />
-                           }
+                           
 
-                        />
+                        
                       <Box display='flex' mt={5} >
                      <PhoneCallback color='white' />
                        <Typography variant='h7' color='white' fontFamily='Inter'>
@@ -35,13 +35,30 @@ import logo from '../../assets/images/logo.png'
 
                    </Grid>
                    <Grid item xs={12} sm={3}>
-                       <Typography borderBottom={1} variant='h5'  color='white'>Besoin d'aide</Typography>
+                       <Typography    textAlign="center"  variant='h5'  color='white'>Besoin d'aide</Typography>
+                       <Box >
+                           <Typography  variant='h6' textAlign="center"  color='white'>Acceuil</Typography>
+                       </Box>
+                       <Box  >
+                           <Typography variant='h6' textAlign="center" color='white'>Contact</Typography>
+                       </Box>
+                       <Box  >
+                           <Typography variant='h6' textAlign="center"  color='white'>Services</Typography>
+                       </Box>
+                       <Box >
+                           <Typography variant='h6'  textAlign="center" color='white'>Solution</Typography>
+                       </Box>
+                       <Box >
+                           <Typography variant='h6' textAlign="center" color='white'>Privacy</Typography>
+                       </Box>
+
+                   </Grid>
+                   <Grid item xs={12} sm={3}>
+                       <Typography   py={2} variant='h5'  color='white'>Besoin d'aide</Typography>
                        <Box>
                            <Typography variant='h6'  color='white'>Acceuil</Typography>
                        </Box>
-                       <Box>
-                           <Typography variant='h6' color='white'>Contact</Typography>
-                       </Box>
+
                        <Box>
                            <Typography variant='h6'  color='white'>Services</Typography>
                        </Box>
@@ -54,24 +71,7 @@ import logo from '../../assets/images/logo.png'
 
                    </Grid>
                    <Grid item xs={12} sm={3}>
-                       <Typography borderBottom={1} variant='h5'  color='white'>Besoin d'aide</Typography>
-                       <Box>
-                           <Typography variant='h6'  color='white'>Acceuil</Typography>
-                       </Box>
-
-                       <Box>
-                           <Typography variant='h6'  color='white'>Services</Typography>
-                       </Box>
-                       <Box>
-                           <Typography variant='h6' color='white'>Solution</Typography>
-                       </Box>
-                       <Box>
-                           <Typography variant='h6' color='white'>Privacy</Typography>
-                       </Box>
-
-                   </Grid>
-                   <Grid item xs={12} sm={3}>
-                       <Typography borderBottom={1} variant='h5'  color='white'>Besoin d'aide</Typography>
+                       <Typography  py={2} variant='h5'  color='white'>Besoin d'aide</Typography>
                        <Box mt={5}>
                        <TextField id="outlined-basic" label="Outlined" variant="outlined" sx={{borderColor:'white'}} />
                        </Box>

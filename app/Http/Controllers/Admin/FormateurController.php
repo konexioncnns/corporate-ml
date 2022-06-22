@@ -21,6 +21,9 @@ class FormateurController extends Controller
         return view('admin.formateurs.list',compact('formateurs'));
     }
 
+
+    
+
     /**
      * Show the form for creating a new resource.
      *

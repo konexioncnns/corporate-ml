@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Domaine;
+use App\Models\Formation;
+use Inertia\Inertia;
+
 class DomaineController extends Controller
 {
     public function index()
@@ -16,7 +19,13 @@ class DomaineController extends Controller
      }   */
       return view('admin.domaines.list',compact('domaine') );
     }
-
+        public function getAll(){
+            $domaineData = Domaine::all();
+            $formationData = Formation::all();
+          
+       return Inertia::render('SearchPageList', ["domaines"=>$domaineData,"formations"=>$formationData ]);
+        
+        }
      /**
      * Show the form for creating a new resource.
      *

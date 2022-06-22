@@ -101,7 +101,7 @@ function Cart() {
 
                                 <Box textAlign="left" ml={3}>
                                     <Typography variant="h6" maxWidth={300}  whiteSpace="normal">
-                                        {item.title.fr}
+                                        {item.title}
                                     </Typography>
                                     <Box display="flex">
                                         <AccessAlarm fontSize="small" />
@@ -195,6 +195,7 @@ function Cart() {
                                 backgroundColor: "success",
                                 borderRadius:5
                             }}
+                            href={route('checkout')}
 
                         >
                             Commander

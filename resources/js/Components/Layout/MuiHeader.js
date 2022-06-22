@@ -38,6 +38,7 @@ import { Call, ShoppingCart } from "@mui/icons-material";
 import { useDispatch, useSelector } from "react-redux";
 import FrFlag from "../../assets/icons/fr.png";
 import EnFlag from "../../assets/icons/en.png";
+import { ChevronDownIcon } from "@heroicons/react/outline";
 const lang = new Lang({ messages });
 const currentLang = new Lang();
 
@@ -45,12 +46,12 @@ const l = currentLang.getLocale;
 
 const menus = [
     { id: 1, title: lang.get("messages.home"), path: "/" },
-    { id: 2, title: lang.get("messages.about"), path: "/about" },
+    { id: 2, title: lang.get("messages.about"), path: "/apropos" },
     { id: 3, title: lang.get("messages.training"), path: "/formation" },
     { id: 4, title: lang.get("messages.contact"), path: "/contactus" },
     { id: 5, title: lang.get("messages.services"), path: "/services" },
     { id: 6, title: lang.get("messages.catalog"), path: "/catalogue" },
-    { id: 7, title: lang.get("messages.posts"), path: "/posts" },
+    { id: 7, title: lang.get("messages.posts"), path: "/articles" },
 ];
 
 function ElevationScroll(props) {
@@ -83,16 +84,14 @@ const MuiHeader = (props) => {
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
-      };
-    
-      const handleClose = () => {
-        setAnchorEl(null);
-      };
-    
-      const open = Boolean(anchorEl);
-      const id = open ? 'simple-popover' : undefined;
+    };
 
-    
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+    const open = Boolean(anchorEl);
+    const id = open ? "simple-popover" : undefined;
 
     const [state, setState] = React.useState({
         right: false,
@@ -117,8 +116,8 @@ const MuiHeader = (props) => {
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <List>
-                {menus.map((menu) => (
-                    <Link underline="none" color="black" href={menu.path}>
+                {menus.map((menu,i) => (
+                    <Link key={i} underline="none" color="black" href={menu.path}>
                         <ListItem button key={menu.id}>
                             <ListItemText primary={menu.title} />
                         </ListItem>
@@ -141,13 +140,9 @@ const MuiHeader = (props) => {
     React.useEffect(() => {
         dispatch(getTotals());
     }, [cart]);
-    const [currency,setCurrency]=useState("USD")
+    const [currency, setCurrency] = useState("USD");
 
-    const handleCurrencyChange=(e)=>{
-        
-
-
-    }
+    const handleCurrencyChange = (e) => {};
 
     return (
         <Box sx={{ marginBottom: "50px" }}>
@@ -228,17 +223,13 @@ const MuiHeader = (props) => {
                                 >
                                     {lang.get("messages.register")}
                                 </Typography>
-                            </InertiaLink>   
-                            <Select onChange={handleCurrencyChange} >
-                            <MenuItem value="XOF">FCFA</MenuItem>
-                            <MenuItem value="CAD">Dollar Cad</MenuItem>
-                            <MenuItem value="EUR">Euro</MenuItem>
-
-
-                        </Select>
+                            </InertiaLink>
+                            <Select onChange={handleCurrencyChange}>
+                                <MenuItem value="XOF">FCFA</MenuItem>
+                                <MenuItem value="CAD">Dollar Cad</MenuItem>
+                                <MenuItem value="EUR">Euro</MenuItem>
+                            </Select>
                         </Box>
-
-                     
                     </Box>
                     <Toolbar
                         sx={{
@@ -288,7 +279,7 @@ const MuiHeader = (props) => {
                                 }}
                             >
                                 {menus.map((menu) => (
-                                    <InertiaLink
+                                    <InertiaLink 
                                         href={menu.path}
                                         underline="none"
                                         key={menu.id}
@@ -307,53 +298,52 @@ const MuiHeader = (props) => {
                                     </InertiaLink>
                                 ))}
                                 <Typography
-                            aria-describedby={id} 
-                            onClick={handleClick}
-                            sx={{fontSize: 14,
-                                color: "black",
-                                display: "block",
-                                fontFamily: "Inter",
-                                cursor:"pointer"
-                            
-                            }}
+                                    aria-describedby={id}
+                                    onClick={handleClick}
+                                    sx={{
+                                        fontSize: 14,
+                                        color: "black",
+                                        display: "block",
+                                        fontFamily: "Inter",
+                                        cursor: "pointer",
+                                    }}
+                                >
+                                    {lang.get("messages.about")}
+                                </Typography>
 
-                        >
-                              {  lang.get("messages.about")}
-                        </Typography>
-                        <Popover
-                            id={id}
-                            open={open}
-                            anchorEl={anchorEl}
-                            onClose={handleClose}
-                            anchorOrigin={{
-                                vertical: "bottom",
-                                horizontal: "left",
-                            }}
-                        >
-                            <List>
-                                 
-                                <ListItem>
-                                    <InertiaLink
-                                     href="/about"
-                                     underline="none"
-                                    >
-                                            A propos
-                                    </InertiaLink>
-                                </ListItem>
-                                <ListItem>
-                                    <InertiaLink
-                                     href="/about"
-                                     underline="none"
-                                    >
-                                            A propos
-                                    </InertiaLink>
-                                </ListItem>
-                            </List>
-                        </Popover>
- 
+                                <Popover
+                                    id={id}
+                                    open={open}
+                                    anchorEl={anchorEl}
+                                    onClose={handleClose}
+                                    anchorOrigin={{
+                                        vertical: "bottom",
+                                        horizontal: "left",
+                                    }}
+                                >
+                                    <List>
+                                        <ListItem>
+                                            <InertiaLink
+                                                href="/about"
+                                                underline="none"
+                                            >
+                                                A propos
+                                            </InertiaLink>
+                                        </ListItem>
+                                        <ListItem>
+                                            <InertiaLink
+                                                href="/about"
+                                                underline="none"
+                                            >
+                                                A propos
+                                            </InertiaLink>
+                                        </ListItem>
+
+                                        
+                                    </List>
+                                </Popover>
                             </Box>
                         )}
-                        
 
                         <Box sx={{ flexGrow: 0 }}>
                             <Tooltip title="Open settings">

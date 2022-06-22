@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreignIdFor(User::class)->default(1);
             $table->string('title');
             $table->text('description');
+            $table->text('body')->nallable();
             $table->foreignIdFor(Category::class);
             $table->string('image');
             $table->string('status')->default('Active');

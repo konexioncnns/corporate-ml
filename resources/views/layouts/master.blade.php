@@ -244,7 +244,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/admin/formation/index" class="nav-link">
+                                    <a href="/admin/formation/list" class="nav-link">
                                         <i class="fa-solid fa-list nav-icon"></i>
                                         <p>Liste des Formation</p>
                                     </a>

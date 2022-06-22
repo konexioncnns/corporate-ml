@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\App;
 class PostController extends Controller
 {
     public function index(){
-        $posts =Post::all()->toArray();
+      $posts =Post::all()->toArray();
+       // $posts =Post::all()->toArray();
       //  dd($posts);
        
       /*   foreach( $articles  as $key => $posts ){
@@ -21,9 +22,9 @@ class PostController extends Controller
           dd()
          }  */
       // dd($articles->toArray());
-        //return view('admin.blogs.posts.list',compact('posts') );
+        return view('admin.blogs.posts.list',compact('posts') );
       //  return Inertia::render('Posts',['posts'=>$posts->only('title','description','image')]);
-       return Inertia::render('Posts', ['posts' =>$posts]);
+      // return Inertia::render('Posts', ['posts' =>$posts]);
     }
 
     public function create(){
@@ -65,10 +66,10 @@ class PostController extends Controller
         $titletranslation = ['en'=>$request->input('title_en'),'fr'=>$request->input('title')];
         $desctranslation = ['en'=>$request->input('description_en'),'fr'=>$request->input('description')];
 
-        $domaine->title=$titletranslation;
-        $domaine->description=$desctranslation;
+        $post->title=$titletranslation;
+        $post->description=$desctranslation;
         //dd( $domaine);
-        $domaine->save();
+        $post->save();
         return redirect( )->route('post.list')->with('status', 'Profile updated!');
     }
 

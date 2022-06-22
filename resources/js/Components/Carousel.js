@@ -15,7 +15,6 @@ import Slider from "react-slick";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import Typical from "react-typical";
-import Footer from "./Layout/Footer";
 import Section from "./Section";
 import { IMAGES } from "../constants";
 

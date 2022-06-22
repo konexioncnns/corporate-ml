@@ -50,6 +50,8 @@ import SliderFormation from "./Formation/SliderFormartionCard";
 import { addCart } from "@/redux/featured/formation/formationSlice";
 import Data from "@/constants/Data";
 import Lang from "lang.js";
+import PageHeader from "@/Components/PageHeader";
+import AccodionDomaine from "./AccodionDomaine";
 
 const currentLang = new Lang();
 
@@ -64,22 +66,20 @@ export default function Formations({ data }) {
     console.log("Formation: ", data);
     return (
         <Box mt={-11}>
-            <Box>
-                <BannerImage
-                    color="white"
-                    title="Catalogue de formation"
-                    subtitle="Técharger ou consulter en ligne notre catalogue de formation"
-                    img={img1}
-                />
-            </Box>{" "}
-            <Accordions />
+             <PageHeader
+            title=" Nos offres de formation professionnelle"
+            subtitle=" Nos offres de formation professionnelle et continue"
+            />
+         
+            
             {/*  <Carousels/> <SwiperFormation /> */}
             <Box>
                 <SelectSection />
-            </Box>
+            </Box>   <AccodionDomaine/>
             {/* SliderFormation */}
             <Box>
                 <Container>
+                    <Typography fontFamily="Inter" color="red" variant="h5">Nos formation à la une !</Typography>
                     <Swiper
                         modules={[Navigation, Pagination, Scrollbar, A11y]}
                         spaceBetween={50}
@@ -104,6 +104,7 @@ export default function Formations({ data }) {
                                             sm={3}
                                         >
                                             <Card
+                                            elevation={3}
                                                 sx={{
                                                     xs: { minWidth: 250 },
                                                     maxWidth: 350,
@@ -185,27 +186,57 @@ export default function Formations({ data }) {
 
                                                             <br></br>
                                                         </Box>
-                                                        <Box textAlign="left">
+                                                        <Box >
                                                             <Typography
-                                                                mt={2}
+                                                            
+                                                            textAlign="center"
+                                                                my={2}
                                                                 gutterBottom
                                                                 variant="h7"
                                                                 fontWeight="600"
                                                                 fontFamily="inter-Regular"
                                                                 color="black"
-                                                                textAlign="left"
+                                                                
                                                                 noWrap
                                                             >
                                                                 {" "}
                                                                 {item.title.fr}
                                                             </Typography>
                                                         </Box>
-                                                        <Box textAlign="left">
-                                                            <Typography>
-                                                                Duré: 48
+                                                        <Box >
+                                                        {currentLang.getLocale() ===
+                                                            "en" ?
+                                                            <Typography 
+                                                            textAlign="left"
+                                                            sx={{
+                                                                display: '-webkit-box',
+                                                                overflow: 'hidden',
+                                                                WebkitBoxOrient: 'vertical',
+                                                                WebkitLineClamp: 2,
+                                                            }}
+                                                            fontFamily="Inter-Regular"
+                                                            >
+                                                                {item.description.en}
                                                             </Typography>
-                                                            <IconButton>
-                                                                <AddShoppingCart
+                                                            :
+                                                            <Typography 
+                                                            textAlign="left"
+                                                            sx={{
+                                                                display: '-webkit-box',
+                                                                overflow: 'hidden',
+                                                                WebkitBoxOrient: 'vertical',
+                                                                WebkitLineClamp: 3,
+                                                            }}
+                                                            fontFamily="Inter-Regular"
+                                                            >
+                                                                {item.description.fr}
+                                                                </Typography>
+                                                            
+                                                            
+                                                            }
+                                                            <Box display="flex" justifyContent="space-between">
+                                                           
+                                                              {/* <IconButton>   <AddShoppingCart
                                                                     color="error"
                                                                     onClick={() =>
                                                                         handleCart(
@@ -213,7 +244,9 @@ export default function Formations({ data }) {
                                                                         )
                                                                     }
                                                                 />
-                                                            </IconButton>
+                                                            </IconButton> */}
+                                                           
+                                                            </Box>
                                                         </Box>
                                                     </Box>
 

@@ -18,15 +18,23 @@ import ts from "../assets/images/ts.jpg";
 import bourse from "../assets/images/bourse.png";
 import { width } from "tailwindcss/defaultTheme";
 import { bgcolor } from "@mui/system";
+import Team from "./Team";
+import PageHeader from "@/Components/PageHeader";
+import Partner from "./Partner";
 
 function Apropos() {
     return (
         <Box mb={20}>
+            <PageHeader
+            title="A propos de 1SIMPLE1 TOUJOURS PLUS LOINS"
+
+            />
             <Container>
                 <Typography color="red" fontFamily="Inter" variant="h5">
                     1SIMPLE1
                 </Typography>
-                <Typography fontFamily="Inter-Regular" variant="h6">
+                <Typography fontSize={16}
+                            fontFamily="Inter-Regular">
                     1SIMPLE1 est une compagnie en TI (Technologie de
                     l’Information) qui opère en Technologies de l’Information
                     (TI) depuis 2012. 1SIMPLE1 fait partie du groupe
@@ -90,7 +98,8 @@ function Apropos() {
                                 2018- Extension
                             </Typography>
 
-                            <Typography fontFamily="Inter-Regular">
+                            <Typography  fontSize={14}
+                            fontFamily="Inter-Regular">
                                 Lorem Ipsum is simply dummy text of the printing
                                 and typesetting industry. Lorem Ipsum has been
                                 the industry's standard dummy text ever since
@@ -119,7 +128,11 @@ function Apropos() {
                         >
                             Le fondateur
                         </Typography>
-                        <Typography textAlign="left" fontFamily="Inter-Regular">
+                        <Typography  variant="h4"
+                                                lineHeight={1.5}
+                                                textAlign="left"
+                                                fontFamily="Inter-Regular"
+                                                fontSize={14}>
                             Le fondateur Lorem Ipsum is simply dummy text of the
                             printing and typesetting industry. Lorem Ipsum has
                             been the industry's standard dummy text ever since
@@ -132,12 +145,7 @@ function Apropos() {
                             simply dummy text of the printing and typesetting
                             industry. Lorem Ipsum has been the industry's
                             standard dummy text ever since the 1500s, when an
-                            unknown printer took a galley of type and scrambled
-                            it to Lorem Ipsum is simply dummy text of the
-                            printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since
-                            the 1500s, when an unknown printer took a galley of
-                            type and scrambled it to
+                            unknown printer took a galley of type and scrambled.
                         </Typography>
                     </Grid>
                     <Grid xs={12} sm={4}>
@@ -158,11 +166,14 @@ function Apropos() {
                             />
                         </TimelineSeparator>
                         <TimelineContent>
-                            <Typography variant="h6" color="red">
+                            <Typography  color="red"
+                                variant="h6"
+                                fontFamily="Inter">
                                 Notre vision
                             </Typography>
 
-                            <Typography fontFamily="Inter-Regular">
+                            <Typography  fontSize={14}
+                            fontFamily="Inter-Regular">
                                 Notre vision est de devenir un partenaire
                                 stratégique pour les organisations et de leur
                                 offrir les meilleurs services disponibles au
@@ -190,7 +201,8 @@ function Apropos() {
                                 Nos valeur
                             </Typography>
 
-                            <Typography fontFamily="Inter-Regular">
+                            <Typography  fontSize={14}
+                            fontFamily="Inter-Regular">
                                 Nos valeurs reposent sur la satisfaction du
                                 client, l’unicité de chaque client, la
                                 transparence envers le client, le plaisir à
@@ -219,7 +231,8 @@ function Apropos() {
                                 Notre mision
                             </Typography>
 
-                            <Typography fontFamily="Inter-Regular">
+                            <Typography  fontSize={14}
+                            fontFamily="Inter-Regular">
                                 Notre mission est d’aider les organisations à
                                 devenir plus performantes grâce aux TI et aux
                                 meilleures pratiques en termes de gouvernance et
@@ -245,7 +258,8 @@ function Apropos() {
                                 Notre approche
                             </Typography>
 
-                            <Typography fontFamily="Inter-Regular">
+                            <Typography  fontSize={14}
+                            fontFamily="Inter-Regular">
                                 Notre approche est orientée «Service client». En
                                 plus,elle combine écoute, expertise, expérience
                                 pour adresser les préoccupations des clients.
@@ -304,8 +318,11 @@ function Apropos() {
 
                         <Grid item xs={12} sm={6}>
                             <Typography
-                                textAlign="left"
-                                fontFamily="Inter-Regular"
+                                 variant="h4"
+                                 lineHeight={2}
+                                 textAlign="left"
+                                 fontFamily="Inter-Regular"
+                                 fontSize={14}
                             >
                                 Initiée en septembre 2017, les bourses
                                 d’excellence 1SIMPLE1 visent à encourager les
@@ -322,19 +339,12 @@ function Apropos() {
                         </Grid>
                     </Grid>
                 </Box>
-                <Box>
-                    <Typography
-                        my={3}
-                        variant="h6"
-                        color="red"
-                        fontFamily="Inter"
-                        mt={2}
-                    >
-                        Actualités
-                    </Typography>
-                 
-                </Box>
+                
             </Container>
+            <Team/>
+           <Box mt={5}>
+           <Partner/>
+           </Box>
         </Box>
     );
 }

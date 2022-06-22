@@ -22,6 +22,7 @@ import {
     GradientOutlined, LinkedIn,
     TextFieldsOutlined, WhatsApp
 } from "@mui/icons-material";
+import ProfileLayout from "@/Layouts/ProfileLayout";
 
 
 
@@ -32,7 +33,7 @@ import {
          setValue(newValue);
      };
     return(
-        <LayoutProfile>
+        <ProfileLayout>
            <Box sx={{width:'50%'}}>
                <TabContext value={value}>
                    <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -112,7 +113,7 @@ import {
                    </Box>
                </TabContext>
            </Box>
-        </LayoutProfile>
+        </ProfileLayout>
     )
 }
 export default Reglages

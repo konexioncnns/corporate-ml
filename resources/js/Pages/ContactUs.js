@@ -269,6 +269,7 @@ const ContactUs = () => {
                                         label="Full Name"
                                         variant="outlined"
                                         fullWidth
+                                        fontFamily="Inter-Regular"
                                         sx={{ marginBottom: "20px !important" }}
                                         name="fullname"
                                         value={data.fullname}
@@ -291,6 +292,7 @@ const ContactUs = () => {
                                             label="Email"
                                             variant="outlined"
                                             fullWidth
+                                            fontFamily="Inter-Regular"
                                             sx={{
                                                 marginBottom: "20px !important",
                                             }}
@@ -300,9 +302,35 @@ const ContactUs = () => {
                                                 setData("email", e.target.value)
                                             }
                                         />
+                                        <div className="col-span-6 sm:col-span-3">
+                        <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
+                          First name
+                        </label>
+                        <input
+                          type="text"
+                          name="first-name"
+                          id="first-name"
+                          autoComplete="given-name"
+                          className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                        />
+                      </div>
+  
+                      <div className="col-span-6 sm:col-span-3">
+                        <label htmlFor="last-name" className="block text-sm font-medium text-gray-700">
+                          Last name
+                        </label>
+                        <input
+                          type="text"
+                          name="last-name"
+                          id="last-name"
+                          autoComplete="family-name"
+                          className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                        />
+                      </div>
                                         <TextField
                                             label="Phone number"
                                             variant="outlined"
+                                            fontFamily="Inter-Regular"
                                             fullWidth
                                             sx={{
                                                 marginBottom: "20px !important",
@@ -320,6 +348,7 @@ const ContactUs = () => {
                                         fullWidth
                                         sx={{ marginBottom: "20px !important" }}
                                         name="subject"
+                                        fontFamily="Inter-Regular"
                                         value={data.subject}
                                         onChange={(e) =>
                                             setData("subject", e.target.value)
@@ -328,6 +357,7 @@ const ContactUs = () => {
                                     <TextField
                                         label="Message"
                                         variant="outlined"
+                                        fontFamily="Inter-Regular"
                                         fullWidth
                                         sx={{ marginBottom: "20px !important" }}
                                         name="message"

@@ -15,14 +15,15 @@ class FormationController extends Controller
 {
     public function index()
     {
-      $form =Formation::findOrfail(1);
+      $form =Formation::findOrFail(1);
        // $titletranslation = ['en'=>'Introduction of itil','fr'=>'Introduction de itil 4'];
        // $desctranslation = ['en'=>'I am happy','fr'=>'Je suis heureux'];
        //
        // dd($form->formateur);
        //$locale= App::getLocale();
-     
+    
      // $form->formateur->firsname;
+
         $n=optional($form->formateur->firstname);
         $device = Currency::convert()
         ->from('XOF')
@@ -42,7 +43,15 @@ class FormationController extends Controller
         
         }  
     }
-
+    public function list()
+    {
+       $formation= Formation::all()->toArray() ;
+     // dd($domaine);
+       /* foreach( $domaine  as $key => $value ){
+        dd( $value['status'] );
+     }   */
+      return view('admin.formations.index',compact('formation') );
+    }
 
     public function create(){
 

@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\Contact;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\StoreContactRequest;
+use Inertia\Inertia;
 
 class ContactController extends Controller
 {
@@ -60,7 +62,7 @@ class ContactController extends Controller
         ]);  
      */
 
-    \Mail::send('contact_email',
+     Mail::send('contact_email',
     array(
         'name' => $request->get('fullname'),
         'email' => $request->get('email'),
@@ -72,10 +74,10 @@ class ContactController extends Controller
          $message->from($request->email);
          
         $message->subject($request->subject);
-         $message->to('ssimple189@gmail.com');
+         $message->to('abdrahamane.kone@1simple1.com');
       });
 
-      return redirect::route('getAll', ['msg' => "Message envoyée avec succès"]);
+      return redirect()->route('getAll', ['msg' => "Message envoyée avec succès"]);
          
     }
 

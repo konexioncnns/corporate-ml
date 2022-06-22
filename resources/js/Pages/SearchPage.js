@@ -13,6 +13,7 @@ import {
     Box,
     Button,
     Card,
+    CardHeader,
     Container,
     Divider,
     Grid,
@@ -23,7 +24,8 @@ import {
 import React, { useEffect, useState } from "react";
 import Checkbox from "@mui/material/Checkbox";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Link } from "@inertiajs/inertia-react";
+import { Link, usePage } from "@inertiajs/inertia-react";
+import Lang from "lang.js";
 const a =0;
 const formation = [
     {
@@ -58,8 +60,11 @@ const formation = [
 ];
 
 export default function SearchPage() {
+    const currentLang = new Lang();
+    const {domaines} = usePage().props
+    console.log("Liste des domaines: ",domaines)
 
-    const [checkBoxValue, setCheckBoxValue] = useState("")
+    const [checkBoxValue, setCheckBoxValue] = useState([])
     const [data, setData] = useState(formation)
     const getCheckBoxValue = (e)=>{
         setCheckBoxValue(e.target.value)
@@ -77,57 +82,50 @@ export default function SearchPage() {
     return (
         <Box mb={80}>
             <Typography>Resultat de recherche</Typography>
-            <Container>
+            <>
                 <Grid container spacing={2}>
-                    <Grid item xs={12} sm={3} sx={{ xs: "none" }}>
+                    <Grid item ml={3} xs={12} sm={2} sx={{ xs: "none" }}>
                         <Box bgcolor="#FFFFFF">
-                            <Accordion sx={{borderBottom:0.5}} >
-                                <AccordionSummary expandIcon={<ExpandMoreIcon/>} >
-                                    FILTRER PAR EDITEUR
+                            <Box sx={{borderBottom:0.5}} >
+                                <CardHeader 
+                              
+                                title="Filtrer par domaine"
+                            
+
+                                />
+                                <AccordionDetails>
+                                    {domaines.map((item,index)=>(
+                                      
+                                        <ListItem sx={{padding:0}}>
+                                        <Checkbox value={item.id} onClick={(e)=>filterResult(e)} />
+                                      {  currentLang.getLocale() === "en" ?   item.title.en : item.title.fr}
+                                    </ListItem>
+                                   
+                                    )) }
+                                  
+                                 
+                                </AccordionDetails>
+                            </Box>
+                            <Accordion sx={{borderBottom:0.5}}>
+                                <AccordionSummary>
+                                  Toute les formations
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <ListItem sx={{padding:0}}>
-                                        <Checkbox value="ACELOX" onClick={(e)=>filterResult(e)} />
-                                        ACELOX
+                                        <Checkbox />
+                                       Axelos
                                     </ListItem>
                                     <ListItem sx={{padding:0}}>
-                                        <Checkbox value="ALFRESCO" onClick={(e)=>filterResult(e)} />
-                                        ALFRESCO
-                                    </ListItem>
-                                    <ListItem sx={{padding:0}}>
-                                        <Checkbox value="PCEB" onClick={(e)=>filterResult(e)}/>
+                                        <Checkbox />
                                         PCEB
                                     </ListItem>
                                     <ListItem sx={{padding:0}}>
-                                        <Checkbox value="MICROSOFT" onClick={(e)=>filterResult(e)}/>
+                                        <Checkbox />
+                                       Alfresco
+                                    </ListItem>
+                                    <ListItem sx={{padding:0}}>
+                                        <Checkbox />
                                         MICROSOFT
-                                    </ListItem>
-                                    <ListItem sx={{padding:0}}>
-                                        <Checkbox value="ORACLE" onClick={(e)=>filterResult(e)}/>
-                                        ORACLE
-                                    </ListItem>
-                                </AccordionDetails>
-                            </Accordion>
-                            <Accordion sx={{borderBottom:0.5}}>
-                                <AccordionSummary>
-                                    CERTIFICATION
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                    <ListItem sx={{padding:0}}>
-                                        <Checkbox />
-                                        ISO 27001
-                                    </ListItem>
-                                    <ListItem sx={{padding:0}}>
-                                        <Checkbox />
-                                        ITIL 4
-                                    </ListItem>
-                                    <ListItem sx={{padding:0}}>
-                                        <Checkbox />
-                                        DevOps Foundation
-                                    </ListItem>
-                                    <ListItem sx={{padding:0}}>
-                                        <Checkbox />
-                                        CIA ®
                                     </ListItem>
                                     <ListItem sx={{padding:0}}>
                                         <Checkbox />
@@ -147,7 +145,7 @@ export default function SearchPage() {
                                     mx={1}
                                     bgcolor="#FFFFFF"
                                     sx={{
-                                        minHeight: 320,
+                                        maxHeight: 360,
                                       xs:{mx:1, width: '98%',justifyContent:'center'},
                                         width: 260,
                                      
@@ -200,7 +198,7 @@ export default function SearchPage() {
                         })}
                     </Grid>
                 </Grid>
-            </Container>
+            </>
         </Box>
     );
 }
