@@ -13,7 +13,11 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Front\CurrencyController;
 use App\Http\Controllers\Admin\FormateurController;
 use App\Http\Controllers\Admin\FormationController;
+use App\Http\Controllers\Admin\PartnerController;
+use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SpecialiteController;
+use App\Http\Controllers\Admin\SolutionController;
+use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Frontend\CheckoutController;
 use App\Http\Controllers\Frontend\TrainingController;
 /*
@@ -35,7 +39,7 @@ Route::post('/checkout/placeorder', [CheckoutController::class,'placeorder'])->n
 Route::get('/checkout/pdf/{order_number}', [CheckoutController::class,'createPDF'])->name('pdf');
 
 Route::inertia('/thankyou','Thankyou')->name('paymentsuccess') ;
-//Route::inertia('/test','Test')->name('test') ;
+Route::inertia('/test','Test')->name('test') ;
 
 Route::get('/formation', [TrainingController::class,'getAll'])->name('getAll');
 Route::get('/formation/{id}', [TrainingController::class,'getOne'])->name('formationDetail');
@@ -45,7 +49,7 @@ Route::get('langue/{code}', [LanguageController::class,'switchLang'])->name('lan
 //Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
 Route::get('/profile',[HomeController::class,'profileDetail'])->name('profile');
 Route::inertia('/profile/order','Profile/MyOrder')->name('profile/order') ;
-Route::inertia('/profile/setting','Profile/Reglages')->name('profile/setting') ;
+Route::inertia('/user/setting','Profile/Setting')->name('profile/setting') ;
 Route::inertia('/admins','Admin/Dashboard')->name('admins') ;
 Route::inertia('/profile/training','Profile/Formation')->name('profile/training') ;
 Route::inertia('/myProfile','ProfileLayout')->name('myProfile') ;
@@ -65,7 +69,7 @@ Route::inertia('/home','Home')->name('home') ;
 
 Route::inertia('/services','Services')->name('services') ;
 Route::get('/search',[DomaineController::class,'getAll'])->name('search') ;
-Route::get('/test',[DomaineController::class,'getAll'])->name('test') ;
+//Route::get('/test',[DomaineController::class,'getAll'])->name('test') ;
 Route::inertia('/posts','Publication')->name('posts') ;
 Route::inertia('/cart','Cart')->name('posts') ;
 
@@ -92,6 +96,22 @@ Route::post('domaine.store', [DomaineController::class,'store'])->name('domaine.
 Route::get('/domaine/edit/{id}', [DomaineController::class,'edit'])->name('domaine.edit');
 Route::get('/domaine/add', [DomaineController::class,'create'])->name('domaine.add');
 Route::post('/domaine/update  ', [DomaineController::class,'update'])->name('domaine.update') ; 
+//Solution
+Route::get('/admin/solution/add', [SolutionController::class,'create'])->name('solution.add');
+Route::post('/admin/solution.store', [SolutionController::class,'store'])->name('solution.store');
+Route::get('/admin/solution/list', [SolutionController::class,'index'])->name('solution.list');
+//Service
+Route::get('/admin/service/add',[ServiceController::class,'create'])->name('service.add');
+Route::post('/admin/service.store',[ServiceController::class,'store'])->name('service.store');
+Route::get('/admin/service/list',[ServiceController::class,'index'])->name('service.list');
+//Team
+Route::get('/admin/team/add',[TeamController::class,'create'])->name('team.add');
+Route::post('/admin/team.store',[TeamController::class,'store'])->name('team.store');
+Route::get('/admin/team/list',[TeamControllerteam::class,'index'])->name('team.list');
+//Partenaire
+Route::get('/admin/partner/add',[PartnerController::class,'create'])->name('partner.add');
+Route::post('/admin/partner.store',[PartnerController::class,'store'])->name('partner.store');
+Route::get('/admin/partner/list',[PartnerController::class,'index'])->name('partner.list');
 
 //Slider
 Route::get('/admin/slider/list', [SliderController::class,'index'])->name('slider.list');

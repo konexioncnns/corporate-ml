@@ -123,8 +123,8 @@ class CheckoutController extends Controller
 
             
             //dd($orders);
-            $orderList =    Orderitems::where('order_number',$orderNumber)->get();
-             $pdf = PDF::loadView('pdf_template.orders_pdf', compact('orderList'));
+            $orderList = Orderitems::where('order_number',$orderNumber)->join('formations','formations.id','orderitems.formation_id')->get();
+             $pdf = PDF::loadView('pdf_template.new_order_pdf', compact('orderList'));
 
             Mail::send('order_email',
             array(
@@ -134,7 +134,7 @@ class CheckoutController extends Controller
                 'orderNumber' => $orderNumber,
             ), function($message) use ($request,$pdf)
               {
-                 $message->from('noreply@1simple1.com');
+                 $message->from('support@1simple1.com');
                  
                 $message->subject("Nouvelle commande");
                  $message->to($request->email);
@@ -182,12 +182,13 @@ class CheckoutController extends Controller
             return Inertia::render('Profile/MyOrder',['data'=>$data]);
           }
 
-          public function createPDF($id){
+          public function createPDF($order_number){
             // Retrieve all products from the db
-            $orders = Orderitems::where('order_number',$id)->get();
-           //dd($orders);
+            $orders = Orderitems::where('order_number',$order_number)->join('formations','formations.id','orderitems.formation_id')->get();
+        
+         //dd($orders[0]['formation']['title']);
             $pdf = PDF::loadView('pdf_template.orders_pdf', compact('orders'));
-            return $pdf->download('file-pdf.pdf');
+            return $pdf->stream('file-pdf.pdf');
         }
  
 

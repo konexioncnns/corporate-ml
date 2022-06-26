@@ -17,11 +17,15 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+.head{
+ display:'flex';justify-content:'space-between'
+
+}
 </style>
 </head>
 <body>
 
-<div style="display:'flex';justify-content:'space-between'">
+<div class="head" >
 <h2><img src="images/logo.png"/></h2>
 <h3>Detail commande</h3>
 </div>
@@ -29,7 +33,7 @@ tr:nth-child(even) {
 <table>
  <thead>
  <tr>
-    <th>Numero commande</th>
+    <th>N° commande</th>
     <th>Formation</th>
     <th>Particapant(s)</th>
     <th>price</th>
@@ -38,15 +42,18 @@ tr:nth-child(even) {
   
   <tbody>
    
-  <tr>
   
-@foreach($orderList as $order){
-    <td>#{{$order->order_number}}</td>
-    <td>Roland Mendel</td>
+
+  
+@foreach($orders as $key => $order){
+  <tr>
+    <td>#</td>
+    <td>{{$order['formation']['title']}}</td>
     <td>{{$order->qty}}</td>
-    <td>{{$order->price}} FCFA</td> }
-  </tr>
+    <td>{{$order->price}} FCFA</td> 
+  </tr>}
 @endforeach
+
   </tbody>
  
 </table>

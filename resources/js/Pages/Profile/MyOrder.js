@@ -2,7 +2,9 @@ import React from 'react'
 import ProfileLayout from '@/Layouts/ProfileLayout';
 import { Button, Chip, Menu, MenuItem } from '@mui/material';
 import { InertiaLink, Link, usePage } from '@inertiajs/inertia-react';
-import { MoreRounded } from '@mui/icons-material';
+import { Download, MoreRounded, RemoveRedEye } from '@mui/icons-material';
+import { EyeIcon } from '@heroicons/react/outline';
+import * as moment from 'moment'
  const MyOrder = ( ) => {
     const {data  } = usePage().props  
     console.log("Mes commandes",data)
@@ -68,30 +70,14 @@ import { MoreRounded } from '@mui/icons-material';
                                         <p class="text-gray-900 whitespace-no-wrap"> {item.amount} </p>
                                     </td>
                                     <td class="px-5 py-5 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">{item.created_at} </p>
+                                        <p class="text-gray-900 whitespace-no-wrap">{moment(item.created_at,'DD-MM-YYYY').format('ll')} </p>
                                     </td>
                                     <td class="px-5 py-5 bg-white text-sm">
-                                    <Button
-                    id="orderActions"
-
-                    aria-controls={open ? 'basic-menu' : undefined}
-                    aria-haspopup="true"
-                    aria-expanded={open ? 'true' : undefined}
-                    onClick={handleClick}
-                >
-                    <MoreRounded />
-                </Button>
-                                    <Menu
-                        id="orderActions"
-                        anchorEl={anchorEl}
-                        open={open}
-                        onClose={handleClose}
-                        MenuListProps={{
-                            'aria-labelledby': 'basic-button',}}>
-                        <MenuItem onClick={handleClose} ><a href={`/checkout/pdf/${item.order_number}`}>Telecharger le pdf</a></MenuItem>
-                        <MenuItem onClick={handleClose} ><InertiaLink href={`/user/order/${item.id}`} >Voir les details</InertiaLink> </MenuItem>
-                        <MenuItem onClick={handleClose} >Voir les details</MenuItem>
-                            </Menu>
+                                    
+                    <a href={`/checkout/pdf/${item.order_number}`}><Download color='secondary' /></a>
+                    <a href={`/checkout/pdf/${item.order_number}`}><RemoveRedEye color='success'/></a>
+              
+                                   
                                     </td>
                                 </tr>
 )})}

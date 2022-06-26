@@ -9137,7 +9137,7 @@ var FullCalendar = (function (exports) {
     function renderMicroColGroup(cols, shrinkWidth) {
         var colNodes = [];
         /*
-        for ColProps with spans, it would have been great to make a single <col span="">
+        for ColProps with spans, it would have been great to make a single <col span=""/>
         HOWEVER, Chrome was getting messing up distributing the width to <td>/<th> elements with colspans.
         SOLUTION: making individual <col> elements makes Chrome behave.
         */

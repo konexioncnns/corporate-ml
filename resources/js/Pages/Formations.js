@@ -91,6 +91,25 @@ export default function Formations({ data }) {
                             delay: 2500,
                             disableOnInteraction: false,
                         }}
+                        breakpoints={{
+                            360: {
+                                // width: 576,
+                                slidesPerView: 1,
+                              },
+                            480: {
+                                // width: 576,
+                                slidesPerView: 1,
+                              },
+                            576: {
+                              // width: 576,
+                              slidesPerView: 2,
+                            },
+                            768: {
+                              // width: 768,
+                              slidesPerView: 4,
+                            },
+                           
+                          }}
                     >
                         <Grid container alignItems="center">
                             {data.map((item, index) => {

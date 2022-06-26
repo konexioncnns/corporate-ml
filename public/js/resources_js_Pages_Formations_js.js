@@ -4315,6 +4315,24 @@ function Formations(_ref) {
             delay: 2500,
             disableOnInteraction: false
           },
+          breakpoints: {
+            360: {
+              // width: 576,
+              slidesPerView: 1
+            },
+            480: {
+              // width: 576,
+              slidesPerView: 1
+            },
+            576: {
+              // width: 576,
+              slidesPerView: 2
+            },
+            768: {
+              // width: 768,
+              slidesPerView: 4
+            }
+          },
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_27__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_31__["default"], {
             container: true,
             alignItems: "center",

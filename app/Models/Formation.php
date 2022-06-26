@@ -27,5 +27,7 @@ class Formation extends Model
 
     }
 
-
+   
 }
+
+

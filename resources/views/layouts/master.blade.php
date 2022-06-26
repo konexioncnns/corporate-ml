@@ -413,6 +413,106 @@
                                 <i class="nav-icon fa-solid fa-chalkboard-user"> </i>
 
                                 <p>
+                                Solutions
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/admin/solutions/list" class="nav-link">
+                                        <i class="fa-solid fa-list nav-icon"></i>
+                                        <p>Liste des solutions</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin/solution/add" class="nav-link">
+                                        <i class="fa-solid fa-plus nav-icon"></i>
+                                        <p>Ajouter une solution</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa-solid fa-chalkboard-user"> </i>
+
+                                <p>
+                                Services
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/admin/service/list" class="nav-link">
+                                        <i class="fa-solid fa-list nav-icon"></i>
+                                        <p>Liste des service</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin/service/add" class="nav-link">
+                                        <i class="fa-solid fa-plus nav-icon"></i>
+                                        <p>Ajouter une service</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa-solid fa-chalkboard-user"> </i>
+
+                                <p>
+                                Team
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/admin/team/list" class="nav-link">
+                                        <i class="fa-solid fa-list nav-icon"></i>
+                                        <p>Liste de team member</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin/team/add" class="nav-link">
+                                        <i class="fa-solid fa-plus nav-icon"></i>
+                                        <p>Ajouter un membre</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa-solid fa-chalkboard-user"> </i>
+
+                                <p>
+                                Partenaire
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/admin/partner/list" class="nav-link">
+                                        <i class="fa-solid fa-list nav-icon"></i>
+                                        <p>Liste des partenaire</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin/partner/add" class="nav-link">
+                                        <i class="fa-solid fa-plus nav-icon"></i>
+                                        <p>Ajouter un partenaire</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa-solid fa-chalkboard-user"> </i>
+
+                                <p>
                                Sliders
                                     <i class="right fas fa-angle-left"></i>
                                 </p>

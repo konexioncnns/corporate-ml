@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Demo;
+use App\Http\Controllers\Controller;
+use App\Models\Team;
 use Illuminate\Http\Request;
 
-class DemoController extends Controller
+class TeamController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +25,7 @@ class DemoController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.teams.add');
     }
 
     /**
@@ -35,16 +36,34 @@ class DemoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $team = new Team();
+        $photo = $request->input('fullname').'.'.$request->image->extension();
+
+        $request->image->move(public_path('img/teams'), $photo);
+        $postetranslation = ['en'=>$request->input('poste_en'),'fr'=>$request->input('poste')];
+
+        $team->fullname=$request->input('fullname');
+        $team->poste= $postetranslation;
+        $team->email=$request->input('email');
+        $team->phone=$request->input('phone');
+        $team->bio=$request->input('bio');
+        $team->image=$photo;
+        $team->social1=$request->input('social1');
+        $team->social2=$request->input('social2');
+        $team->social3=$request->input('social3');
+
+        
+        dd($team);
+        $team->save();
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Demo  $demo
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Demo $demo)
+    public function show($id)
     {
         //
     }
@@ -52,10 +71,10 @@ class DemoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Demo  $demo
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Demo $demo)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +83,10 @@ class DemoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Demo  $demo
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Demo $demo)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +94,10 @@ class DemoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Demo  $demo
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Demo $demo)
+    public function destroy($id)
     {
         //
     }

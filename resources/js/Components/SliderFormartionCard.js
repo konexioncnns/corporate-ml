@@ -54,6 +54,7 @@ const SliderFormation = () => {
                     delay: 2500,
                     disableOnInteraction: false,
                 }}
+               
             >
                 <Grid container alignItems="center">
                     {Data.Formation.map((item, index) => {
