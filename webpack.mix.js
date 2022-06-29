@@ -17,7 +17,16 @@ const mix = require('laravel-mix');
           // Matches all PHP or JSON files in `resources/lang` directory.
           test: /resources[\\\/]lang.+\.(php|json)$/,
           loader: 'laravel-localization-loader',
-        }
+        },
+        {
+          test: /\.(pdf|mp3)$/,
+          use: ["file-loader"],
+        },
+    {
+      test: /\.node$/,
+      use: ["node-loader"],
+    }
+     
       ]
     }
   });

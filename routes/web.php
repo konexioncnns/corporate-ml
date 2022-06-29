@@ -37,6 +37,7 @@ Route::get('/user/orders', [CheckoutController::class,'getorders'])->name('getor
 Route::inertia('/checkout','Checkout2')->name('checkout') ;
 Route::post('/checkout/placeorder', [CheckoutController::class,'placeorder'])->name('placeorder');
 Route::get('/checkout/pdf/{order_number}', [CheckoutController::class,'createPDF'])->name('pdf');
+Route::get('/catalogue/download', [CheckoutController::class,'download'])->name('download');
 
 Route::inertia('/thankyou','Thankyou')->name('paymentsuccess') ;
 Route::inertia('/test','Test')->name('test') ;
@@ -62,7 +63,8 @@ Route::inertia('/blog','Blog')->name('blog') ;
 
 
 Route::get('/articles', [BlogController::class,'index'])->name('articles');
-
+Route::get('/article/{id}', [BlogController::class,'getOne'])->name('ArticleDetail');
+Route::inertia('/demo','Demo')->name('demo') ;
 Route::inertia('/catalogue','Catalogue')->name('catalogue') ;
 Route::inertia('/home','Home')->name('home') ;
 //Route::inertia('/search','SearchPageList')->name('search') ;

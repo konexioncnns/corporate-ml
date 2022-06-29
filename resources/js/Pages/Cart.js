@@ -101,7 +101,7 @@ function Cart() {
 
                                 <Box textAlign="left" ml={3}>
                                     <Typography variant="h6" maxWidth={300}  whiteSpace="normal">
-                                        {item.title}
+                                        {item.title.fr}
                                     </Typography>
                                     <Box display="flex">
                                         <AccessAlarm fontSize="small" />

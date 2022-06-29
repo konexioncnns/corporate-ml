@@ -6425,27 +6425,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/@mui/icons-material/esm/CurrencyExchange.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@mui/icons-material/esm/CurrencyExchange.js ***!
-  \******************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _utils_createSvgIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/material/utils/createSvgIcon.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_utils_createSvgIcon__WEBPACK_IMPORTED_MODULE_1__["default"])( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", {
-  d: "M12.89 11.1c-1.78-.59-2.64-.96-2.64-1.9 0-1.02 1.11-1.39 1.81-1.39 1.31 0 1.79.99 1.9 1.34l1.58-.67c-.15-.45-.82-1.92-2.54-2.24V5h-2v1.26c-2.48.56-2.49 2.86-2.49 2.96 0 2.27 2.25 2.91 3.35 3.31 1.58.56 2.28 1.07 2.28 2.03 0 1.13-1.05 1.61-1.98 1.61-1.82 0-2.34-1.87-2.4-2.09l-1.66.67c.63 2.19 2.28 2.78 2.9 2.96V19h2v-1.24c.4-.09 2.9-.59 2.9-3.22 0-1.39-.61-2.61-3.01-3.44zM3 21H1v-6h6v2H4.52c1.61 2.41 4.36 4 7.48 4 4.97 0 9-4.03 9-9h2c0 6.08-4.92 11-11 11-3.72 0-7.01-1.85-9-4.67V21zm-2-9C1 5.92 5.92 1 12 1c3.72 0 7.01 1.85 9 4.67V3h2v6h-6V7h2.48C17.87 4.59 15.12 3 12 3c-4.97 0-9 4.03-9 9H1z"
-}), 'CurrencyExchange'));
-
-/***/ }),
-
 /***/ "./node_modules/@mui/icons-material/esm/PhoneCallback.js":
 /*!***************************************************************!*\
   !*** ./node_modules/@mui/icons-material/esm/PhoneCallback.js ***!
@@ -36982,6 +36961,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Button/Button.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Menu/Menu.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/MenuItem/MenuItem.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var _ApplicationLogo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ApplicationLogo */ "./resources/js/Components/ApplicationLogo.js");
@@ -36990,8 +36971,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MuiHeader__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./MuiHeader */ "./resources/js/Components/Layout/MuiHeader.js");
 /* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Footer */ "./resources/js/Components/Layout/Footer.js");
 /* harmony import */ var _Footer2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Footer2 */ "./resources/js/Components/Layout/Footer2.js");
-/* harmony import */ var _mui_icons_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/icons-material */ "./node_modules/@mui/icons-material/esm/CurrencyExchange.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -37006,6 +36998,22 @@ __webpack_require__.r(__webpack_exports__);
 
 function Layout(_ref) {
   var children = _ref.children;
+
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0__.useState(null),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      anchorEl = _React$useState2[0],
+      setAnchorEl = _React$useState2[1];
+
+  var open = Boolean(anchorEl);
+
+  var handleClick = function handleClick(event) {
+    setAnchorEl(event.currentTarget);
+  };
+
+  var handleClose = function handleClose() {
+    setAnchorEl(null);
+  };
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
     bgcolor: "#fff",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_MuiHeader__WEBPACK_IMPORTED_MODULE_5__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -37013,29 +37021,64 @@ function Layout(_ref) {
       bgcolor: "#F9FAFB",
       className: "App",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        id: "catalogue",
+        "aria-controls": open ? 'catalogue' : undefined,
+        "aria-haspopup": "true",
+        "aria-expanded": open ? 'true' : undefined,
+        onClick: handleClick,
         sx: {
           position: "fixed",
           bottom: "58%",
-          right: "-5px",
+          right: "-1px",
           backgroundColor: "purple",
           color: '#FFF',
-          borderRadius: "50px",
+          borderRadius: "10px",
           textAlign: 'center',
           boxShadow: "2px 2px 3px #999"
         },
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_icons_material__WEBPACK_IMPORTED_MODULE_11__["default"], {})
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
-        sx: {
-          position: "fixed",
-          bottom: "50%",
-          right: "-5px",
-          backgroundColor: "#0C9",
-          color: '#FFF',
-          borderRadius: "50px",
-          textAlign: 'center',
-          boxShadow: "2px 2px 3px #999"
+        children: "Catalogue"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
+        id: "demo-positioned-menu",
+        "aria-labelledby": "catalogue",
+        anchorEl: anchorEl,
+        open: open,
+        onClose: handleClose,
+        anchorOrigin: {
+          vertical: 40,
+          horizontal: 'right'
         },
-        children: ["Demo", '     ']
+        transformOrigin: {
+          vertical: 'top',
+          horizontal: 'right'
+        },
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
+          onClick: handleClose,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.InertiaLink, {
+            href: "catalogue",
+            children: "En ligne"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], {
+          onClick: handleClose,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("a", {
+            href: "/catalogue/download",
+            children: "Telecharger le catalogue"
+          })
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.InertiaLink, {
+        href: "/demo",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+          sx: {
+            position: "fixed",
+            bottom: "50%",
+            right: "-5px",
+            backgroundColor: "#0C9",
+            color: '#FFF',
+            borderRadius: "10px",
+            textAlign: 'center',
+            boxShadow: "2px 2px 3px #999"
+          },
+          children: "Demo"
+        })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
         variant: "contained",
         color: "error",
@@ -37045,7 +37088,7 @@ function Layout(_ref) {
           bottom: "42%",
           right: "-5px",
           color: "white",
-          borderRadius: "50px",
+          borderRadius: "10px",
           textAlign: 'center',
           boxShadow: "2px 2px 3px #999"
         },
@@ -39847,7 +39890,7 @@ var ___CSS_LOADER_URL_REPLACEMENT_3___ = _node_modules_laravel_mix_node_modules_
 var ___CSS_LOADER_URL_REPLACEMENT_4___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_assets_fonts_Inter_static_Inter_Light_ttf__WEBPACK_IMPORTED_MODULE_6__["default"]);
 var ___CSS_LOADER_URL_REPLACEMENT_5___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_assets_fonts_Inter_static_Inter_SemiBold_ttf__WEBPACK_IMPORTED_MODULE_7__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n  font-family: \"Open_Sans\";\n  src: local(\"Open_Sans\"),\nurl(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\nfont-weight: bold;\n}\n@font-face {\n  font-family: \"Open_Sans_Condensed\";\n  src: local(\"Open_Sans\"),\nurl(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n}\n@font-face {\n  font-family: \"Inter\";\n  src: local(\"Inter\"),\nurl(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ");\nfont-weight: bold;\n}\n@font-face {\n  font-family: \"Inter-Regular\";\n  src: local(\"Inter-Regular\"),\nurl(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ");\n\n}\n@font-face {\n  font-family: \"Inter-Light\";\n  src: local(\"Inter-Light\"),\nurl(" + ___CSS_LOADER_URL_REPLACEMENT_4___ + ");\n\n}\n@font-face {\n  font-family: \"Inter-SemiBold\";\n  src: local(\"Inter-SemiBold\"),\nurl(" + ___CSS_LOADER_URL_REPLACEMENT_5___ + ");\n\n}\n.wave {\n  transform: rotate(180deg);\n  left: 0;\n}\n.App {\n  text-align: center;\n}\n\n.App-logo {\n  height: 40vmin;\n  pointer-events: none;\n}\n\n@media (prefers-reduced-motion: no-preference) {\n  .App-logo {\n    -webkit-animation: App-logo-spin infinite 20s linear;\n            animation: App-logo-spin infinite 20s linear;\n  }\n}\n\n.App-header {\n  background-color: #282c34;\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  font-size: calc(10px + 2vmin);\n  color: white;\n}\n\n.App-link {\n  color: #61dafb;\n}\n\n@-webkit-keyframes App-logo-spin {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n\n@keyframes App-logo-spin {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n.swiper-container {\n    width: 480px;\n}\n@media screen and (min-width: 360px) {\n  .swiper-container {\n      width: 360px;\n  }\n}\n@media screen and (min-width: 640px) {\n    .swiper-container {\n        width: 640px;\n    }\n}\n\n@media screen and (min-width: 768px) {\n    .swiper-container {\n        width: 768px;\n    }\n}\n@media screen and (min-width: 992px) {\n    .swiper-container {\n        width: 992px;\n    }\n}\n\n\n\n\n\n\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@font-face {\n  font-family: \"Open_Sans\";\n  src: local(\"Open_Sans\"),\nurl(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\nfont-weight: bold;\n}\n@font-face {\n  font-family: \"Open_Sans_Condensed\";\n  src: local(\"Open_Sans\"),\nurl(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n}\n@font-face {\n  font-family: \"Inter\";\n  src: local(\"Inter\"),\nurl(" + ___CSS_LOADER_URL_REPLACEMENT_2___ + ");\nfont-weight: bold;\n}\n@font-face {\n  font-family: \"Inter-Regular\";\n  src: local(\"Inter-Regular\"),\nurl(" + ___CSS_LOADER_URL_REPLACEMENT_3___ + ");\n\n}\n@font-face {\n  font-family: \"Inter-Light\";\n  src: local(\"Inter-Light\"),\nurl(" + ___CSS_LOADER_URL_REPLACEMENT_4___ + ");\n\n}\n@font-face {\n  font-family: \"Inter-SemiBold\";\n  src: local(\"Inter-SemiBold\"),\nurl(" + ___CSS_LOADER_URL_REPLACEMENT_5___ + ");\n\n}\n.wave {\n  transform: rotate(180deg);\n  left: 0;\n}\n.App {\n  text-align: center;\n}\n\n.App-logo {\n  height: 40vmin;\n  pointer-events: none;\n}\n\n@media (prefers-reduced-motion: no-preference) {\n  .App-logo {\n    -webkit-animation: App-logo-spin infinite 20s linear;\n            animation: App-logo-spin infinite 20s linear;\n  }\n}\n\n.App-header {\n  background-color: #282c34;\n  min-height: 100vh;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  font-size: calc(10px + 2vmin);\n  color: white;\n}\n\n.App-link {\n  color: #61dafb;\n}\n\n\n.react-pdf__Document {\n  display: inline-block;\n}\n\n.react-pdf__Page {\n  width: 600px;\n  height: 600px;\n}\n\n\n@-webkit-keyframes App-logo-spin {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n\n\n@keyframes App-logo-spin {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n.swiper-container {\n    width: 480px;\n}\n@media screen and (min-width: 360px) {\n  .swiper-container {\n      width: 360px;\n  }\n}\n@media screen and (min-width: 640px) {\n    .swiper-container {\n        width: 640px;\n    }\n}\n\n@media screen and (min-width: 768px) {\n    .swiper-container {\n        width: 768px;\n    }\n}\n@media screen and (min-width: 992px) {\n    .swiper-container {\n        width: 992px;\n    }\n}\n\n\n\n\n\n\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -98611,6 +98654,16 @@ var map = {
 		9,
 		"resources_js_Pages_Catalogue_js"
 	],
+	"./Catalogue2": [
+		"./resources/js/Pages/Catalogue2.js",
+		9,
+		"resources_js_Pages_Catalogue2_js"
+	],
+	"./Catalogue2.js": [
+		"./resources/js/Pages/Catalogue2.js",
+		9,
+		"resources_js_Pages_Catalogue2_js"
+	],
 	"./Checkout": [
 		"./resources/js/Pages/Checkout.js",
 		9,
@@ -98710,6 +98763,16 @@ var map = {
 		"./resources/js/Pages/Dashboard.js",
 		9,
 		"resources_js_Pages_Dashboard_js"
+	],
+	"./Demo": [
+		"./resources/js/Pages/Demo.js",
+		9,
+		"resources_js_Pages_Demo_js"
+	],
+	"./Demo.js": [
+		"./resources/js/Pages/Demo.js",
+		9,
+		"resources_js_Pages_Demo_js"
 	],
 	"./Domaine": [
 		"./resources/js/Pages/Domaine.js",
@@ -100405,7 +100468,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_Pages_About_js":1,"resources_js_Pages_AccodionDomaine_js":1,"resources_js_Pages_Admin_Dashboard_js":1,"resources_js_Pages_Auth_ConfirmPassword_js":1,"resources_js_Pages_Auth_ForgotPassword_js":1,"resources_js_Pages_Auth_Login_js":1,"resources_js_Pages_Auth_Register_js":1,"resources_js_Pages_Auth_ResetPassword_js":1,"resources_js_Pages_Auth_VerifyEmail_js":1,"resources_js_Pages_Blog_js":1,"resources_js_Pages_Cart_js":1,"resources_js_Pages_Catalogue_js":1,"resources_js_Pages_Checkout_js":1,"resources_js_Pages_Checkout_CheckoutForm_js":1,"resources_js_Pages_Checkout_StripeContainer_js":1,"resources_js_Pages_Checkout2_js":1,"resources_js_Pages_Contact_js":1,"resources_js_Pages_Contact2_js":1,"resources_js_Pages_ContactForm_js":1,"resources_js_Pages_ContactUs_js":1,"resources_js_Pages_ContactUs2_js":1,"resources_js_Pages_Dashboard_js":1,"resources_js_Pages_Domaine_js":1,"resources_js_Pages_Formation_SliderFormartionCard_js":1,"resources_js_Pages_FormationDetail_js":1,"resources_js_Pages_Formations_js":1,"resources_js_Pages_FormationsR_js":1,"resources_js_Pages_Heading_js":1,"resources_js_Pages_Home_js":1,"resources_js_Pages_Partner_js":1,"resources_js_Pages_PostDetail_js":1,"resources_js_Pages_Posts_js":1,"resources_js_Pages_Profile_Formation_js":1,"resources_js_Pages_Profile_MyOrder_js":1,"resources_js_Pages_Profile_Order_js":1,"resources_js_Pages_Profile_Profile_js":1,"resources_js_Pages_Profile_Reglages_js":1,"resources_js_Pages_Profile_Setting_js":1,"resources_js_Pages_Propos_js":1,"resources_js_Pages_Publication_js":1,"resources_js_Pages_SearchPage_js":1,"resources_js_Pages_SearchPageList_js":1,"resources_js_Pages_Services_js":1,"resources_js_Pages_Solutions_Archico_js":1,"resources_js_Pages_Solutions_Collab_js":1,"resources_js_Pages_Team_js":1,"resources_js_Pages_Test_js":1,"resources_js_Pages_Thankyou_js":1,"resources_js_Pages_Welcome_js":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_Pages_About_js":1,"resources_js_Pages_AccodionDomaine_js":1,"resources_js_Pages_Admin_Dashboard_js":1,"resources_js_Pages_Auth_ConfirmPassword_js":1,"resources_js_Pages_Auth_ForgotPassword_js":1,"resources_js_Pages_Auth_Login_js":1,"resources_js_Pages_Auth_Register_js":1,"resources_js_Pages_Auth_ResetPassword_js":1,"resources_js_Pages_Auth_VerifyEmail_js":1,"resources_js_Pages_Blog_js":1,"resources_js_Pages_Cart_js":1,"resources_js_Pages_Catalogue_js":1,"resources_js_Pages_Catalogue2_js":1,"resources_js_Pages_Checkout_js":1,"resources_js_Pages_Checkout_CheckoutForm_js":1,"resources_js_Pages_Checkout_StripeContainer_js":1,"resources_js_Pages_Checkout2_js":1,"resources_js_Pages_Contact_js":1,"resources_js_Pages_Contact2_js":1,"resources_js_Pages_ContactForm_js":1,"resources_js_Pages_ContactUs_js":1,"resources_js_Pages_ContactUs2_js":1,"resources_js_Pages_Dashboard_js":1,"resources_js_Pages_Demo_js":1,"resources_js_Pages_Domaine_js":1,"resources_js_Pages_Formation_SliderFormartionCard_js":1,"resources_js_Pages_FormationDetail_js":1,"resources_js_Pages_Formations_js":1,"resources_js_Pages_FormationsR_js":1,"resources_js_Pages_Heading_js":1,"resources_js_Pages_Home_js":1,"resources_js_Pages_Partner_js":1,"resources_js_Pages_PostDetail_js":1,"resources_js_Pages_Posts_js":1,"resources_js_Pages_Profile_Formation_js":1,"resources_js_Pages_Profile_MyOrder_js":1,"resources_js_Pages_Profile_Order_js":1,"resources_js_Pages_Profile_Profile_js":1,"resources_js_Pages_Profile_Reglages_js":1,"resources_js_Pages_Profile_Setting_js":1,"resources_js_Pages_Propos_js":1,"resources_js_Pages_Publication_js":1,"resources_js_Pages_SearchPage_js":1,"resources_js_Pages_SearchPageList_js":1,"resources_js_Pages_Services_js":1,"resources_js_Pages_Solutions_Archico_js":1,"resources_js_Pages_Solutions_Collab_js":1,"resources_js_Pages_Team_js":1,"resources_js_Pages_Test_js":1,"resources_js_Pages_Thankyou_js":1,"resources_js_Pages_Welcome_js":1,"node_modules_howler_dist_howler_js":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

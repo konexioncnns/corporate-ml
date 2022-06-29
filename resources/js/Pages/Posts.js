@@ -7,8 +7,13 @@ import {
     CardHeader,
     CardMedia,
     Container,
+    FormControl,
+    FormControlLabel,
     Grid, 
+    ListItem, 
     Pagination, 
+    Radio, 
+    RadioGroup, 
     Stack, 
     Typography,
 } from "@mui/material";
@@ -19,6 +24,7 @@ import { InertiaLink,Link, useForm, usePage } from '@inertiajs/inertia-react'
 import { PostAddSharp } from "@mui/icons-material"; 
 import Lang from "lang.js";
 import { Inertia } from "@inertiajs/inertia";
+import { pink } from "@mui/material/colors";
 const currentLang = new Lang();
 const Posts = () => {
    const {posts  } = usePage().props  
@@ -56,15 +62,65 @@ const Posts = () => {
            <Container>
            <Box
                     height="10vh"
-                    justifyContent="center"
-                    mx={20}
+                    justifyContent="flex-start"
+                   
                     my={5}
                     sx={{  borderRadius: 5 }}
                     alignItems="center"
-                    bgcolor="#ed8484"
+                    bgcolor="#ed8484" 
                     display="flex"
                 >
-                    <Typography textAlign="left">Filtrer par</Typography>
+                    <Typography textAlign="left" fontFamily="Inter" color="white" mx={2}>Filtrer par</Typography>
+                    <FormControl>
+                                        <RadioGroup
+                                            aria-labelledby="demo-radio-buttons-group-label"
+                                            defaultValue="female"
+                                            name="radio-buttons-group"
+                                        >
+                                            
+                                                <ListItem
+                                                    
+                                                    sx={{ padding: 0 }}
+                                                >
+                                                    <FormControlLabel
+                                                       
+                                                        control={
+                                                            <Radio
+                                                             
+                                                            value="video"
+                                                                sx={{
+                                                                    color:"white",
+                                                                    "&.Mui-checked":
+                                                                        {
+                                                                            color:"white",
+                                                                        },
+                                                                }}
+                                                            />
+                                                        }
+                                                        label="Videos"
+                                                    />
+                                                      <FormControlLabel
+                                                       
+                                                       control={
+                                                           <Radio
+                                                            
+                                                                value="archive"
+                                                               sx={{
+                                                                   color: "white",
+                                                                   "&.Mui-checked":
+                                                                       {
+                                                                           color: "white",
+                                                                       },
+                                                               }}
+                                                           />
+                                                       }
+                                                       label="Archives"
+                                                   />
+                                                </ListItem>
+                                            
+                                        </RadioGroup>
+                                    </FormControl>
+
                 </Box>
            <Grid container spacing={5}>
                
@@ -78,7 +134,8 @@ const Posts = () => {
    1SIMPLE1
   </RightCornerLargeRibbon>
   <Card sx={{ xs:{mx:2},maxWidth: 350, minHeight: 320 }} elevation={2} >
-        <CardMedia component="img" height={100} image={`../img/posts/${item.image}`} />
+      {/*   <CardMedia component="img" height={100} src={`../img/posts/${item.image}`} /> */}
+        <img src={`../img/posts/${item.image}`} style={{width:'100vh',height:150}} />
        
         <CardContent>
            
@@ -107,7 +164,11 @@ const Posts = () => {
             }
             
         </Typography>
-        <Button  variant="contained" sx={{bgcolor:"red",position:"relative"}}>Lire plus</Button>
+        <Button  variant="contained" sx={{bgcolor:"red",position:"relative"}}>
+            <InertiaLink href={`/article/${item.id}`} >
+ Lire plus
+            </InertiaLink>
+           </Button>
         </CardContent>
         <Box display="flex" justifyContent="space-between" alignItems="center" sx={{height:"40px",backgroundColor:"#f6f6f6"}}  >
         <Typography textAlign="left" variant="body2" fontSize={11} fontFamily="Inter-Regular">

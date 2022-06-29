@@ -666,7 +666,7 @@ function Cart() {
                 variant: "h6",
                 maxWidth: 300,
                 whiteSpace: "normal",
-                children: item.title
+                children: item.title.fr
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
                 display: "flex",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_icons_material__WEBPACK_IMPORTED_MODULE_11__["default"], {

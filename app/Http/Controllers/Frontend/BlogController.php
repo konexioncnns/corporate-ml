@@ -23,4 +23,12 @@ class BlogController extends Controller
         //  return Inertia::render('Posts',['posts'=>$posts->only('title','description','image')]);
         return Inertia::render('Posts', ['posts' =>$posts]);
       }
+
+      public function getOne($id){
+        $data = Post::findOrFail($id);
+        $postsList=Post::limit(3)->get();
+        
+       // dd($postsList);
+           return Inertia::render('PostDetail',['postList'=>$postsList,'data'=>$data->only('id','title','description','image','category','created_at')]);
+       }
 }

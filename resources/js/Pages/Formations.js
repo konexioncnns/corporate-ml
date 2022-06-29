@@ -93,11 +93,11 @@ export default function Formations({ data }) {
                         }}
                         breakpoints={{
                             360: {
-                                // width: 576,
+                                // width: 360,
                                 slidesPerView: 1,
                               },
                             480: {
-                                // width: 576,
+                                // width: 480,
                                 slidesPerView: 1,
                               },
                             576: {
@@ -131,13 +131,14 @@ export default function Formations({ data }) {
                                                 }}
                                             >
                                                 <CardActionArea>
+                                                <InertiaLink href={`/formation/${item.id}`}>  
                                                     <CardMedia
                                                         component="img"
                                                          
                                                         sx={{maxHeight:140}}
                                                         image={`../img/formations/${item.image}`}
                                                         alt="green iguana"
-                                                    />{" "}
+                                                    /></InertiaLink>
                                                 </CardActionArea>
                                                 <CardContent>
                                                     <Box
@@ -277,9 +278,9 @@ export default function Formations({ data }) {
                                                         }}
                                                         mt={5}
                                                     >
+                                                         <InertiaLink href={`/formation/${item.id}`}>  
                                                         <Button
                                                             mt={2}
-                                                            href={`/formation/${item.id}`}
                                                         >
                                                             <Typography
                                                                 color="white"
@@ -290,6 +291,7 @@ export default function Formations({ data }) {
                                                                 formation
                                                             </Typography>
                                                         </Button>
+                                                        </InertiaLink>  
                                                     </Stack>
                                                 </CardContent>
 
