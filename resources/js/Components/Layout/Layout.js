@@ -26,7 +26,8 @@ export default function Layout({children}) {
     <MuiHeader/>
 
 
-   <Box mt={20} bgcolor="#F9FAFB"  className='App'  >
+   <Box mt={20}  bgcolor="#F9FAFB"  className='App'>
+  
    <Button
    id="catalogue"
    aria-controls={open ? 'catalogue' : undefined}
@@ -71,10 +72,11 @@ export default function Layout({children}) {
 
 
 
-    <InertiaLink href="/demo">
+    
       <Button
         sx={{
           position:"fixed",
+         
       
       bottom:"50%",
       right:"-5px",
@@ -84,7 +86,7 @@ export default function Layout({children}) {
       textAlign:'center',
       boxShadow: "2px 2px 3px #999",
         }}
-      >Demo</Button></InertiaLink>
+      ><InertiaLink href="/demo">Demo</InertiaLink></Button>
        <Button
        variant='contained'
        color='error'

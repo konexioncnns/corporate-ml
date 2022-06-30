@@ -31,9 +31,9 @@ import React from "react";
 import img from "../assets/images/about3.jpg";
 import img2 from "../assets/images/post1.jpg";
 
-function PostDetail({data}) {
+function PostDetail({data,categories}) {
     const { postList} = usePage().props
-    console.log(postList)
+    console.log(categories)
     return (
         
       <Box>
@@ -261,11 +261,9 @@ function PostDetail({data}) {
                 </Typography>
                 <Box>
                   <List>
-                    <ListItem>  Education </ListItem>
-                    <ListItem>   Education </ListItem>
-                    <ListItem>   Education </ListItem>
-                    <ListItem>   Education </ListItem>
-                    <ListItem>   Education </ListItem>
+                    {categories.map((item,index)=>(
+                        <ListItem> <InertiaLink href={`/blog/categorie/${item.id}`}> {item.title.fr} </InertiaLink></ListItem>
+                    ))}
                   </List>
                 </Box>
 

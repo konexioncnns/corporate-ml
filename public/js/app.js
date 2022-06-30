@@ -37064,19 +37064,19 @@ function Layout(_ref) {
             children: "Telecharger le catalogue"
           })
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.InertiaLink, {
-        href: "/demo",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
-          sx: {
-            position: "fixed",
-            bottom: "50%",
-            right: "-5px",
-            backgroundColor: "#0C9",
-            color: '#FFF',
-            borderRadius: "10px",
-            textAlign: 'center',
-            boxShadow: "2px 2px 3px #999"
-          },
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        sx: {
+          position: "fixed",
+          bottom: "50%",
+          right: "-5px",
+          backgroundColor: "#0C9",
+          color: '#FFF',
+          borderRadius: "10px",
+          textAlign: 'center',
+          boxShadow: "2px 2px 3px #999"
+        },
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.InertiaLink, {
+          href: "/demo",
           children: "Demo"
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
@@ -98784,6 +98784,16 @@ var map = {
 		9,
 		"resources_js_Pages_Domaine_js"
 	],
+	"./FilterPost": [
+		"./resources/js/Pages/FilterPost.js",
+		9,
+		"resources_js_Pages_FilterPost_js"
+	],
+	"./FilterPost.js": [
+		"./resources/js/Pages/FilterPost.js",
+		9,
+		"resources_js_Pages_FilterPost_js"
+	],
 	"./Formation/SliderFormartionCard": [
 		"./resources/js/Pages/Formation/SliderFormartionCard.js",
 		9,
@@ -100468,7 +100478,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_Pages_About_js":1,"resources_js_Pages_AccodionDomaine_js":1,"resources_js_Pages_Admin_Dashboard_js":1,"resources_js_Pages_Auth_ConfirmPassword_js":1,"resources_js_Pages_Auth_ForgotPassword_js":1,"resources_js_Pages_Auth_Login_js":1,"resources_js_Pages_Auth_Register_js":1,"resources_js_Pages_Auth_ResetPassword_js":1,"resources_js_Pages_Auth_VerifyEmail_js":1,"resources_js_Pages_Blog_js":1,"resources_js_Pages_Cart_js":1,"resources_js_Pages_Catalogue_js":1,"resources_js_Pages_Catalogue2_js":1,"resources_js_Pages_Checkout_js":1,"resources_js_Pages_Checkout_CheckoutForm_js":1,"resources_js_Pages_Checkout_StripeContainer_js":1,"resources_js_Pages_Checkout2_js":1,"resources_js_Pages_Contact_js":1,"resources_js_Pages_Contact2_js":1,"resources_js_Pages_ContactForm_js":1,"resources_js_Pages_ContactUs_js":1,"resources_js_Pages_ContactUs2_js":1,"resources_js_Pages_Dashboard_js":1,"resources_js_Pages_Demo_js":1,"resources_js_Pages_Domaine_js":1,"resources_js_Pages_Formation_SliderFormartionCard_js":1,"resources_js_Pages_FormationDetail_js":1,"resources_js_Pages_Formations_js":1,"resources_js_Pages_FormationsR_js":1,"resources_js_Pages_Heading_js":1,"resources_js_Pages_Home_js":1,"resources_js_Pages_Partner_js":1,"resources_js_Pages_PostDetail_js":1,"resources_js_Pages_Posts_js":1,"resources_js_Pages_Profile_Formation_js":1,"resources_js_Pages_Profile_MyOrder_js":1,"resources_js_Pages_Profile_Order_js":1,"resources_js_Pages_Profile_Profile_js":1,"resources_js_Pages_Profile_Reglages_js":1,"resources_js_Pages_Profile_Setting_js":1,"resources_js_Pages_Propos_js":1,"resources_js_Pages_Publication_js":1,"resources_js_Pages_SearchPage_js":1,"resources_js_Pages_SearchPageList_js":1,"resources_js_Pages_Services_js":1,"resources_js_Pages_Solutions_Archico_js":1,"resources_js_Pages_Solutions_Collab_js":1,"resources_js_Pages_Team_js":1,"resources_js_Pages_Test_js":1,"resources_js_Pages_Thankyou_js":1,"resources_js_Pages_Welcome_js":1,"node_modules_howler_dist_howler_js":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_Pages_About_js":1,"resources_js_Pages_AccodionDomaine_js":1,"resources_js_Pages_Admin_Dashboard_js":1,"resources_js_Pages_Auth_ConfirmPassword_js":1,"resources_js_Pages_Auth_ForgotPassword_js":1,"resources_js_Pages_Auth_Login_js":1,"resources_js_Pages_Auth_Register_js":1,"resources_js_Pages_Auth_ResetPassword_js":1,"resources_js_Pages_Auth_VerifyEmail_js":1,"resources_js_Pages_Blog_js":1,"resources_js_Pages_Cart_js":1,"resources_js_Pages_Catalogue_js":1,"resources_js_Pages_Catalogue2_js":1,"resources_js_Pages_Checkout_js":1,"resources_js_Pages_Checkout_CheckoutForm_js":1,"resources_js_Pages_Checkout_StripeContainer_js":1,"resources_js_Pages_Checkout2_js":1,"resources_js_Pages_Contact_js":1,"resources_js_Pages_Contact2_js":1,"resources_js_Pages_ContactForm_js":1,"resources_js_Pages_ContactUs_js":1,"resources_js_Pages_ContactUs2_js":1,"resources_js_Pages_Dashboard_js":1,"resources_js_Pages_Demo_js":1,"resources_js_Pages_Domaine_js":1,"resources_js_Pages_FilterPost_js":1,"resources_js_Pages_Formation_SliderFormartionCard_js":1,"resources_js_Pages_FormationDetail_js":1,"resources_js_Pages_Formations_js":1,"resources_js_Pages_FormationsR_js":1,"resources_js_Pages_Heading_js":1,"resources_js_Pages_Home_js":1,"resources_js_Pages_Partner_js":1,"resources_js_Pages_PostDetail_js":1,"resources_js_Pages_Posts_js":1,"resources_js_Pages_Profile_Formation_js":1,"resources_js_Pages_Profile_MyOrder_js":1,"resources_js_Pages_Profile_Order_js":1,"resources_js_Pages_Profile_Profile_js":1,"resources_js_Pages_Profile_Reglages_js":1,"resources_js_Pages_Profile_Setting_js":1,"resources_js_Pages_Propos_js":1,"resources_js_Pages_Publication_js":1,"resources_js_Pages_SearchPage_js":1,"resources_js_Pages_SearchPageList_js":1,"resources_js_Pages_Services_js":1,"resources_js_Pages_Solutions_Archico_js":1,"resources_js_Pages_Solutions_Collab_js":1,"resources_js_Pages_Team_js":1,"resources_js_Pages_Test_js":1,"resources_js_Pages_Thankyou_js":1,"resources_js_Pages_Welcome_js":1,"node_modules_howler_dist_howler_js":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
