@@ -37686,15 +37686,52 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "store": () => (/* binding */ store)
 /* harmony export */ });
-/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
-/* harmony import */ var _featured_formation_formationSlice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../featured/formation/formationSlice */ "./resources/js/redux/featured/formation/formationSlice.js");
+/* harmony import */ var _reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js");
+/* harmony import */ var _featured_formation_filterSlice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../featured/formation/filterSlice */ "./resources/js/redux/featured/formation/filterSlice.js");
+/* harmony import */ var _featured_formation_formationSlice__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../featured/formation/formationSlice */ "./resources/js/redux/featured/formation/formationSlice.js");
 
 
-var store = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.configureStore)({
+
+var store = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_2__.configureStore)({
   reducer: {
-    cart: _featured_formation_formationSlice__WEBPACK_IMPORTED_MODULE_0__["default"]
+    cart: _featured_formation_formationSlice__WEBPACK_IMPORTED_MODULE_1__["default"],
+    search: _featured_formation_filterSlice__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
 });
+
+/***/ }),
+
+/***/ "./resources/js/redux/featured/formation/filterSlice.js":
+/*!**************************************************************!*\
+  !*** ./resources/js/redux/featured/formation/filterSlice.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "search": () => (/* binding */ search)
+/* harmony export */ });
+var _require = __webpack_require__(/*! @reduxjs/toolkit */ "./node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js"),
+    createSlice = _require.createSlice;
+
+var initialState = {
+  searchText: ''
+};
+var filterSlice = createSlice({
+  name: "recherche",
+  initialState: initialState,
+  reducers: {
+    search: function search(state, action) {
+      state.searchText = action.payload;
+    }
+  },
+  extraReducers: {}
+});
+var search = filterSlice.actions.search;
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (filterSlice.reducer);
 
 /***/ }),
 
@@ -98794,6 +98831,46 @@ var map = {
 		9,
 		"resources_js_Pages_FilterPost_js"
 	],
+	"./Formation/FilterCategory": [
+		"./resources/js/Pages/Formation/FilterCategory.js",
+		9,
+		"resources_js_Pages_Formation_FilterCategory_js"
+	],
+	"./Formation/FilterCategory.js": [
+		"./resources/js/Pages/Formation/FilterCategory.js",
+		9,
+		"resources_js_Pages_Formation_FilterCategory_js"
+	],
+	"./Formation/FormationGrid": [
+		"./resources/js/Pages/Formation/FormationGrid.js",
+		7,
+		"resources_js_Pages_Formation_FormationGrid_js"
+	],
+	"./Formation/FormationGrid.js": [
+		"./resources/js/Pages/Formation/FormationGrid.js",
+		7,
+		"resources_js_Pages_Formation_FormationGrid_js"
+	],
+	"./Formation/Recherche": [
+		"./resources/js/Pages/Formation/Recherche.js",
+		9,
+		"resources_js_Pages_Formation_Recherche_js"
+	],
+	"./Formation/Recherche.js": [
+		"./resources/js/Pages/Formation/Recherche.js",
+		9,
+		"resources_js_Pages_Formation_Recherche_js"
+	],
+	"./Formation/RechercheInput": [
+		"./resources/js/Pages/Formation/RechercheInput.js",
+		9,
+		"resources_js_Pages_Formation_RechercheInput_js"
+	],
+	"./Formation/RechercheInput.js": [
+		"./resources/js/Pages/Formation/RechercheInput.js",
+		9,
+		"resources_js_Pages_Formation_RechercheInput_js"
+	],
 	"./Formation/SliderFormartionCard": [
 		"./resources/js/Pages/Formation/SliderFormartionCard.js",
 		9,
@@ -100478,7 +100555,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_Pages_About_js":1,"resources_js_Pages_AccodionDomaine_js":1,"resources_js_Pages_Admin_Dashboard_js":1,"resources_js_Pages_Auth_ConfirmPassword_js":1,"resources_js_Pages_Auth_ForgotPassword_js":1,"resources_js_Pages_Auth_Login_js":1,"resources_js_Pages_Auth_Register_js":1,"resources_js_Pages_Auth_ResetPassword_js":1,"resources_js_Pages_Auth_VerifyEmail_js":1,"resources_js_Pages_Blog_js":1,"resources_js_Pages_Cart_js":1,"resources_js_Pages_Catalogue_js":1,"resources_js_Pages_Catalogue2_js":1,"resources_js_Pages_Checkout_js":1,"resources_js_Pages_Checkout_CheckoutForm_js":1,"resources_js_Pages_Checkout_StripeContainer_js":1,"resources_js_Pages_Checkout2_js":1,"resources_js_Pages_Contact_js":1,"resources_js_Pages_Contact2_js":1,"resources_js_Pages_ContactForm_js":1,"resources_js_Pages_ContactUs_js":1,"resources_js_Pages_ContactUs2_js":1,"resources_js_Pages_Dashboard_js":1,"resources_js_Pages_Demo_js":1,"resources_js_Pages_Domaine_js":1,"resources_js_Pages_FilterPost_js":1,"resources_js_Pages_Formation_SliderFormartionCard_js":1,"resources_js_Pages_FormationDetail_js":1,"resources_js_Pages_Formations_js":1,"resources_js_Pages_FormationsR_js":1,"resources_js_Pages_Heading_js":1,"resources_js_Pages_Home_js":1,"resources_js_Pages_Partner_js":1,"resources_js_Pages_PostDetail_js":1,"resources_js_Pages_Posts_js":1,"resources_js_Pages_Profile_Formation_js":1,"resources_js_Pages_Profile_MyOrder_js":1,"resources_js_Pages_Profile_Order_js":1,"resources_js_Pages_Profile_Profile_js":1,"resources_js_Pages_Profile_Reglages_js":1,"resources_js_Pages_Profile_Setting_js":1,"resources_js_Pages_Propos_js":1,"resources_js_Pages_Publication_js":1,"resources_js_Pages_SearchPage_js":1,"resources_js_Pages_SearchPageList_js":1,"resources_js_Pages_Services_js":1,"resources_js_Pages_Solutions_Archico_js":1,"resources_js_Pages_Solutions_Collab_js":1,"resources_js_Pages_Team_js":1,"resources_js_Pages_Test_js":1,"resources_js_Pages_Thankyou_js":1,"resources_js_Pages_Welcome_js":1,"node_modules_howler_dist_howler_js":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_Pages_About_js":1,"resources_js_Pages_AccodionDomaine_js":1,"resources_js_Pages_Admin_Dashboard_js":1,"resources_js_Pages_Auth_ConfirmPassword_js":1,"resources_js_Pages_Auth_ForgotPassword_js":1,"resources_js_Pages_Auth_Login_js":1,"resources_js_Pages_Auth_Register_js":1,"resources_js_Pages_Auth_ResetPassword_js":1,"resources_js_Pages_Auth_VerifyEmail_js":1,"resources_js_Pages_Blog_js":1,"resources_js_Pages_Cart_js":1,"resources_js_Pages_Catalogue_js":1,"resources_js_Pages_Catalogue2_js":1,"resources_js_Pages_Checkout_js":1,"resources_js_Pages_Checkout_CheckoutForm_js":1,"resources_js_Pages_Checkout_StripeContainer_js":1,"resources_js_Pages_Checkout2_js":1,"resources_js_Pages_Contact_js":1,"resources_js_Pages_Contact2_js":1,"resources_js_Pages_ContactForm_js":1,"resources_js_Pages_ContactUs_js":1,"resources_js_Pages_ContactUs2_js":1,"resources_js_Pages_Dashboard_js":1,"resources_js_Pages_Demo_js":1,"resources_js_Pages_Domaine_js":1,"resources_js_Pages_FilterPost_js":1,"resources_js_Pages_Formation_FilterCategory_js":1,"resources_js_Pages_Formation_FormationGrid_js":1,"resources_js_Pages_Formation_Recherche_js":1,"resources_js_Pages_Formation_RechercheInput_js":1,"resources_js_Pages_Formation_SliderFormartionCard_js":1,"resources_js_Pages_FormationDetail_js":1,"resources_js_Pages_Formations_js":1,"resources_js_Pages_FormationsR_js":1,"resources_js_Pages_Heading_js":1,"resources_js_Pages_Home_js":1,"resources_js_Pages_Partner_js":1,"resources_js_Pages_PostDetail_js":1,"resources_js_Pages_Posts_js":1,"resources_js_Pages_Profile_Formation_js":1,"resources_js_Pages_Profile_MyOrder_js":1,"resources_js_Pages_Profile_Order_js":1,"resources_js_Pages_Profile_Profile_js":1,"resources_js_Pages_Profile_Reglages_js":1,"resources_js_Pages_Profile_Setting_js":1,"resources_js_Pages_Propos_js":1,"resources_js_Pages_Publication_js":1,"resources_js_Pages_SearchPage_js":1,"resources_js_Pages_SearchPageList_js":1,"resources_js_Pages_Services_js":1,"resources_js_Pages_Solutions_Archico_js":1,"resources_js_Pages_Solutions_Collab_js":1,"resources_js_Pages_Team_js":1,"resources_js_Pages_Test_js":1,"resources_js_Pages_Thankyou_js":1,"resources_js_Pages_Welcome_js":1,"node_modules_howler_dist_howler_js":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

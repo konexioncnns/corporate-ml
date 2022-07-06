@@ -31,21 +31,39 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('post.update') }}" method="post">
+                    <form action="{{ route('post.update') }}" method="post" enctype="multipart/form-data">
                         @csrf
-                        <input type="hidden" name="id" value="{{$post['id']}}"/>
+                        <input type="hidden" name="id" value="{{$post->id}}"/>
                         <div class="form-group">
                             <label for="title">Titre du article</label>
-                            <input type="text" class="form-control" name="title"  value="{{   $domaine['title']['fr']  }}">
+                            <input type="text" class="form-control" name="title" value="{{$postt['description']['fr']}}">
                         </div>
                         <div class="form-group">
                             <label for="inputDescription">Description du article</label>
                             <textarea name="description" class="form-control" rows="4">
-                            {{  $domaine['description']['fr'] }}
+                                {{$postt['description']['fr']}}
                             </textarea>
                         </div>
 
-                      
+                        <div class="form-group">
+                            <label for="inputClientCompany">Category</label>
+                          
+                            <select name="category_id" class="form-control custom-select"> 
+                               
+                                 
+                           @foreach($categories as $category) 
+                                <option value="{{$category->id}}">{{$category->title}}</option>
+                                @endforeach
+                            </select>
+                           
+                            
+                        </div>
+                        <div class="form-group">
+                        <label for="image">Image</label>
+                        <input type="file" class="form-control" name="image" >
+                    </div>
+                    <img src=" {{asset('img/posts/'.$post->image)}}" alt="article-image" style="width:60px ;height:60px;"
+                                        class="img-circle img-fluid">
 
 
                 </div>
@@ -67,13 +85,13 @@
                 <div class="card-body">
 
                     <div class="form-group">
-                        <label for="title">Titre du domaine</label>
-                        <input type="text" class="form-control" name="title_en"  value="{{   $domaine['title']['en']  }}">
+                        <label for="title">Title of domaine</label>
+                        <input type="text" class="form-control" name="title_en" value="{{$postt['title']['en']}}">
                     </div>
                     <div class="form-group">
                         <label for="inputDescription">Description du domaine</label>
                         <textarea name="description_en" class="form-control" rows="4">
-                        {{  $domaine['description']['en'] }}
+                        {{$postt['description']['en']}}
                         </textarea>
                     </div>
 

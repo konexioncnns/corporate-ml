@@ -84,7 +84,7 @@ const { breakpoints, typography: { pxToRem } } = defaultTheme
                                    
                                 <div className="mt-1">
                                     <input
-                                        type="text"
+                                        type="email"
                                         name="email"
                                         placeholder="Email"
                                         className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-100 sm:text-sm"
@@ -109,8 +109,8 @@ const { breakpoints, typography: { pxToRem } } = defaultTheme
                                 <div className="mt-1">
                                     <input
                                         type="text"
-                                        name="pay"
-                                        placeholder="Pay"
+                                        name="country"
+                                        placeholder="Country"
                                         className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-100 sm:text-sm"
                                     />
                                 </div>
@@ -121,7 +121,7 @@ const { breakpoints, typography: { pxToRem } } = defaultTheme
                                 <div className="mt-1">
                                     <input
                                         type="text"
-                                        name="Entreprise"
+                                        name="entreprise"
                                         placeholder="Entreprise"
                                         className="block w-full border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-100 sm:text-sm"
                                     />

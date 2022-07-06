@@ -20,6 +20,7 @@
             <th>Title en</th>
             <th>Description en</th>
             <th>Status</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -31,6 +32,20 @@
             <td>{{$value['description']['en'] }}</td>
 
             <td> {{ $value['status']}} </td>
+            <td>
+
+<div class="text-center">
+    <a href="/admin/formation/edit/{{$value['id']}}" class="btn btn-sm bg-teal">
+        <i class="fas fa-edit"></i>
+    </a>
+    <a href="#" class="btn btn-sm btn-primary">
+        <i class="fas fa-eye"></i>
+    </a>
+    <a href="#" class="btn btn-sm btn-danger">
+        <i class="fas fa-trash"></i>
+    </a>
+</div>
+</td>
         </tr>
       
        

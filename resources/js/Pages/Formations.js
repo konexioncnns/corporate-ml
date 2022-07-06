@@ -11,6 +11,12 @@ import {
     IconButton,
     CardContent,
     Stack,
+    FormControl,
+    Select,
+    MenuItem,
+    RadioGroup,
+    FormControlLabel,
+    Radio,
 } from "@mui/material";
 /*Start slideformationCard*/
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
@@ -28,12 +34,12 @@ import {
     PeopleAltSharp,
     ShoppingCart,
 } from "@mui/icons-material";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 //import { addCart } from "../../redux/featured/formation/formationSlice";
 import { InertiaLink, usePage } from "@inertiajs/inertia-react";
 
 /*Fin slideformationCard*/
-import React from "react";
+import React, { useState } from "react";
 import Accordions from "../components/Accordion";
 import { Carousels } from "../components/Carousel";
 import Section from "../components/Section";
@@ -52,6 +58,8 @@ import Data from "@/constants/Data";
 import Lang from "lang.js";
 import PageHeader from "@/Components/PageHeader";
 import AccodionDomaine from "./AccodionDomaine";
+import Recherchex from "./Formation/Recherche";
+import RechercheInput from "./Formation/RechercheInput";
 
 const currentLang = new Lang();
 
@@ -64,22 +72,28 @@ export default function Formations({ data }) {
         /* window.location.href = ('/cart')*/
     };
     console.log("Formation: ", data);
+  
+   
     return (
         <Box mt={-11}>
-             <PageHeader
-            title=" Nos offres de formation professionnelle"
-            subtitle=" Nos offres de formation professionnelle et continue"
-            />
-         
-            
+            <PageHeader
+                title=" Nos offres de formation professionnelle"
+                subtitle=" Nos offres de formation professionnelle et continue"
+            >
+                
+                </PageHeader>
+
             {/*  <Carousels/> <SwiperFormation /> */}
-            <Box>
-                <SelectSection />
-            </Box>   <AccodionDomaine/>
+
+            {/* Recherche */}
+           <RechercheInput dataForm={data} />
+            <AccodionDomaine />
             {/* SliderFormation */}
             <Box>
                 <Container>
-                    <Typography fontFamily="Inter" color="red" variant="h5">Nos formation à la une !</Typography>
+                    <Typography fontFamily="Inter" color="red" variant="h5">
+                        Nos formation à la une !
+                    </Typography>
                     <Swiper
                         modules={[Navigation, Pagination, Scrollbar, A11y]}
                         spaceBetween={50}
@@ -95,27 +109,26 @@ export default function Formations({ data }) {
                             360: {
                                 // width: 360,
                                 slidesPerView: 1,
-                              },
+                            },
                             480: {
                                 // width: 480,
                                 slidesPerView: 1,
-                              },
+                            },
                             576: {
-                              // width: 576,
-                              slidesPerView: 2,
+                                // width: 576,
+                                slidesPerView: 2,
                             },
                             768: {
-                              // width: 768,
-                              slidesPerView: 4,
+                                // width: 768,
+                                slidesPerView: 4,
                             },
-                           
-                          }}
+                        }}
                     >
                         <Grid container alignItems="center">
                             {data.map((item, index) => {
                                 return (
                                     <SwiperSlide>
-                                        <Grid 
+                                        <Grid
                                             key={index}
                                             mt={5}
                                             item
@@ -123,7 +136,7 @@ export default function Formations({ data }) {
                                             sm={3}
                                         >
                                             <Card
-                                            elevation={3}
+                                                elevation={3}
                                                 sx={{
                                                     xs: { minWidth: 250 },
                                                     maxWidth: 350,
@@ -131,14 +144,18 @@ export default function Formations({ data }) {
                                                 }}
                                             >
                                                 <CardActionArea>
-                                                <InertiaLink href={`/formation/${item.id}`}>  
-                                                    <CardMedia
-                                                        component="img"
-                                                         
-                                                        sx={{maxHeight:140}}
-                                                        image={`../img/formations/${item.image}`}
-                                                        alt="green iguana"
-                                                    /></InertiaLink>
+                                                    <InertiaLink
+                                                        href={`/formation/${item.id}`}
+                                                    >
+                                                        <CardMedia
+                                                            component="img"
+                                                            sx={{
+                                                                maxHeight: 140,
+                                                            }}
+                                                            image={`../img/formations/${item.image}`}
+                                                            alt="green iguana"
+                                                        />
+                                                    </InertiaLink>
                                                 </CardActionArea>
                                                 <CardContent>
                                                     <Box
@@ -206,57 +223,69 @@ export default function Formations({ data }) {
 
                                                             <br></br>
                                                         </Box>
-                                                        <Box >
+                                                        <Box>
                                                             <Typography
-                                                            
-                                                            textAlign="center"
+                                                                textAlign="center"
                                                                 my={2}
                                                                 gutterBottom
                                                                 variant="h7"
                                                                 fontWeight="600"
                                                                 fontFamily="inter-Regular"
                                                                 color="black"
-                                                                
                                                                 noWrap
                                                             >
                                                                 {" "}
                                                                 {item.title.fr}
                                                             </Typography>
                                                         </Box>
-                                                        <Box >
-                                                        {currentLang.getLocale() ===
-                                                            "en" ?
-                                                            <Typography 
-                                                            textAlign="left"
-                                                            sx={{
-                                                                display: '-webkit-box',
-                                                                overflow: 'hidden',
-                                                                WebkitBoxOrient: 'vertical',
-                                                                WebkitLineClamp: 2,
-                                                            }}
-                                                            fontFamily="Inter-Regular"
-                                                            >
-                                                                {item.description.en}
-                                                            </Typography>
-                                                            :
-                                                            <Typography 
-                                                            textAlign="left"
-                                                            sx={{
-                                                                display: '-webkit-box',
-                                                                overflow: 'hidden',
-                                                                WebkitBoxOrient: 'vertical',
-                                                                WebkitLineClamp: 3,
-                                                            }}
-                                                            fontFamily="Inter-Regular"
-                                                            >
-                                                                {item.description.fr}
+                                                        <Box>
+                                                            {currentLang.getLocale() ===
+                                                            "en" ? (
+                                                                <Typography
+                                                                    textAlign="left"
+                                                                    sx={{
+                                                                        display:
+                                                                            "-webkit-box",
+                                                                        overflow:
+                                                                            "hidden",
+                                                                        WebkitBoxOrient:
+                                                                            "vertical",
+                                                                        WebkitLineClamp: 2,
+                                                                    }}
+                                                                    fontFamily="Inter-Regular"
+                                                                >
+                                                                    {
+                                                                        item
+                                                                            .description
+                                                                            .en
+                                                                    }
                                                                 </Typography>
-                                                            
-                                                            
-                                                            }
-                                                            <Box display="flex" justifyContent="space-between">
-                                                           
-                                                              {/* <IconButton>   <AddShoppingCart
+                                                            ) : (
+                                                                <Typography
+                                                                    textAlign="left"
+                                                                    sx={{
+                                                                        display:
+                                                                            "-webkit-box",
+                                                                        overflow:
+                                                                            "hidden",
+                                                                        WebkitBoxOrient:
+                                                                            "vertical",
+                                                                        WebkitLineClamp: 3,
+                                                                    }}
+                                                                    fontFamily="Inter-Regular"
+                                                                >
+                                                                    {
+                                                                        item
+                                                                            .description
+                                                                            .fr
+                                                                    }
+                                                                </Typography>
+                                                            )}
+                                                            <Box
+                                                                display="flex"
+                                                                justifyContent="space-between"
+                                                            >
+                                                                {/* <IconButton>   <AddShoppingCart
                                                                     color="error"
                                                                     onClick={() =>
                                                                         handleCart(
@@ -265,7 +294,6 @@ export default function Formations({ data }) {
                                                                     }
                                                                 />
                                                             </IconButton> */}
-                                                           
                                                             </Box>
                                                         </Box>
                                                     </Box>
@@ -278,20 +306,20 @@ export default function Formations({ data }) {
                                                         }}
                                                         mt={5}
                                                     >
-                                                         <InertiaLink href={`/formation/${item.id}`}>  
-                                                        <Button
-                                                            mt={2}
+                                                        <InertiaLink
+                                                            href={`/formation/${item.id}`}
                                                         >
-                                                            <Typography
-                                                                color="white"
-                                                                variant="body2"
-                                                                fontFamily="inter-Regular"
-                                                            >
-                                                                Voir la
-                                                                formation
-                                                            </Typography>
-                                                        </Button>
-                                                        </InertiaLink>  
+                                                            <Button mt={2}>
+                                                                <Typography
+                                                                    color="white"
+                                                                    variant="body2"
+                                                                    fontFamily="inter-Regular"
+                                                                >
+                                                                    Voir la
+                                                                    formation
+                                                                </Typography>
+                                                            </Button>
+                                                        </InertiaLink>
                                                     </Stack>
                                                 </CardContent>
 

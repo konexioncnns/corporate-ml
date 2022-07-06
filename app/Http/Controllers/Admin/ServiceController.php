@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
-
-use App\Http\Controllers\Controller;
-use App\Models\Service;
+namespace App\Http\Controllers\Admin;use App\Models\Service;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
 
 class ServiceController extends Controller
 {
@@ -15,7 +14,11 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        //
+        $services = Service::all();
+        $servicess=$services->toArray();
+
+        return view('admin.services.list',compact('services','servicess'));
+
     }
 
     /**
@@ -45,26 +48,40 @@ class ServiceController extends Controller
         $service->title=$titletranslation;
         $service->extrait=$extraittranslation;
         $service->description=$desctranslation;
+        if($request->hasFile('image1')){
+            $image1 = 'image1'.time().'.'.$request->image1->extension();
+            $service->image1= $image1;
+            $request->image1->move(public_path('img/services'), $image1);
 
+        }
+        if($request->hasFile('image2')){
+            $image2 = 'image2'.time().'.'.$request->image2->extension();
+            $service->image2= $image2;
+            $request->image2->move(public_path('img/services'), $image2);
 
-        $image1 = 'image1'.time().'.'.$request->image1->extension();
-        $image2 = 'image2'.time().'.'.$request->image2->extension();
-        $image3 = 'image3'.time().'.'.$request->image3->extension();
-        $image4 = 'image4'.time().'.'.$request->image4->extension();
-        $image5 = 'image5'.time().'.'.$request->image5->extension();
-        $request->image1->move(public_path('img/services'), $image1);
-        $request->image2->move(public_path('img/services'), $image2);
-        $request->image3->move(public_path('img/services'), $image3);
-        $request->image4->move(public_path('img/services'), $image4);
-        $request->image5->move(public_path('img/services'), $image5);
+        }
+        if($request->hasFile('image3')){
+            $image3 = 'image3'.time().'.'.$request->image3->extension();
+            $service->image3= $image3;
+            $request->image3->move(public_path('img/services'), $image3);
+        }
+        if($request->hasFile('image4')){
+            $image4 = 'image4'.time().'.'.$request->image4->extension();
+            $service->image4= $image4;
+            $request->image4->move(public_path('img/services'), $image4);
 
-        $service->image1=$image1;
-        $service->image2=$image2;
-        $service->image3=$image3;
-        $service->image4=$image4;
-        $service->image5=$image5;
-        dd( $service);
+        }
+        if($request->hasFile('image5')){
+             $image5 = 'image5'.time().'.'.$request->image5->extension();
+            $service->image5= $image5;
+            $request->image5->move(public_path('img/services'), $image5);
+
+        }
+
+       
+      //  dd( $service);
         $service->save();
+        return redirect()->route('service.list');
     }
 
     /**
@@ -86,7 +103,11 @@ class ServiceController extends Controller
      */
     public function edit($id)
     {
-        //
+       $service = Service::findOrfail($id);
+       $serv= $service->toArray();
+
+
+       return view('admin.services.edit',compact('service','serv'));
     }
 
     /**
@@ -96,9 +117,73 @@ class ServiceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+       $id = $request->input('id');
+       $service = Service::findOrfail($id);
+
+       $titletranslation = ['en'=>$request->input('title_en'),'fr'=>$request->input('title')];
+       $extraittranslation = ['en'=>$request->input('extrait_en'),'fr'=>$request->input('extrait')];
+       $desctranslation = ['en'=>$request->input('description_en'),'fr'=>$request->input('description')];
+       
+       $service->title=$titletranslation;
+       $service->extrait=$extraittranslation;
+       $service->description=$desctranslation;
+
+        if($request->hasFile('image1')){
+            $destination = 'img/services'.$service->image1;
+            if(File::exists($destination)){
+                File::delete($destination);
+            }
+            $image1 = 'image1'.time().'.'.$request->image1->extension();
+            $service->image1= $image1;
+            $request->image1->move(public_path('img/services'), $image1);
+
+        }
+        if($request->hasFile('image2')){
+            $destination = 'img/services'.$service->image2;
+            if(File::exists($destination)){
+                File::delete($destination);
+            }
+            $image2 = 'image2'.time().'.'.$request->image2->extension();
+            $service->image2= $image2;
+            $request->image2->move(public_path('img/services'), $image2);
+
+        }
+        if($request->hasFile('image3')){
+            $destination = 'img/services'.$service->image3;
+            if(File::exists($destination)){
+                File::delete($destination);
+            }
+            $image3 = 'image3'.time().'.'.$request->image3->extension();
+            $service->image3= $image3;
+            $request->image3->move(public_path('img/services'), $image3);
+        }
+        if($request->hasFile('image4')){
+            $destination = 'img/services'.$service->image4;
+            if(File::exists($destination)){
+                File::delete($destination);
+            }
+            $image4 = 'image4'.time().'.'.$request->image4->extension();
+            $service->image4= $image4;
+            $request->image4->move(public_path('img/services'), $image4);
+
+        }
+        if($request->hasFile('image5')){
+            $destination = 'img/services'.$service->image5;
+            if(File::exists($destination)){
+                File::delete($destination);
+            }
+            $image5 = 'image5'.time().'.'.$request->image5->extension();
+            $service->image5= $image5;
+            $request->image5->move(public_path('img/services'), $image5);
+
+        }
+      // dd( $service);
+       $service->update();
+       return redirect()->route('service.list');
+
+
     }
 
     /**

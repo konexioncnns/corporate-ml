@@ -30,7 +30,7 @@ use App\Http\Controllers\Frontend\TrainingController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/domaines', [DomaineController::class,'getAllDomaine'])->name('getdomaines');
 
 Route::get('/user/orders', [CheckoutController::class,'getorders'])->name('getorders')->middleware("auth");
  Route::get('/user/order/{order_id}', [CheckoutController::class,'getOrderDetail'])->name('user.orderdetais');
@@ -67,13 +67,14 @@ Route::get('/article/{id}', [BlogController::class,'getOne'])->name('ArticleDeta
 Route::inertia('/demo','Demo')->name('demo') ;
 Route::inertia('/catalogue','Catalogue')->name('catalogue') ;
 Route::inertia('/home','Home')->name('home') ;
-//Route::inertia('/search','SearchPageList')->name('search') ;
+//Route::inertia('/search','SearchPage')->name('search') ;
 
 Route::inertia('/services','Services')->name('services') ;
+//Route::get('/search',[TrainingController::class,'search'])->name('searchform') ;
 Route::get('/search',[DomaineController::class,'getAll'])->name('search') ;
 //Route::get('/test',[DomaineController::class,'getAll'])->name('test') ;
 Route::inertia('/posts','Publication')->name('posts') ;
-Route::inertia('/cart','Cart')->name('posts') ;
+Route::inertia('/cart','Cart')->name('cart') ;
 
 Route::get('/h', function () {
     return Inertia::render('Welcome', [
@@ -102,18 +103,27 @@ Route::post('/domaine/update  ', [DomaineController::class,'update'])->name('dom
 Route::get('/admin/solution/add', [SolutionController::class,'create'])->name('solution.add');
 Route::post('/admin/solution.store', [SolutionController::class,'store'])->name('solution.store');
 Route::get('/admin/solution/list', [SolutionController::class,'index'])->name('solution.list');
+Route::get('/admin/solution/edit/{id}', [SolutionController::class,'edit'])->name('solution.edit');
+Route::post('/admin/solution/update', [SolutionController::class,'update'])->name('solution.update');
 //Service
 Route::get('/admin/service/add',[ServiceController::class,'create'])->name('service.add');
 Route::post('/admin/service.store',[ServiceController::class,'store'])->name('service.store');
 Route::get('/admin/service/list',[ServiceController::class,'index'])->name('service.list');
+Route::get('/admin/service/edit/{id}', [ServiceController::class,'edit'])->name('service.edit');
+Route::post('/admin/service/update', [ServiceController::class,'update'])->name('service.update');
 //Team
 Route::get('/admin/team/add',[TeamController::class,'create'])->name('team.add');
 Route::post('/admin/team.store',[TeamController::class,'store'])->name('team.store');
-Route::get('/admin/team/list',[TeamControllerteam::class,'index'])->name('team.list');
+Route::get('/admin/team/list',[TeamController::class,'index'])->name('team.list');
+Route::get('/admin/team/edit/{id}', [TeamController::class,'edit'])->name('team.edit');
+Route::post('/admin/team/update', [TeamController::class,'update'])->name('team.update');
 //Partenaire
 Route::get('/admin/partner/add',[PartnerController::class,'create'])->name('partner.add');
 Route::post('/admin/partner.store',[PartnerController::class,'store'])->name('partner.store');
 Route::get('/admin/partner/list',[PartnerController::class,'index'])->name('partner.list');
+
+Route::get('/admin/partner/edit/{id}', [PartnerController::class,'edit'])->name('partner.edit');
+Route::post('/admin/partner/update', [PartnerController::class,'update'])->name('partner.update');
 
 //Slider
 Route::get('/admin/slider/list', [SliderController::class,'index'])->name('slider.list');
@@ -137,13 +147,16 @@ Route::get('/admin/formateur/delete/{id}', [FormateurController::class,'destroy'
 //Formation
 Route::get('/admin/formation/list', [FormationController::class,'list'])->name('formation.list');
 Route::get('/admin/formation/add', [FormationController::class,'create'])->name('formation.add');
-Route::post('store', [FormationController::class,'store'])->name('store');
+Route::get('/admin/formation/edit/{id}',[FormationController::class,'edit'])->name('formation.edit');
+Route::post('/admin/formation/update', [FormationController::class,'update'])->name('formation.update'); 
+Route::post('store', [FormationController::class,'store'])->name('formation.store');
 Route::get('/admin/domaine/delete/{id}', [FormationController::class,'destroy'])->name('domaine.delete');
 //Post
 Route::get('/admin/post/list', [PostController::class,'index'])->name('post.list');
 Route::get('/admin/post/add', [PostController::class,'create'])->name('post.add');
 Route::post('/admin/post.store', [PostController::class,'store'])->name('post.store');
 Route::get('/admin/post/edit/{id}', [PostController::class,'edit'])->name('post.edit');
+Route::post('/admin/post/update', [PostController::class,'update'])->name('post.update');
 Route::get('/admin/post/delete/{id}', [CategoryController::class,'destroy'])->name('post.delete');
 //Categories post
 Route::get('/admin/category/list', [CategoryController::class,'index'])->name('category.list');

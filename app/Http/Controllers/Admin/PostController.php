@@ -10,6 +10,8 @@ use App\Models\Category;
 use Illuminate\Support\Facades\DB;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\File;
+
 class PostController extends Controller
 {
     public function index(){
@@ -52,8 +54,10 @@ class PostController extends Controller
 
     public function edit(  $id)
     {
-      $post = Post::findOrFail($id)->toArray(); 
-       return view('admin.blogs.posts.edit',compact('post'));
+      $post = Post::findOrFail($id); 
+      $postt=$post->toArray();
+      $categories = Category::all();
+       return view('admin.blogs.posts.edit',compact('post','postt','categories'));
     }
 
 
@@ -68,9 +72,18 @@ class PostController extends Controller
 
         $post->title=$titletranslation;
         $post->description=$desctranslation;
+        if($request->hasFile('image')){
+          $destination = 'img/posts/'.$post->image;
+          if(File::exists($destination)){
+              File::delete($destination);}
+          $image = 'Post-'.time().'.'.$request->image->extension();
+          $post->image= $image;
+          $request->image->move(public_path('img/posts'), $image);
+
+      }
         //dd( $domaine);
-        $post->save();
-        return redirect( )->route('post.list')->with('status', 'Profile updated!');
+        $post->update();
+        return redirect()->route('post.list')->with('status', 'Profile updated!');
     }
 
 }

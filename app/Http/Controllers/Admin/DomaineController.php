@@ -26,6 +26,15 @@ class DomaineController extends Controller
        return Inertia::render('SearchPageList', ["domaines"=>$domaineData,"formations"=>$formationData ]);
         
         }
+
+
+
+        public function getAllDomaine(){
+            $domaines = Domaine::all();
+            return Inertia::share('FormationGrid',['domainesList'=>$domaines]);
+        }
+    
+
      /**
      * Show the form for creating a new resource.
      *
@@ -35,6 +44,11 @@ class DomaineController extends Controller
     {
         return view('admin.domaines.add');
     }
+
+
+
+
+
 
     /**
      * Store a newly created resource in storage.
@@ -107,7 +121,7 @@ class DomaineController extends Controller
         $domaine->description=$desctranslation;
         //dd( $domaine);
         $domaine->save();
-        return redirect( )->route('category.list')->with('status', 'Profile updated!');
+        return redirect( )->route('domaine.list')->with('status', 'domaine updated!');
     }
 
     /**

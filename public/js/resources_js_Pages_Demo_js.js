@@ -1030,7 +1030,7 @@ var Demo = function Demo() {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
                   className: "mt-1",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
-                    type: "text",
+                    type: "email",
                     name: "email",
                     placeholder: "Email",
                     className: "block w-full border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-100 sm:text-sm"
@@ -1069,8 +1069,8 @@ var Demo = function Demo() {
                   className: "mt-1",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
                     type: "text",
-                    name: "pay",
-                    placeholder: "Pay",
+                    name: "country",
+                    placeholder: "Country",
                     className: "block w-full border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-100 sm:text-sm"
                   })
                 })]
@@ -1088,7 +1088,7 @@ var Demo = function Demo() {
                   className: "mt-1",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
                     type: "text",
-                    name: "Entreprise",
+                    name: "entreprise",
                     placeholder: "Entreprise",
                     className: "block w-full border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-100 sm:text-sm"
                   })

@@ -49,7 +49,6 @@
                             <div class="form-group">
                         <label for="inputClientCompany">Status</label>
                         <select id="status" name="status" class="form-control custom-select">
-                            <option selected disabled>Status</option>
                             <option value="active">Active</option>
                             <option value="inactive">Inactive</option>
                         </select>

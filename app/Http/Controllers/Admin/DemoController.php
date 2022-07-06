@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreDemoRequest;
+use App\Models\Demo;
 use Illuminate\Http\Request;
 
 class DemoController extends Controller
@@ -33,9 +35,15 @@ class DemoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreDemoRequest $request)
     {
-        //
+        $demo = new Demo();
+        
+        $demo->firstname=$request->firstname;
+        $demo->lastname=$request->lastname;
+        $demo->email=$request->email;
+        $demo->phone=$request->phone;
+
     }
 
     /**

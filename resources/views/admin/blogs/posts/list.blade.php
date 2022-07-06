@@ -2,7 +2,7 @@
 @section('content')
 <div class="col-md-12 d-flex justify-content-between">
 <Button type="button" class="btn btn-success mb-2" data-toggle="modal" data-target="#modal-default">
-    Ajouter une categorie</Button>
+    Ajouter un article</Button>
 
 </div>
 
@@ -16,8 +16,6 @@
                   <tr> 
                     <th>Titre de article</th>
                     <th>Description</th> 
-                    <th>Title of article</th>
-                    <th>Description of article</th> 
                     <th>Status</th>
                     <th>Actions</th>
                   </tr>
@@ -27,13 +25,22 @@
                   <tr>
                   <td>{{$value['title']['fr'] }}
                   <td>{{$value['description']['fr'] }}
-                    <td>{{$value['title']['en'] }}</td>
-                     <td>{{$value['description']['en'] }}</td>
                    
                     <td> {{ $value['status']}}  </td>
                     <td> 
-                      <a href='/admin/blogs/post/edit/{{$value['id']}}'>edit</a>
-                      <a href='/admin/blogs/post/delete/{{$value['id']}}'>Delete</a>
+                    
+
+                      <div class="text-right">
+                                <a href="/admin/post/edit/{{$value['id']}}" class="btn btn-sm bg-teal">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a href="#" class="btn btn-sm btn-primary">
+                                    <i class="fas fa-eye"></i> 
+                                </a> 
+                                <a  class="btn btn-sm btn-danger" href="/admin/post/delete/{{$value['id']}}">
+                                <i class="fas fa-trash"></i> 
+                                </a>
+                            </div>
                     </td>
                     
                   </tr>

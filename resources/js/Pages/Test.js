@@ -6,9 +6,10 @@ import MyBook from './Catalogue';
 import Catalogue from './Catalogue';
 import DemoBook from './Catalogue2';
 import Demo from './Demo';
+import FormationGrid from './Formation/FormationGrid';
 const CardExampleImageCard = () => (
 <Box>
-   <Demo/>
+  <FormationGrid/>
 </Box>
 )
 

@@ -18,14 +18,18 @@ import {
     Typography,
 } from "@mui/material";
 import img from "../assets/images/formation.png"
-import React from "react";
+import React, { useState } from "react";
 import Data from "../constants/Data";
 import ts from "../assets/images/search.png";
+import { InertiaLink } from "@inertiajs/inertia-react";
 export const SelectSection = () => {
     const [category, setCategory] = React.useState(0);
+    const [selected,setSelected]=useState();
 
     const handleChange = (event) => {
         setCategory(event.target.value);
+        setSelected(event.target.value);
+       alert("selectionner:",selected)
     };
     return (
         <Box py={{ xs: 3, md: 12 }}>
@@ -60,7 +64,7 @@ export const SelectSection = () => {
            
             <Container>
                 <Grid container alignItems="center">
-                    <Grid item xs={12} lg={5}>
+                    <Grid item xs={12}  lg={5}>
                         <Box xs={12}>
                             <Typography
                                 mb={2}
@@ -125,7 +129,7 @@ export const SelectSection = () => {
                             mt: { xs: 6, lg: 0 },
                         }}
                     >
-                        <Box mr={15} mt={4}>
+                        <Box mr={15} mt={4} component="form">
                             <Box mb={2}>
                                 <Box mb={1} textAlign="left">
                                     <Typography
@@ -144,11 +148,12 @@ export const SelectSection = () => {
                                 >
                                     <Select
                                         value={category}
-                                        onChange={handleChange}
+                                       
                                         variant="filled"
                                     >
                                         {Data.Category.map((item) => (
                                             <MenuItem
+                                             onChange={handleChange}
                                                 key={item.id}
                                                 value={item.id}
                                             >
@@ -227,10 +232,11 @@ export const SelectSection = () => {
                                         backgroundColor: "red",
                                         color: "white", fontFamily:"Inter"
                                     }}
-                                  href="/search"
+                                
 
                                 >
-                                    Recherhe
+                                    <InertiaLink href="/search">
+                                    Recherhe</InertiaLink>
                                 </Button>
                             </Box>
                         </Box>

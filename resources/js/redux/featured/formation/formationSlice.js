@@ -9,6 +9,7 @@ const initialState={
         : [],
     cartTotalQuantity: 0,
     cartTotalAmont: 0,
+  
 
 }
 
@@ -16,6 +17,7 @@ const formationSlice = createSlice({
     name:"formation",
     initialState,
     reducers:{
+       
         //Ajouter au panier
         addCart(state, action) {
             const itemIndex = state.cartItems.findIndex(

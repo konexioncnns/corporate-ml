@@ -1311,7 +1311,7 @@ var Demo = function Demo() {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
                   className: "mt-1",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
-                    type: "text",
+                    type: "email",
                     name: "email",
                     placeholder: "Email",
                     className: "block w-full border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-100 sm:text-sm"
@@ -1350,8 +1350,8 @@ var Demo = function Demo() {
                   className: "mt-1",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
                     type: "text",
-                    name: "pay",
-                    placeholder: "Pay",
+                    name: "country",
+                    placeholder: "Country",
                     className: "block w-full border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-100 sm:text-sm"
                   })
                 })]
@@ -1369,7 +1369,7 @@ var Demo = function Demo() {
                   className: "mt-1",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
                     type: "text",
-                    name: "Entreprise",
+                    name: "entreprise",
                     placeholder: "Entreprise",
                     className: "block w-full border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-100 sm:text-sm"
                   })
@@ -1445,6 +1445,203 @@ var Demo = function Demo() {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Demo);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Formation/FormationGrid.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/Pages/Formation/FormationGrid.js ***!
+  \*******************************************************/
+/***/ (() => {
+
+/* import {
+  Add,
+  ArrowCircleRight,
+  ArrowRight,
+  ArrowRightAltRounded,
+} from "@mui/icons-material";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Box,
+  Button,
+  Card,
+  Container,
+  Divider,
+  FormControl,
+  FormControlLabel,
+  FormLabel,
+  Grid,
+  List,
+  ListItem,
+  Radio,
+  RadioGroup,
+  Typography,
+} from "@mui/material";
+import React, { useEffect, useState } from "react";
+import Checkbox from "@mui/material/Checkbox";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { Link, usePage } from "@inertiajs/inertia-react";
+import { pink, red } from "@mui/material/colors";
+
+import React from 'react'
+import FilterCategory from './FilterCategory'
+
+
+ const FormationGrid = () => {
+  return (
+    <Box mb={80}>
+    <Typography>Resultat de recherche</Typography>
+    <Container>
+        <Grid container spacing={2}>
+            <Grid item xs={12} sm={3} sx={{ xs: "none" }}>
+                <Box bgcolor="#FFFFFF">
+                    <Box sx={{ borderBottom: 0.5 }}>
+                        <AccordionSummary>
+                            FILTRER PAR CATEGORIES
+                        </AccordionSummary>
+                        <AccordionDetails>
+                            {domaines.map((item, i) => (
+                                <ListItem key={i} sx={{ padding: 0 }}>
+                                    <Checkbox
+                                        sx={{
+                                            color: red[800],
+                                            "&.Mui-checked": {
+                                                color: red[600],
+                                            },
+                                        }}
+                                        value={item.id}
+                                        onClick={(e) => filterResult(e)}
+                                    />
+                                    {item.title.fr}
+                                </ListItem>
+                            ))}
+                        </AccordionDetails>
+                    </Box> 
+                    <Box sx={{ borderBottom: 0.5 }}>
+                        <AccordionSummary>CATEGORIES</AccordionSummary>
+                        <AccordionDetails>
+                            <FormControl>
+                                <RadioGroup
+                                    aria-labelledby="demo-radio-buttons-group-label"
+                                    defaultValue="female"
+                                    name="radio-buttons-group"
+                                >
+                                    {domaines.map((item, i) => (
+                                        <ListItem
+                                            key={i}
+                                            sx={{ padding: 0 }}
+                                        >
+                                            <FormControlLabel
+                                               
+                                                control={
+                                                    <Radio
+                                                        value={item.id}
+                                                onClick={(e)=>filterResult(e)}
+                                                        sx={{
+                                                            color: pink[800],
+                                                            "&.Mui-checked":
+                                                                {
+                                                                    color: pink[600],
+                                                                },
+                                                        }}
+                                                    />
+                                                }
+                                                label={item.title.fr}
+                                            />
+                                        </ListItem>
+                                    ))}
+                                </RadioGroup>
+                            </FormControl>
+                        </AccordionDetails>
+                    </Box>
+                </Box>
+            </Grid>
+
+            <Grid container item xs={12} mb={10} sm={9}>
+                {data.map((item, index) => {
+                    return (
+                        <Box
+                            key={index}
+                            mt={2}
+                            mx={1}
+                            bgcolor="#FFFFFF"
+                            sx={{
+                                minHeight: 320,
+                                xs: {
+                                    mx: 1,
+                                    width: "98%",
+                                    justifyContent: "center",
+                                },
+                                width: 260,
+
+                                borderWidth: 0.1,
+                                borderColor: "#d3cfcf",
+                            }}
+                        >
+                            <Typography textAlign="left">
+                                Formation
+                            </Typography>
+                            <Typography
+                                variant="h6"
+                                fontWeight="600"
+                                fontFamily="Inter"
+                                textAlign="left"
+                            >
+                                {item.title.fr}
+                            </Typography>
+                            <Typography
+                                variant="body2"
+                                textAlign="left"
+                                fontFamily="Inter-Regular"
+                                px={2}
+                                sx={{
+                                    lineHeight:1.5,
+                                    letterSpacing:1,
+                                    display:
+                                        "-webkit-box",
+                                    overflow:
+                                        "hidden",
+                                    WebkitBoxOrient:
+                                        "vertical",
+                                    WebkitLineClamp: 6,
+                                }}
+                            >
+                                {item.description.fr}
+                            </Typography>
+                            <Box sx={{ marginBottom: 2 }}>
+                                <Button
+                                    variant="outlined"
+                                    sx={{
+                                        marginTop: 5,
+                                        width: 180,
+                                        height: 50,
+                                        borderRadius: 20,
+                                        alignContent: "end",
+                                    }}
+                                >
+                                    <Link
+                                        href={route(
+                                            "formationDetail",
+                                            `${item.id}`
+                                        )}
+                                    >
+                                        En savoir plus
+                                        <ArrowCircleRight />
+                                    </Link>
+                                </Button>
+                            </Box>
+                        </Box>
+                    );
+                })}
+            </Grid>
+        </Grid>
+    </Container>
+</Box>
+  )
+}
+export default FormationGrid; */
 
 /***/ }),
 
@@ -1871,13 +2068,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _assets_images_man_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/images/man.png */ "./resources/js/assets/images/man.png");
 /* harmony import */ var _Catalogue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Catalogue */ "./resources/js/Pages/Catalogue.js");
 /* harmony import */ var _Catalogue2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Catalogue2 */ "./resources/js/Pages/Catalogue2.js");
 /* harmony import */ var _Demo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Demo */ "./resources/js/Pages/Demo.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Formation_FormationGrid__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Formation/FormationGrid */ "./resources/js/Pages/Formation/FormationGrid.js");
+/* harmony import */ var _Formation_FormationGrid__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_Formation_FormationGrid__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -1889,8 +2089,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var CardExampleImageCard = function CardExampleImageCard() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Demo__WEBPACK_IMPORTED_MODULE_4__["default"], {})
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)((_Formation_FormationGrid__WEBPACK_IMPORTED_MODULE_5___default()), {})
   });
 };
 

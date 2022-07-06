@@ -419,7 +419,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/admin/solutions/list" class="nav-link">
+                                    <a href="/admin/solution/list" class="nav-link">
                                         <i class="fa-solid fa-list nav-icon"></i>
                                         <p>Liste des solutions</p>
                                     </a>

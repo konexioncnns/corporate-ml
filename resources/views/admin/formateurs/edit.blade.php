@@ -37,7 +37,7 @@
                
                     <div class="row d-flex justify-content-between">
                 <div class="form-group justify-content-center>
-               <label for=" genre">Genre</label>
+               <label for="genre">Genre</label>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" value="Homme" name="gender" />
                         <label class="form-check-label">Homme</label>
@@ -50,8 +50,10 @@
                 </div>
                 <div class="form-group">
                         <label for="image">Image</label>
-                        <input type="file" class="form-control" value={{$formateur->image}} name="image" >
+                        <input type="file" name="profile_image" class="form-control" value={{$formateur->image}}  >
                     </div>
+                    <img style="width:60px ;height:60px;" src=" {{asset('img/'.$formateur->image)}}" alt="user-avatar"
+                                        class="img-circle img-fluid">
 
                 </div>
 

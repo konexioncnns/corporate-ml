@@ -36,7 +36,7 @@
                         <div class="row d-flex justify-content-between">
                             <div class="form-group">
                                 <label for="title">Nom complet</label>
-                                <input type="text" class="form-control" name="fullname" placeholder="title de la solution">
+                                <input type="text" class="form-control" name="fullname" placeholder="full name">
                             </div>
 
 

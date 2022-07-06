@@ -16,13 +16,14 @@ return new class extends Migration
         Schema::create('services', function (Blueprint $table) {
             $table->id();
             $table->string('title'); 
-            $table->string('description');
+            $table->text('description');
+            $table->text('extrait');
             $table->string('image1')->nullable();
             $table->string('image2')->nullable();  
             $table->string('image3')->nullable(); 
             $table->string('image4')->nullable();
             $table->string('image5')->nullable();  
-            $table->string('status')->default("Active"); 
+            $table->string('status')->default("active"); 
             $table->timestamps();
         });
     }

@@ -9,5 +9,5 @@ class Demo extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title','solution_id','description','image','status'];
+    protected $fillable = ['firstname','lastname','email','phone','country','entreprise','country','solution_id','description','status'];
 }

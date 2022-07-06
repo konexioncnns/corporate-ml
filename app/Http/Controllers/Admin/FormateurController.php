@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\Formateur;
 use App\Models\Specialite;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
+
 class FormateurController extends Controller
 {
     /**
@@ -111,8 +113,9 @@ $imageName = time().'.'.$request->image->extension();
      */
     public function update(Request $request)
     {   
-        $imageName = time().'.'.$request->image->extension();  
+       
         $id =$request->input('id');
+
         $formateur = Formateur::findOrFail($id);
         $biographytranslation = $request->input('biography');
         $formateur->firstname=$request->input('firstname');
@@ -124,11 +127,18 @@ $imageName = time().'.'.$request->image->extension();
         $formateur->dateofbirth=$request->input('dateofbirth');
         $formateur->biography= $biographytranslation ;
         $formateur->specialite_id=$request->input('specialite_id');
-     
-        $formateur->image=$request->image->move(public_path('img'), $imageName);
+        
+        if($request->hasFile('profile_image')){
+        $destination = 'img'.$formateur->image;
+        if(File::exists($destination)){
+            File::delete($destination);  }
+        $imageName = $formateur->lastname.time().'.'.$request->profile_image->extension();  
+        $formateur->image= $imageName;
+        $request->profile_image->move(public_path('img'), $imageName);
+    }
         $formateur->status="Active";
-      ($formateur);
-        $formateur->save();
+        ($formateur);
+        $formateur->update();
         return redirect()->route('formateur.list');
     }
 
