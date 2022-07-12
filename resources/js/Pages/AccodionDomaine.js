@@ -23,6 +23,8 @@ import parse from 'html-react-parser';
 import { addCart } from "@/redux/featured/formation/formationSlice";
 import { useDispatch } from "react-redux";
 
+
+
 const AccodionDomaine = () => {
 
     const dispatch = useDispatch();
@@ -76,13 +78,13 @@ const AccodionDomaine = () => {
                              <Typography
                             variant="h4"
                             fontSize={14}
-                            fontFamily="Inter-Regular"
+                            fontFamily="Inter-Roman"
                         >
                             {currentLang =="en"
                                 ? itemf.title.en
                                 : itemf.title.fr}
                         </Typography>
-                        <Typography>{itemf.formateur.firstname} {itemf.formateur.lastname}</Typography>
+                        <Typography fontFamily="Inter-Roman">{itemf.formateur.firstname} {itemf.formateur.lastname}</Typography>
                         </Box>
                        
                     </AccordionSummary>
@@ -92,25 +94,23 @@ const AccodionDomaine = () => {
                             <List>
                                 <ListItem>
                                     <Box>
-                                    <Typography color="red" variant="h6">
+                                    <Typography color="red" variant="h6"  fontFamily="Inter-Medium">
                                             Objectifs
                                         </Typography>
                                         <Typography
+                                            fontFamily="Inter-Roman"
+                                            lineHeight={2}
+                                            fontWeight='600'
                                             fontSize={14}
-                                            fontWeight="400"
-                                            variant="body2"
-                                            textAlign="left"
-                                            letterSpacing={1}
-                                            fontFamily="Inter-Regular"
                                         >
-
+  <ul className="accordion">
                                            { currentLang.getLocale() === "en"
-                                ? parse(`${itemf.overview.en}`)
+                                ? parse(` ${itemf.overview.en} `)
                                 : parse(`${itemf.overview.fr}`)
                                 
                                 }
-                                            
-
+                                        </ul>    
+ 
                                         </Typography>
                                     </Box>
                                 </ListItem>
@@ -120,22 +120,20 @@ const AccodionDomaine = () => {
                                             Description
                                         </Typography>
                                         <Typography
-                                            fontSize={14}
-                                            fontWeight="500"
-                                            variant="body2"
-                                            textAlign="left"
-                                            letterSpacing={1}
-                                            fontFamily="Inter-Regular"
+                                           fontFamily="Inter-Roman"
+                                           lineHeight={2}
+                                           fontWeight='600'
+                                           fontSize={14}
                                             
                                         >
-                                            <ul>
+                                          
                                             { currentLang === "en"
                                 ? parse(`${itemf.description.en}`)
                                 : parse(`${itemf.description.fr}`)
                                 
                                 }
                                     
-                                            </ul>
+                                             
                                         </Typography>
                                     </Box>
                                 </ListItem>
@@ -144,13 +142,18 @@ const AccodionDomaine = () => {
                                         <Typography color="red" variant="h6">
                                         Programme
                                         </Typography>
-                                   
+                                        <Typography  fontSize={14}
+                                           fontFamily="Inter-Roman"
+                                            textAlign='left'
+                                           lineHeight={2}
+                                           fontWeight='600'>
+                                   <ul className="accordion">
                                         { currentLang.getLocale() === "en"
                                 ? parse(`${itemf.programme?.en}`)
                                 : parse(`${itemf.programme?.fr}`)
                                 
                                 }
-                                       
+                                       </ul></Typography>
                                     </Box>
                                 </ListItem>
                                 <ListItem>
@@ -158,12 +161,20 @@ const AccodionDomaine = () => {
                                         <Typography color="red" variant="h6">
                                         Public
                                         </Typography>
-                                   
+                                   <Typography
+                                    fontFamily="Inter-Roman"
+                                    lineHeight={2}
+                                    fontWeight='600'
+                                    fontSize={14}
+                                    textAlign='left'
+                                    >
+
+                                    
                                         { currentLang.getLocale() === "en"
                                 ? parse(`${itemf.public?.en}`)
                                 : parse(`${itemf.public?.fr}`)
                                 
-                                }
+                                }</Typography>
                                        
                                     </Box>
                                 </ListItem>
@@ -188,15 +199,23 @@ const AccodionDomaine = () => {
                             }}
                         >
                             <CardHeader
-                                title="Toutes les formations"
+                                title=" Detail de la formation"
                                 sx={{
                                     backgroundColor: "red",
                                     height: 40,
                                     color: "white",
+                                    fontFamily:"Inter-Roman"
                                 }}
                             />
-                            <Typography mt={3} textAlign="center" variant="h5">
-                                Detail de la formation
+                            <Typography mt={3} textAlign="center" variant="h5"
+                            
+                            fontFamily="Inter-Roman"
+                            lineHeight={2}
+                            fontWeight='600'
+                            fontSize={14}
+                            
+                            >
+                               
                             </Typography>
                             <ListItem sx={{ justifyContent: "space-between" }}>
                                 <Typography
@@ -206,36 +225,47 @@ const AccodionDomaine = () => {
                                 >
                                     Formation
                                 </Typography>
-                                <Typography color="black" variant="h7">
+                                <Typography Transformation>
                                     {itemf.title.fr}
                                 </Typography>
                                 <Divider />
                             </ListItem>
                             <ListItem sx={{ justifyContent: "space-between" }}>
                                 <Typography
-                                    color="black"
-                                    fontWeight="700"
-                                    variant="h7"
+                                textAlign="left"
+                                   fontFamily="Inter-Roman"
+                                   lineHeight={2}
+                                   fontWeight='600'
+                                   fontSize={14}
                                 >
                                     Prix HT:
                                 </Typography>
-                                <Typography color="black" variant="h7">
+                                <Typography 
+                                textAlign="right"
+                                 fontFamily="Inter-Roman"
+                                 lineHeight={2}
+                                 fontWeight='600'
+                                 fontSize={14}>
                                     {itemf.price}FCFA
                                 </Typography>
                                 <Divider />
                             </ListItem>
                             <ListItem sx={{ justifyContent: "space-between" }}>
                                 <Typography
-                                    color="black"
-                                    fontWeight="700"
-                                    variant="h7"
+                                  textAlign="left"
+                                  fontFamily="Inter-Roman"
+                                  lineHeight={2}
+                                  fontWeight='600'
+                                  fontSize={14}
                                 >
                                     Duré:
                                 </Typography>
                                 <Typography
-                                    textAlign="right"
-                                    color="black"
-                                    variant="h7"
+                                   textAlign="right"
+                                   fontFamily="Inter-Roman"
+                                   lineHeight={2}
+                                   fontWeight='600'
+                                   fontSize={14}
                                 >
                                     2 jours
                                 </Typography>
@@ -243,26 +273,38 @@ const AccodionDomaine = () => {
                             </ListItem>
                             <ListItem sx={{ justifyContent: "space-between" }}>
                                 <Typography
-                                    color="black"
-                                    fontWeight="700"
-                                    variant="h7"
+                                     textAlign="left"
+                                     fontFamily="Inter-Roman"
+                                     lineHeight={2}
+                                     fontWeight='600'
+                                     fontSize={14}
                                 >
                                     Lieu:
                                 </Typography>
-                                <Typography color="black" variant="h7">
+                                <Typography  textAlign="right"
+                                 fontFamily="Inter-Roman"
+                                 lineHeight={2}
+                                 fontWeight='600'
+                                 fontSize={14}>
                                     E-learning
                                 </Typography>
                                 <Divider />
                             </ListItem>
                             <ListItem sx={{ justifyContent: "space-between" }}>
                                 <Typography
-                                    color="black"
-                                    fontWeight="700"
-                                    variant="h7"
+                                    textAlign="left"
+                                    fontFamily="Inter-Roman"
+                                    lineHeight={2}
+                                    fontWeight='600'
+                                    fontSize={14}
                                 >
                                     Langue
                                 </Typography>
-                                <Typography color="black" variant="h7">
+                                <Typography  textAlign="right"
+                                 fontFamily="Inter-Roman"
+                                 lineHeight={2}
+                                 fontWeight='600'
+                                 fontSize={14}>
                                     Français
                                 </Typography>
                                 <Divider />

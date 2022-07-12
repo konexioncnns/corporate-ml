@@ -53,6 +53,30 @@
 
                       </textarea>
                         </div>
+                        <div class="form-group">
+                        <label for="title">Vos Besoins</label>
+                        <textarea id="needs" name="needs" class="form-control" rows="8" cols="5">
+
+                      </textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Valeur ajoutées</label>
+                        <textarea id="add_values" name="add_values" class="form-control" rows="8" cols="5">
+
+                      </textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Notre solution</label>
+                        <textarea id="our_solution" name="our_solution" class="form-control" rows="8" cols="5">
+
+                      </textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Experiences client</label>
+                        <textarea id="customer_experiences" name="customer_experiences" class="form-control" rows="8" cols="5">
+
+                      </textarea>
+                    </div>
                         <div class="row d-flex justify-content-between">
                             <div class="form-group">
                                 <label for="image1">Image 1</label>
@@ -124,6 +148,30 @@
                         {{$solu['description']['en']}}
                       </textarea>
                     </div>
+                    <div class="form-group">
+                        <label for="title">Needs of solutions</label>
+                        <textarea id="needs_en" name="needs_en" class="form-control" rows="8" cols="5">
+
+                      </textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Add values</label>
+                        <textarea id="add_values_en" name="add_values_en" class="form-control" rows="8" cols="5">
+
+                      </textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Our solution</label>
+                        <textarea id="our_solution_en" name="our_solution_en" class="form-control" rows="8" cols="5">
+
+                      </textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Customer experiences</label>
+                        <textarea id="customer_experiences_en" name="customer_experiences_en" class="form-control" rows="8" cols="5">
+
+                      </textarea>
+                    </div>
 
 
                     <div class="row  d-flex justify-content-around">
@@ -149,9 +197,49 @@
             .catch(error => {
                 console.error(error);
             });
+            ClassicEditor
+        .create(document.querySelector('#needs'))
+            .catch(error => {
+                console.error(error);
+            });
+            ClassicEditor
+        .create(document.querySelector('#add_values'))
+            .catch(error => {
+                console.error(error);
+            });
+            ClassicEditor
+        .create(document.querySelector('#our_solution'))
+            .catch(error => {
+                console.error(error);
+            });
+            ClassicEditor
+        .create(document.querySelector('#customer_experiences'))
+            .catch(error => {
+                console.error(error);
+            });
 
     ClassicEditor
         .create(document.querySelector('#description_en'))
+            .catch(error => {
+                console.error(error);
+            });
+            ClassicEditor
+        .create(document.querySelector('#needs_en'))
+            .catch(error => {
+                console.error(error);
+            });
+            ClassicEditor
+        .create(document.querySelector('#add_values_en'))
+            .catch(error => {
+                console.error(error);
+            });
+            ClassicEditor
+        .create(document.querySelector('#our_solution_en'))
+            .catch(error => {
+                console.error(error);
+            });
+            ClassicEditor
+        .create(document.querySelector('#customer_experiences_en'))
             .catch(error => {
                 console.error(error);
             });

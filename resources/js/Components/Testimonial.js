@@ -30,7 +30,7 @@ const Testimonial = () => {
     var settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 20000,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
@@ -41,8 +41,15 @@ const Testimonial = () => {
     
     }
     return (
+      <Box sx={{mb:{xs:40,sm:10}}}>
+      <Box mb={3}>
+      <Typography fontSize={36} fontFamily='Inter-Roman'>Voici quelques temoignage de nos clients</Typography>
+
+      </Box>
+     
         <Box display="flex" justifyContent="center">
-            <Box sx={{ width: "50%" }}>
+          
+            <Box sx={{  width:{xs:"80%",sm:"90%"}}}>
                 <Slider {...settings}>
                     <CardT />
                     <CardT />
@@ -51,7 +58,7 @@ const Testimonial = () => {
                      </Slider>
                 
             </Box>
-        </Box>
+        </Box></Box>
     );
 };
 
@@ -74,7 +81,7 @@ const CardT = () => {
                justifyContent: "center",
            }}
        />
-       <Typography   textAlign="center" variant="body1" fontFamily="Inter-Regular" fontSize={14}>
+       <Typography   textAlign="center" variant="body1" fontFamily="Inter-Roman" fontSize={14}>
            J’ai eu la chance de travailler avec 1SIMPLE1 dans la mise en
            place d’un guichet unique pour les utilisateurs des services
            informatiques de notre organisation Louis Laganière,

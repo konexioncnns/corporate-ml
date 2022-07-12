@@ -58,7 +58,7 @@ class FormationController extends Controller
     public function create(){
 
         $domaines = Domaine::all();
-        $formations = Formateur::all();
+        $formateurs = Formateur::all();
         
        return view('admin/formations/add',compact('domaines','formateurs'));
    }
@@ -141,6 +141,7 @@ class FormationController extends Controller
         }
        // dd($formation);
        $formation->update();
+       return redirect()->route('formation.list');
     }
 
 }

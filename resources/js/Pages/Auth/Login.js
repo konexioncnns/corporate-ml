@@ -7,6 +7,8 @@ import Label from "@/Components/Label";
 import ValidationErrors from "@/Components/ValidationErrors";
 import { Head, Link, useForm } from "@inertiajs/inertia-react";
 import { Box, Button as Btn, Typography } from "@mui/material";
+import { Brightness1Rounded, Facebook, Google, LinkedIn } from "@mui/icons-material";
+import { FacebookIcon, LinkedinIcon } from "react-share";
 
 export default function Login({ status, canResetPassword }) {
     const { data, setData, post, processing, errors, reset } = useForm({
@@ -48,15 +50,7 @@ export default function Login({ status, canResetPassword }) {
 
             <ValidationErrors errors={errors} />
             <Typography>Login with social network </Typography>
-            <Box mx={4} display="flex" justifyContent="space-around">
-                <Btn  href={route("googleRedirect")} variant="contained" color="error" processing={processing}>
-                    Google
-                </Btn>
-                
-                <Btn variant="contained" color="error" processing={processing}>
-                    LinkedIn
-                </Btn>
-            </Box>
+           
             <form onSubmit={submit}>
                 <div>
                     <Label forInput="email" value="Email" />
@@ -113,6 +107,18 @@ export default function Login({ status, canResetPassword }) {
                         Log in
                     </Button>
                 </div>
+                <div
+            className="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5"
+          >
+            <p className="text-center font-semibold mx-4 mb-0">OR</p>
+          </div>
+
+         <Box display="flex" justifyContent='space-between'>
+          <Btn  href={route("googleRedirect")} variant="contained" color="error"><Google/> </Btn>
+          <Btn variant="outlined" sx={{ border:'none' }}><FacebookIcon/></Btn>
+          <Btn variant="outlined" fontSize={22} sx={{ border:'none' }} ><LinkedinIcon/> </Btn>
+
+         </Box>
             </form>
         </Guest>
     );

@@ -16,8 +16,12 @@ return new class extends Migration
         Schema::create('solutions', function (Blueprint $table) {
             $table->id();
             $table->string('title'); 
-            $table->string('extrait'); 
+            $table->text('extrait'); 
             $table->text('description');
+            $table->text('add_values')->nullable();
+            $table->text('needs')->nullable();
+            $table->text('our_solution')->nullable();
+            $table->text('customer_experiences')->nullable(); 
             $table->string('image1')->nullable();
             $table->string('image2')->nullable();  
             $table->string('image3')->nullable(); 

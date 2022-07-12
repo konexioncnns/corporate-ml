@@ -5,6 +5,12 @@ url("./assets/fonts/Open_Sans/static/OpenSans/OpenSans-Bold.ttf");
 font-weight: bold;
 }
 @font-face {
+  font-family: "Inter-Roman";
+  src: local("Inter-Roman"),
+url("./assets/fonts/Inter-roman.var.woff2");
+font-weight: "700";
+}
+@font-face {
   font-family: "Open_Sans_Condensed";
   src: local("Open_Sans"),
 url("./assets/fonts/Open_Sans/static/OpenSans_Condensed/OpenSans_Condensed-Bold.ttf");
@@ -15,10 +21,31 @@ url("./assets/fonts/Open_Sans/static/OpenSans_Condensed/OpenSans_Condensed-Bold.
 url("./assets/fonts/Inter/static/Inter-Bold.ttf");
 font-weight: bold;
 }
+
+@font-face {
+  font-family: "Inter-ExtraBold";
+  src: local("Inter-ExtraBold"),
+url("./assets/fonts/Inter/static/Inter-ExtraBold.ttf");
+font-weight: bold;
+}
+
+@font-face {
+  font-family: "Inter-Medium";
+  src: local("Inter-Medium"),
+url("./assets/fonts/Inter/static/Inter-Medium.ttf");
+font-weight: bold;
+}
+@font-face {
+  font-family: "Inter-semiBold";
+  src: local("Inter-SemiBold"),
+url("./assets/fonts/Inter/static/Inter-SemiBold.ttf");
+font-weight: '800';
+}
 @font-face {
   font-family: "Inter-Regular";
   src: local("Inter-Regular"),
 url("./assets/fonts/Inter/static/Inter-Regular.ttf");
+font-weight: "700";
 
 }
 @font-face {
@@ -113,7 +140,20 @@ url("./assets/fonts/Inter/static/Inter-SemiBold.ttf");
 
 
 
+.accordion li {
+ /* list-style: url('./assets/icons/done.svg'); */
+ list-style:   square;
+  
+}
 
-
+.solution li {
+  list-style: url('./assets/icons/done.svg'); 
+   
+ }
+ .service li {
+  list-style: url('./assets/icons/done.svg'); 
+  margin-left: 2px;
+   
+ }
 
 

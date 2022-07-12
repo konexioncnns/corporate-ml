@@ -9,6 +9,7 @@ import MuiHeader from './MuiHeader'
 import Footer from './Footer'
 import Footer2 from './Footer2'
 import { CurrencyExchange } from '@mui/icons-material'
+import MuiHeader2 from './MuiHeader2'
 
 export default function Layout({children}) {  
    const [anchorEl, setAnchorEl] = React.useState(null);
@@ -23,7 +24,7 @@ export default function Layout({children}) {
  
 
     <Box bgcolor="#fff">
-    <MuiHeader/>
+    <MuiHeader2/>
 
 
    <Box mt={20}  bgcolor="#F9FAFB"  className='App'>
@@ -36,6 +37,9 @@ export default function Layout({children}) {
    onClick={handleClick}
         sx={{
           position:"fixed",
+          "&:hover": {
+            handleClick
+          },
       
       bottom:"58%",
       right:"-1px",
@@ -44,6 +48,7 @@ export default function Layout({children}) {
       borderRadius:"10px",
       textAlign:'center',
       boxShadow: "2px 2px 3px #999",
+      display:{xs:"none",sm:"flex"}
         }}
       >
         Catalogue
@@ -85,6 +90,7 @@ export default function Layout({children}) {
       borderRadius:"10px",
       textAlign:'center',
       boxShadow: "2px 2px 3px #999",
+      display:{xs:"none",sm:"flex"}
         }}
       ><InertiaLink href="/demo">Demo</InertiaLink></Button>
        <Button
@@ -100,6 +106,7 @@ export default function Layout({children}) {
       borderRadius:"10px",
       textAlign:'center',
       boxShadow: "2px 2px 3px #999",
+      display:{xs:"none",sm:"flex"}
         }}
       >
         <InertiaLink href='/contactus'>Contact</InertiaLink>

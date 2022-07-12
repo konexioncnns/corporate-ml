@@ -91,7 +91,7 @@ export default function Formations({ data }) {
             {/* SliderFormation */}
             <Box>
                 <Container>
-                    <Typography fontFamily="Inter" color="red" variant="h5">
+                    <Typography fontFamily="Inter-Roman" color="red" variant="h5">
                         Nos formation à la une !
                     </Typography>
                     <Swiper

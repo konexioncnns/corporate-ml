@@ -38,9 +38,9 @@ import ProfileLayout from "@/Layouts/ProfileLayout";
                <TabContext value={value}>
                    <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                        <TabList onChange={handleChange} >
-                           <Tab sx={{fontStyle:"OpenSans",fontWeight:'bold'}} label="General" value="1" />
-                           <Tab sx={{fontStyle:"OpenSans",fontWeight:'bold'}} label="Avatar" value="2" />
-                           <Tab sx={{fontStyle:"OpenSans",fontWeight:'bold'}} label="Mot de pass" value="3" />
+                           <Tab sx={{fontFamily:"Inter-Roman",fontWeight:'bold'}} label="General" value="1" />
+                           <Tab sx={{fontFamily:"Inter-Roman",fontWeight:'bold'}} label="Avatar" value="2" />
+                           <Tab sx={{fontFamily:"Inter-Roman",fontWeight:'bold'}} label="Mot de pass" value="3" />
                        </TabList>
                    </Box>
                    <Box sx={{border:"0.5px solid",borderColor:"#c4bcbc",textAlign:'left' }}>

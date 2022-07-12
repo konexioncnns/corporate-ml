@@ -1,6 +1,28 @@
 "use strict";
 (self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_Pages_Auth_Login_js"],{
 
+/***/ "./node_modules/@mui/icons-material/esm/Google.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@mui/icons-material/esm/Google.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _utils_createSvgIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/material/utils/createSvgIcon.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_utils_createSvgIcon__WEBPACK_IMPORTED_MODULE_2__["default"])( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+  d: "M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032s2.701-6.032,6.033-6.032c1.498,0,2.866,0.549,3.921,1.453l2.814-2.814C17.503,2.988,15.139,2,12.545,2C7.021,2,2.543,6.477,2.543,12s4.478,10,10.002,10c8.396,0,10.249-7.85,9.426-11.748L12.545,10.239z"
+}), 'Google'));
+
+/***/ }),
+
 /***/ "./resources/js/Components/Button.js":
 /*!*******************************************!*\
   !*** ./resources/js/Components/Button.js ***!
@@ -235,7 +257,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Button/Button.js");
+/* harmony import */ var _mui_icons_material__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/icons-material */ "./node_modules/@mui/icons-material/esm/Google.js");
+/* harmony import */ var react_share__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-share */ "./node_modules/react-share/es/FacebookIcon.js");
+/* harmony import */ var react_share__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-share */ "./node_modules/react-share/es/LinkedinIcon.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
 
 
 
@@ -288,22 +315,6 @@ function Login(_ref) {
       errors: errors
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
       children: "Login with social network "
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
-      mx: 4,
-      display: "flex",
-      justifyContent: "space-around",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
-        href: route("googleRedirect"),
-        variant: "contained",
-        color: "error",
-        processing: processing,
-        children: "Google"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
-        variant: "contained",
-        color: "error",
-        processing: processing,
-        children: "LinkedIn"
-      })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("form", {
       onSubmit: submit,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
@@ -356,10 +367,135 @@ function Login(_ref) {
           processing: processing,
           children: "Log in"
         })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+        className: "flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("p", {
+          className: "text-center font-semibold mx-4 mb-0",
+          children: "OR"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        display: "flex",
+        justifyContent: "space-between",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
+          href: route("googleRedirect"),
+          variant: "contained",
+          color: "error",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_icons_material__WEBPACK_IMPORTED_MODULE_12__["default"], {}), " "]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
+          variant: "outlined",
+          sx: {
+            border: 'none'
+          },
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_share__WEBPACK_IMPORTED_MODULE_13__["default"], {})
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
+          variant: "outlined",
+          fontSize: 22,
+          sx: {
+            border: 'none'
+          },
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_share__WEBPACK_IMPORTED_MODULE_14__["default"], {}), " "]
+        })]
       })]
     })]
   });
 }
+
+/***/ }),
+
+/***/ "./node_modules/react-share/es/FacebookIcon.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/react-share/es/FacebookIcon.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _hocs_createIcon__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hocs/createIcon */ "./node_modules/react-share/es/hocs/createIcon.js");
+
+var FacebookIcon = (0,_hocs_createIcon__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    color: '#3b5998',
+    networkName: 'facebook',
+    path: 'M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z',
+});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FacebookIcon);
+
+
+/***/ }),
+
+/***/ "./node_modules/react-share/es/LinkedinIcon.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/react-share/es/LinkedinIcon.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _hocs_createIcon__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hocs/createIcon */ "./node_modules/react-share/es/hocs/createIcon.js");
+
+var LinkedinIcon = (0,_hocs_createIcon__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    color: '#007fb1',
+    networkName: 'linkedin',
+    path: 'M20.4,44h5.4V26.6h-5.4V44z M23.1,18c-1.7,0-3.1,1.4-3.1,3.1c0,1.7,1.4,3.1,3.1,3.1 c1.7,0,3.1-1.4,3.1-3.1C26.2,19.4,24.8,18,23.1,18z M39.5,26.2c-2.6,0-4.4,1.4-5.1,2.8h-0.1v-2.4h-5.2V44h5.4v-8.6 c0-2.3,0.4-4.5,3.2-4.5c2.8,0,2.8,2.6,2.8,4.6V44H46v-9.5C46,29.8,45,26.2,39.5,26.2z',
+});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LinkedinIcon);
+
+
+/***/ }),
+
+/***/ "./node_modules/react-share/es/hocs/createIcon.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-share/es/hocs/createIcon.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ createIcon)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var __assign = (undefined && undefined.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __rest = (undefined && undefined.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+};
+
+function createIcon(iconConfig) {
+    var Icon = function (_a) {
+        var bgStyle = _a.bgStyle, borderRadius = _a.borderRadius, iconFillColor = _a.iconFillColor, round = _a.round, size = _a.size, rest = __rest(_a, ["bgStyle", "borderRadius", "iconFillColor", "round", "size"]);
+        return (react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", __assign({ viewBox: "0 0 64 64", width: size, height: size }, rest),
+            round ? (react__WEBPACK_IMPORTED_MODULE_0__.createElement("circle", { cx: "32", cy: "32", r: "31", fill: iconConfig.color, style: bgStyle })) : (react__WEBPACK_IMPORTED_MODULE_0__.createElement("rect", { width: "64", height: "64", rx: borderRadius, ry: borderRadius, fill: iconConfig.color, style: bgStyle })),
+            react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", { d: iconConfig.path, fill: iconFillColor })));
+    };
+    Icon.defaultProps = {
+        bgStyle: {},
+        borderRadius: 0,
+        iconFillColor: 'white',
+        size: 64,
+    };
+    return Icon;
+}
+
 
 /***/ })
 

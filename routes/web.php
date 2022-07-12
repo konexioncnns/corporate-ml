@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\DomaineController;
 use App\Http\Controllers\Frontend\BlogController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\DemoController;
 use App\Http\Controllers\Front\CurrencyController;
 use App\Http\Controllers\Admin\FormateurController;
 use App\Http\Controllers\Admin\FormationController;
@@ -19,6 +20,7 @@ use App\Http\Controllers\Admin\SpecialiteController;
 use App\Http\Controllers\Admin\SolutionController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Frontend\CheckoutController;
+use App\Http\Controllers\Frontend\ProfileController;
 use App\Http\Controllers\Frontend\TrainingController;
 /*
 |--------------------------------------------------------------------------
@@ -50,6 +52,10 @@ Route::get('langue/{code}', [LanguageController::class,'switchLang'])->name('lan
 //Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
 Route::get('/profile',[HomeController::class,'profileDetail'])->name('profile');
 Route::inertia('/profile/order','Profile/MyOrder')->name('profile/order') ;
+
+Route::get('/profile',[ProfileController::class,'getUser'])->name('profile')->middleware("auth");
+Route::inertia('/user/edit','Profile/MyProfile')->name('user-profile');
+
 Route::inertia('/user/setting','Profile/Setting')->name('profile/setting') ;
 Route::inertia('/admins','Admin/Dashboard')->name('admins') ;
 Route::inertia('/profile/training','Profile/Formation')->name('profile/training') ;
@@ -69,7 +75,8 @@ Route::inertia('/catalogue','Catalogue')->name('catalogue') ;
 Route::inertia('/home','Home')->name('home') ;
 //Route::inertia('/search','SearchPage')->name('search') ;
 
-Route::inertia('/services','Services')->name('services') ;
+Route::get('/services',[ServiceController::class,'getAll'])->name('services');
+Route::get('/service/{id}',[ServiceController::class,'getOne'])->name('service') ;
 //Route::get('/search',[TrainingController::class,'search'])->name('searchform') ;
 Route::get('/search',[DomaineController::class,'getAll'])->name('search') ;
 //Route::get('/test',[DomaineController::class,'getAll'])->name('test') ;
@@ -93,6 +100,8 @@ Route::get('/dashboard', function () {
 Route::get('/currency', [CurrencyController::class,'index'])->name('currency');
 Route::resource('contacts',ContactController::class);
 Route::post('/contact/store', [ContactController::class,'store'])->name('contact.save');
+
+Route::post('/demo/store', [DemoController::class,'store'])->name('demo.save');
 /* ADMINISTRATION */
 Route::get('/domaine/list', [DomaineController::class,'index'])->name('domaine.list');
 Route::post('domaine.store', [DomaineController::class,'store'])->name('domaine.store');
@@ -149,7 +158,7 @@ Route::get('/admin/formation/list', [FormationController::class,'list'])->name('
 Route::get('/admin/formation/add', [FormationController::class,'create'])->name('formation.add');
 Route::get('/admin/formation/edit/{id}',[FormationController::class,'edit'])->name('formation.edit');
 Route::post('/admin/formation/update', [FormationController::class,'update'])->name('formation.update'); 
-Route::post('store', [FormationController::class,'store'])->name('formation.store');
+Route::post('/admin/formation/store', [FormationController::class,'store'])->name('formation.store');
 Route::get('/admin/domaine/delete/{id}', [FormationController::class,'destroy'])->name('domaine.delete');
 //Post
 Route::get('/admin/post/list', [PostController::class,'index'])->name('post.list');

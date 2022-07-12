@@ -18,6 +18,10 @@ return new class extends Migration
             $table->string('title'); 
             $table->text('description');
             $table->text('extrait');
+            $table->text('add_values')->nullable();
+            $table->text('needs')->nullable();
+            $table->text('our_service')->nullable();
+            $table->text('customer_experiences')->nullable(); 
             $table->string('image1')->nullable();
             $table->string('image2')->nullable();  
             $table->string('image3')->nullable(); 

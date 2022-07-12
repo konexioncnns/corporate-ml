@@ -13,10 +13,12 @@
     <link rel="stylesheet" href="{{asset('adminlte/plugins/fontawesome-free/css/all6.min.css')}}">
     <link rel="stylesheet" href="{{asset('adminlte/plugins/fontawesome-free/css/all.min.css')}}">
     <link rel="stylesheet" href="{{asset('adminlte/plugins/summernote/summernote-bs4.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/content-styles.css')}}" type="text/css">
+
     <!-- Theme style -->
 
     <link rel="stylesheet" href="{{asset('adminlte/css/adminlte.min.css')}}">
-    <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
 </head>
 
 <body class="hold-transition sidebar-mini">

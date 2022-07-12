@@ -2105,7 +2105,7 @@ function SearchPageList() {
     return state.search.searchText;
   });
 
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState8 = _slicedToArray(_useState7, 2),
       searchTxt = _useState8[0],
       setSearch = _useState8[1];
@@ -2183,7 +2183,13 @@ function SearchPageList() {
                       backgroundColor: "red"
                     }
                   },
-                  children: "Voir toutes les formation"
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
+                    variant: "h4",
+                    fontSize: 16,
+                    fontFamily: "Inter-Medium",
+                    fontWeight: "500",
+                    children: "Voir toutes les formation"
+                  })
                 })
               }), domaines.map(function (item, i) {
                 return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -2194,10 +2200,10 @@ function SearchPageList() {
                     },
                     selected: active === item.id ? true : false,
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
-                      variant: "h4",
-                      fontSize: 16,
-                      fontFamily: "Inter var",
-                      fontWeight: "500",
+                      fontFamily: "Inter-Roman",
+                      lineHeight: 2,
+                      fontWeight: "600",
+                      fontSize: 14,
                       children: item.title.fr
                     })
                   })
@@ -2250,10 +2256,10 @@ function SearchPageList() {
         backgroundImage: "url(".concat(_assets_images_demoImg_png__WEBPACK_IMPORTED_MODULE_4__["default"], ")"),
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        justifyContent: 'center',
+        justifyContent: "center",
         backgroundPosition: "center center",
-        backgroundAttachment: 'scroll',
-        boxSizing: 'border-box'
+        backgroundAttachment: "scroll",
+        boxSizing: "border-box"
       },
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
@@ -2264,7 +2270,7 @@ function SearchPageList() {
         })
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
-      fontFamily: "Inter var",
+      fontFamily: "Inter-Roman",
       fontSize: 20,
       children: "Resultat de recherche"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], {
@@ -2283,9 +2289,9 @@ function SearchPageList() {
               mx: 1,
               bgcolor: "#FFFFFF",
               sx: {
-                minHeight: 320,
+                minHeight: 280,
                 xs: {
-                  mx: 1,
+                  ml: 15,
                   width: "98%",
                   justifyContent: "center"
                 },
@@ -2293,24 +2299,18 @@ function SearchPageList() {
                 borderWidth: 0.1,
                 borderColor: "#d3cfcf"
               },
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
-                textAlign: "left",
-                fontFamily: "Inter var",
-                children: "Formation"
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+                src: "img/formations/".concat(item.image),
+                style: {
+                  height: 150,
+                  width: '100%'
+                }
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
-                variant: "h5",
-                fontWeight: "bold",
-                fontSize: 22,
-                fontFamily: "Inter var",
+                fontFamily: "Inter",
+                lineHeight: 2,
+                fontWeight: "600",
+                fontSize: 16,
                 textAlign: "left",
-                px: 2,
-                children: item.title.fr
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
-                variant: "body2",
-                textAlign: "left",
-                fontWeight: "400",
-                fontSize: 18,
-                fontFamily: "Inter var",
                 px: 2,
                 sx: {
                   lineHeight: 1.5,
@@ -2318,7 +2318,25 @@ function SearchPageList() {
                   display: "-webkit-box",
                   overflow: "hidden",
                   WebkitBoxOrient: "vertical",
-                  WebkitLineClamp: 6
+                  WebkitLineClamp: 1
+                },
+                children: item.title.fr
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_13__["default"], {
+                variant: "body2",
+                fontFamily: "Inter-Roman",
+                lineHeight: 2,
+                fontWeight: "600",
+                fontSize: 13,
+                textAlign: "left",
+                mt: 1,
+                px: 2,
+                sx: {
+                  lineHeight: 1.5,
+                  letterSpacing: 1,
+                  display: "-webkit-box",
+                  overflow: "hidden",
+                  WebkitBoxOrient: "vertical",
+                  WebkitLineClamp: 5
                 },
                 children: item.description.fr
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -2326,17 +2344,20 @@ function SearchPageList() {
                   marginBottom: 2
                 },
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
-                  variant: "outlined",
+                  variant: "contained",
+                  color: "error",
                   sx: {
                     marginTop: 5,
                     width: 180,
                     height: 50,
-                    borderRadius: 20,
+                    borderRadius: 2,
                     alignContent: "end"
                   },
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.Link, {
                     href: route("formationDetail", "".concat(item.id)),
-                    children: ["En savoir plus", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_icons_material__WEBPACK_IMPORTED_MODULE_21__["default"], {})]
+                    children: ["En savoir plus", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_icons_material__WEBPACK_IMPORTED_MODULE_21__["default"], {
+                      color: "error"
+                    })]
                   })
                 })
               })]

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;use App\Models\Service;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
+use Inertia\Inertia;
 
 class ServiceController extends Controller
 {
@@ -20,7 +21,23 @@ class ServiceController extends Controller
         return view('admin.services.list',compact('services','servicess'));
 
     }
+public function getAll(){
+    $services = Service::all();
+        $servicess=$services->toArray();
 
+        return Inertia::render('Services',['services'=>$services]);
+
+
+
+}
+public function getOne($id){
+    $service = Service::findOrfail($id);
+
+        return Inertia::render('Services/Service',['service'=>$service]);
+
+
+
+}
     /**
      * Show the form for creating a new resource.
      *
@@ -45,9 +62,19 @@ class ServiceController extends Controller
         $extraittranslation = ['en'=>$request->input('extrait_en'),'fr'=>$request->input('extrait')];
         $desctranslation = ['en'=>$request->input('description_en'),'fr'=>$request->input('description')];
         
-        $service->title=$titletranslation;
+        $needstranslation = ['en'=>$request->input('needs_en'),'fr'=>$request->input('needs')];
+        $our_servicetranslation = ['en'=>$request->input('our_service_en'),'fr'=>$request->input('our_service')];
+        $add_valuestranslation = ['en'=>$request->input('add_values_en'),'fr'=>$request->input('add_values')];
+        $customer_experiencestranslation = ['en'=>$request->input('customer_experiences_en'),'fr'=>$request->input('customer_experiences')];
+
+         $service->title=$titletranslation;
         $service->extrait=$extraittranslation;
         $service->description=$desctranslation;
+        $service->needs=$needstranslation;
+        $service->our_service=$our_servicetranslation;
+        $service->add_values= $add_valuestranslation;
+        $service->customer_experiences= $customer_experiencestranslation ;
+
         if($request->hasFile('image1')){
             $image1 = 'image1'.time().'.'.$request->image1->extension();
             $service->image1= $image1;
@@ -126,9 +153,18 @@ class ServiceController extends Controller
        $extraittranslation = ['en'=>$request->input('extrait_en'),'fr'=>$request->input('extrait')];
        $desctranslation = ['en'=>$request->input('description_en'),'fr'=>$request->input('description')];
        
+       $needstranslation = ['en'=>$request->input('needs_en'),'fr'=>$request->input('needs')];
+       $our_servicetranslation = ['en'=>$request->input('our_service_en'),'fr'=>$request->input('our_service')];
+       $add_valuestranslation = ['en'=>$request->input('add_values_en'),'fr'=>$request->input('add_values')];
+       $customer_experiencestranslation = ['en'=>$request->input('customer_experiences_en'),'fr'=>$request->input('customer_experiences')];
+
        $service->title=$titletranslation;
        $service->extrait=$extraittranslation;
        $service->description=$desctranslation;
+       $service->needs=$needstranslation;
+       $service->our_service=$our_servicetranslation;
+       $service->add_values= $add_valuestranslation;
+       $service->customer_experiences= $customer_experiencestranslation ;
 
         if($request->hasFile('image1')){
             $destination = 'img/services'.$service->image1;

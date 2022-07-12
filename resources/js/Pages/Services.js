@@ -39,7 +39,13 @@ import ebiosmanager from "../assets/images/ebiosmanager.png"
 import BarSide from "@/Components/BarSide";
 import PageHeader from "@/Components/PageHeader";
 import { indigo, purple, red } from "@mui/material/colors";
-export default function Services() {
+import { useState } from "react";
+
+import img1 from '../../../public/img/services/image11657065011.png'
+import { InertiaLink } from "@inertiajs/inertia-react";
+export default function Services({services}) {
+    const  [data, setdata] = useState(services);
+    console.log("les services sont:",data)
     return (
         <Box>
             <PageHeader
@@ -51,10 +57,10 @@ export default function Services() {
                 <Box mt={-5} mb={20}>
                     <Box mt={5} mx="25%" justifyContent="center">
                         <Typography
-                            variant="h2"
-                            fontSize={32}
+                        fontSize={32}
+                         fontFamily="Inter"
                             textAlign="center"
-                            fontFamily="Inter"
+                          
                             mt={8}
                         >
                             The service we offer is specifically designed to
@@ -92,25 +98,30 @@ export default function Services() {
                                 </p>
                             </Box>
                         </Grid>  */}
+                                {data.map((service,index)=>(
 
-                                <Grid item xs={12} sm={4}>
+                              
+                                <Grid item xs={12} sm={4} mb={5}>
                                     <Box display="flex">
                                         <Box>
-                                            <img src={archico} height="50" />
+                                           <InertiaLink href={`/service/${service.id}`}> <img src={`../img/services/${service.image1}`}  style={{maxHeight:100,maxWidth:150,borderRadius:10}} alt={service.title.fr} /></InertiaLink>
                                         </Box>
                                         <Box ml={1}>
                                             <Typography
                                                 textAlign="left"
                                                 variant="h5"
+                                                color="error"
+                                                fontFamily="Inter-Medium"
+                                                
                                             >
-                                                ARCHICO
+                                               {service.title.fr}
                                             </Typography>
                                             <Typography
                                                 variant="h4"
                                                 lineHeight={1.5}
                                                 textAlign="left"
-                                                fontFamily="Inter-Regular"
-                                                fontSize={14}
+                                                fontFamily="Inter-Medium"
+                                                fontSize={16}
                                                 sx={{
                                                     display: "-webkit-box",
                                                     overflow: "hidden",
@@ -118,19 +129,14 @@ export default function Services() {
                                                     WebkitLineClamp: 3,
                                                 }}
                                             >
-                                                Numériser et archiver vos
-                                                informations, permet de
-                                                s’assurer d’avoir une mémoire
-                                                organisationnelle en cas de
-                                                sinistre (feu, inondation,
-                                                ouragan, tremblement de terre,
-                                                etc.) et aussi s’assurer de la
-                                                continuité des affaires.
+                                                {service.extrait.fr}
                                             </Typography>
                                         </Box>
                                     </Box>
                                 </Grid>
-                                <Grid item xs={12} sm={4}>
+  ))}
+
+                               {/*  <Grid item xs={12} sm={4}>
                                     <Box display="flex">
                                         <Box>
                                             <img src={collab} height="50" />
@@ -198,7 +204,7 @@ export default function Services() {
                                             </Typography>
                                         </Box>
                                     </Box>
-                                </Grid>
+                                </Grid> */}
                             </Grid>
                             <Grid container spacing={5} my={5}>
                                 <Grid item xs={12} sm={6}>

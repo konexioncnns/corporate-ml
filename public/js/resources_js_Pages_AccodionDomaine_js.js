@@ -1763,9 +1763,10 @@ var AccodionDomaine = function AccodionDomaine() {
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
                       variant: "h4",
                       fontSize: 14,
-                      fontFamily: "Inter-Regular",
+                      fontFamily: "Inter-Roman",
                       children: currentLang == "en" ? itemf.title.en : itemf.title.fr
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
+                      fontFamily: "Inter-Roman",
                       children: [itemf.formateur.firstname, " ", itemf.formateur.lastname]
                     })]
                   })
@@ -1783,15 +1784,17 @@ var AccodionDomaine = function AccodionDomaine() {
                             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
                               color: "red",
                               variant: "h6",
+                              fontFamily: "Inter-Medium",
                               children: "Objectifs"
                             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
+                              fontFamily: "Inter-Roman",
+                              lineHeight: 2,
+                              fontWeight: "600",
                               fontSize: 14,
-                              fontWeight: "400",
-                              variant: "body2",
-                              textAlign: "left",
-                              letterSpacing: 1,
-                              fontFamily: "Inter-Regular",
-                              children: currentLang.getLocale() === "en" ? (0,html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])("".concat(itemf.overview.en)) : (0,html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])("".concat(itemf.overview.fr))
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("ul", {
+                                className: "accordion",
+                                children: currentLang.getLocale() === "en" ? (0,html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])(" ".concat(itemf.overview.en, " ")) : (0,html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])("".concat(itemf.overview.fr))
+                              })
                             })]
                           })
                         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
@@ -1801,15 +1804,11 @@ var AccodionDomaine = function AccodionDomaine() {
                               variant: "h6",
                               children: "Description"
                             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
+                              fontFamily: "Inter-Roman",
+                              lineHeight: 2,
+                              fontWeight: "600",
                               fontSize: 14,
-                              fontWeight: "500",
-                              variant: "body2",
-                              textAlign: "left",
-                              letterSpacing: 1,
-                              fontFamily: "Inter-Regular",
-                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("ul", {
-                                children: currentLang === "en" ? (0,html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])("".concat(itemf.description.en)) : (0,html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])("".concat(itemf.description.fr))
-                              })
+                              children: currentLang === "en" ? (0,html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])("".concat(itemf.description.en)) : (0,html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])("".concat(itemf.description.fr))
                             })]
                           })
                         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
@@ -1818,7 +1817,17 @@ var AccodionDomaine = function AccodionDomaine() {
                               color: "red",
                               variant: "h6",
                               children: "Programme"
-                            }), currentLang.getLocale() === "en" ? (0,html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])("".concat((_itemf$programme = itemf.programme) === null || _itemf$programme === void 0 ? void 0 : _itemf$programme.en)) : (0,html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])("".concat((_itemf$programme2 = itemf.programme) === null || _itemf$programme2 === void 0 ? void 0 : _itemf$programme2.fr))]
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
+                              fontSize: 14,
+                              fontFamily: "Inter-Roman",
+                              textAlign: "left",
+                              lineHeight: 2,
+                              fontWeight: "600",
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("ul", {
+                                className: "accordion",
+                                children: currentLang.getLocale() === "en" ? (0,html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])("".concat((_itemf$programme = itemf.programme) === null || _itemf$programme === void 0 ? void 0 : _itemf$programme.en)) : (0,html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])("".concat((_itemf$programme2 = itemf.programme) === null || _itemf$programme2 === void 0 ? void 0 : _itemf$programme2.fr))
+                              })
+                            })]
                           })
                         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -1826,7 +1835,14 @@ var AccodionDomaine = function AccodionDomaine() {
                               color: "red",
                               variant: "h6",
                               children: "Public"
-                            }), currentLang.getLocale() === "en" ? (0,html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])("".concat((_itemf$public = itemf["public"]) === null || _itemf$public === void 0 ? void 0 : _itemf$public.en)) : (0,html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])("".concat((_itemf$public2 = itemf["public"]) === null || _itemf$public2 === void 0 ? void 0 : _itemf$public2.fr))]
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
+                              fontFamily: "Inter-Roman",
+                              lineHeight: 2,
+                              fontWeight: "600",
+                              fontSize: 14,
+                              textAlign: "left",
+                              children: currentLang.getLocale() === "en" ? (0,html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])("".concat((_itemf$public = itemf["public"]) === null || _itemf$public === void 0 ? void 0 : _itemf$public.en)) : (0,html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])("".concat((_itemf$public2 = itemf["public"]) === null || _itemf$public2 === void 0 ? void 0 : _itemf$public2.fr))
+                            })]
                           })
                         })]
                       })
@@ -1853,17 +1869,21 @@ var AccodionDomaine = function AccodionDomaine() {
                             borderWidth: 2
                           },
                           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
-                            title: "Toutes les formations",
+                            title: " Detail de la formation",
                             sx: {
                               backgroundColor: "red",
                               height: 40,
-                              color: "white"
+                              color: "white",
+                              fontFamily: "Inter-Roman"
                             }
                           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
                             mt: 3,
                             textAlign: "center",
                             variant: "h5",
-                            children: "Detail de la formation"
+                            fontFamily: "Inter-Roman",
+                            lineHeight: 2,
+                            fontWeight: "600",
+                            fontSize: 14
                           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
                             sx: {
                               justifyContent: "space-between"
@@ -1874,8 +1894,7 @@ var AccodionDomaine = function AccodionDomaine() {
                               variant: "h7",
                               children: "Formation"
                             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
-                              color: "black",
-                              variant: "h7",
+                              Transformation: true,
                               children: itemf.title.fr
                             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], {})]
                           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
@@ -1883,13 +1902,18 @@ var AccodionDomaine = function AccodionDomaine() {
                               justifyContent: "space-between"
                             },
                             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
-                              color: "black",
-                              fontWeight: "700",
-                              variant: "h7",
+                              textAlign: "left",
+                              fontFamily: "Inter-Roman",
+                              lineHeight: 2,
+                              fontWeight: "600",
+                              fontSize: 14,
                               children: "Prix HT:"
                             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
-                              color: "black",
-                              variant: "h7",
+                              textAlign: "right",
+                              fontFamily: "Inter-Roman",
+                              lineHeight: 2,
+                              fontWeight: "600",
+                              fontSize: 14,
                               children: [itemf.price, "FCFA"]
                             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], {})]
                           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
@@ -1897,14 +1921,18 @@ var AccodionDomaine = function AccodionDomaine() {
                               justifyContent: "space-between"
                             },
                             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
-                              color: "black",
-                              fontWeight: "700",
-                              variant: "h7",
+                              textAlign: "left",
+                              fontFamily: "Inter-Roman",
+                              lineHeight: 2,
+                              fontWeight: "600",
+                              fontSize: 14,
                               children: "Dur\xE9:"
                             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
                               textAlign: "right",
-                              color: "black",
-                              variant: "h7",
+                              fontFamily: "Inter-Roman",
+                              lineHeight: 2,
+                              fontWeight: "600",
+                              fontSize: 14,
                               children: "2 jours"
                             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], {})]
                           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
@@ -1912,13 +1940,18 @@ var AccodionDomaine = function AccodionDomaine() {
                               justifyContent: "space-between"
                             },
                             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
-                              color: "black",
-                              fontWeight: "700",
-                              variant: "h7",
+                              textAlign: "left",
+                              fontFamily: "Inter-Roman",
+                              lineHeight: 2,
+                              fontWeight: "600",
+                              fontSize: 14,
                               children: "Lieu:"
                             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
-                              color: "black",
-                              variant: "h7",
+                              textAlign: "right",
+                              fontFamily: "Inter-Roman",
+                              lineHeight: 2,
+                              fontWeight: "600",
+                              fontSize: 14,
                               children: "E-learning"
                             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], {})]
                           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
@@ -1926,13 +1959,18 @@ var AccodionDomaine = function AccodionDomaine() {
                               justifyContent: "space-between"
                             },
                             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
-                              color: "black",
-                              fontWeight: "700",
-                              variant: "h7",
+                              textAlign: "left",
+                              fontFamily: "Inter-Roman",
+                              lineHeight: 2,
+                              fontWeight: "600",
+                              fontSize: 14,
                               children: "Langue"
                             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
-                              color: "black",
-                              variant: "h7",
+                              textAlign: "right",
+                              fontFamily: "Inter-Roman",
+                              lineHeight: 2,
+                              fontWeight: "600",
+                              fontSize: 14,
                               children: "Fran\xE7ais"
                             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], {})]
                           })]

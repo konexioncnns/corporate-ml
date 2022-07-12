@@ -31,7 +31,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('store') }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('formation.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label for="title">Titre de la formation</label>
@@ -41,9 +41,9 @@
                             <label for="inputDescription">Description de la formation</label>
                             <textarea name="description" class="form-control" rows="4"></textarea>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" >
                             <label for="title">Objectif de la formation</label>
-                            <textarea id="objectif" name="objectif" class="form-control" rows="20" cols="5">
+                            <textarea id="objectif" name="objectif" class="form-control ck-content" rows="20" cols="5">
 
                       </textarea>
                         </div>
@@ -195,17 +195,23 @@ ClassicEditor
 
 
 ClassicEditor
-    .create(document.querySelector('#objectif_en'))
+    .create(document.querySelector('#objectif_en'),{
+        toolbar: [ 'bold', 'italic', 'link', 'undo', 'redo', 'numberedList', 'bulletedList' ]
+    })
     .catch(error => {
         console.error(error);
     });
 ClassicEditor
-    .create(document.querySelector('#programme_en'))
+    .create(document.querySelector('#programme_en'),{
+        toolbar: [ 'bold', 'italic', 'link', 'undo', 'redo', 'numberedList', 'bulletedList' ]
+    })
     .catch(error => {
         console.error(error);
     });
 ClassicEditor
-    .create(document.querySelector('#public_en'))
+    .create(document.querySelector('#public_en'),{
+        toolbar: [ 'bold', 'italic', 'link', 'undo', 'redo', 'numberedList', 'bulletedList', 'Source', 'mode', 'document', 'doctools' ]
+    })
     .catch(error => {
         console.error(error);
     });

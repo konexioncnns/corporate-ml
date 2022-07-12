@@ -46,10 +46,21 @@ class SolutionController extends Controller
         $titletranslation = ['en'=>$request->input('title_en'),'fr'=>$request->input('title')];
         $extraittranslation = ['en'=>$request->input('extrait_en'),'fr'=>$request->input('extrait')];
         $desctranslation = ['en'=>$request->input('description_en'),'fr'=>$request->input('description')];
+       
+        $needstranslation = ['en'=>$request->input('needs_en'),'fr'=>$request->input('needs')];
+        $our_solutiontranslation = ['en'=>$request->input('our_solution_en'),'fr'=>$request->input('our_solution')];
+        $add_valuestranslation = ['en'=>$request->input('add_values_en'),'fr'=>$request->input('add_values')];
+        $customer_experiencestranslation = ['en'=>$request->input('customer_experiences_en'),'fr'=>$request->input('customer_experiences')]; 
         
         $solution->title=$titletranslation;
         $solution->extrait=$extraittranslation;
         $solution->description=$desctranslation;
+
+        $solution->needs=$needstranslation;
+        $solution->our_solution=$our_solutiontranslation;
+        $solution->add_values= $add_valuestranslation;
+        $solution->customer_experiences= $customer_experiencestranslation ;
+
         if($request->hasFile('image1')){
             $image1 = 'image1'.time().'.'.$request->image1->extension();
             $solution->image1= $image1;
@@ -107,7 +118,7 @@ class SolutionController extends Controller
     public function edit($id)
     {
         $solution = Solution::findOrfail($id);
-        $servsolu= $solution->toArray();
+        $solu= $solution->toArray();
  
  
         return view('admin.solutions.edit',compact('solution','solu'));
@@ -128,10 +139,19 @@ class SolutionController extends Controller
        $titletranslation = ['en'=>$request->input('title_en'),'fr'=>$request->input('title')];
        $extraittranslation = ['en'=>$request->input('extrait_en'),'fr'=>$request->input('extrait')];
        $desctranslation = ['en'=>$request->input('description_en'),'fr'=>$request->input('description')];
+        
+       $needstranslation = ['en'=>$request->input('needs_en'),'fr'=>$request->input('needs')];
+       $our_solutiontranslation = ['en'=>$request->input('our_solution_en'),'fr'=>$request->input('our_solution')];
+       $add_valuestranslation = ['en'=>$request->input('add_values_en'),'fr'=>$request->input('add_values')];
+       $customer_experiencestranslation = ['en'=>$request->input('customer_experiences_en'),'fr'=>$request->input('customer_experiences')]; 
        
        $solution->title=$titletranslation;
        $solution->extrait=$extraittranslation;
        $solution->description=$desctranslation;
+       $solution->needs=$needstranslation;
+       $solution->our_solution=$our_solutiontranslation;
+       $solution->add_values= $add_valuestranslation;
+       $solution->customer_experiences= $customer_experiencestranslation ;
 
         if($request->hasFile('image1')){
             $destination = 'img/solutions'.$solution->image1;
@@ -182,7 +202,7 @@ class SolutionController extends Controller
             $request->image5->move(public_path('img/solutions'), $image5);
 
         }
-      // dd( $solution);
+      //dd( $solution);
        $solution->update();
        return redirect()->route('solution.list');
 

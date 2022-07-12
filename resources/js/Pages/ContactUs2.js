@@ -32,6 +32,7 @@ import {
 import { red } from "tailwindcss/colors";
 import Example from "./Blog";
 import PageHeader from "@/Components/PageHeader";
+import Support from "@/Components/Support";
 const theme = createTheme();
 
 const ContactUs = () => {
@@ -55,10 +56,11 @@ const ContactUs = () => {
     return (
         <div>  
             
-            <PageHeader
+          {/*   <PageHeader
             title=" 1SIMPLE1 TOUJOURS PLUS LOIN"
             subtitle=" Vous avez des questions concernant notre gamme de formations ou de services ?"
-            />
+            /> */}
+            <Support/>
         
         <Container>
           

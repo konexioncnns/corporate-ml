@@ -1926,13 +1926,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Services)
 /* harmony export */ });
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Container/Container.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Grid/Grid.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/CardMedia/CardMedia.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/List/List.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/ListItem/ListItem.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Box/Box.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Container/Container.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Grid/Grid.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/CardMedia/CardMedia.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/List/List.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/ListItem/ListItem.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _components_BannerImage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/BannerImage */ "./resources/js/components/BannerImage.js");
 /* harmony import */ var _components_ServiceSection__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ServiceSection */ "./resources/js/components/ServiceSection.js");
@@ -1948,7 +1948,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_images_ebiosmanager_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../assets/images/ebiosmanager.png */ "./resources/js/assets/images/ebiosmanager.png");
 /* harmony import */ var _Components_BarSide__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @/Components/BarSide */ "./resources/js/Components/BarSide.js");
 /* harmony import */ var _Components_PageHeader__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @/Components/PageHeader */ "./resources/js/Components/PageHeader.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _public_img_services_image11657065011_png__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../../public/img/services/image11657065011.png */ "./public/img/services/image11657065011.png");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
@@ -1969,144 +1982,102 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function Services() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_Components_PageHeader__WEBPACK_IMPORTED_MODULE_14__["default"], {
+
+
+
+
+function Services(_ref) {
+  var services = _ref.services;
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(services),
+      _useState2 = _slicedToArray(_useState, 2),
+      data = _useState2[0],
+      setdata = _useState2[1];
+
+  console.log("les services sont:", data);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_Components_PageHeader__WEBPACK_IMPORTED_MODULE_14__["default"], {
       title: "Our services",
       subtitle: "The service we offer is specifically designed to meet your needs."
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_17__["default"], {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
         mt: -5,
         mb: 20,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
           mt: 5,
           mx: "25%",
           justifyContent: "center",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
-            variant: "h2",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
             fontSize: 32,
-            textAlign: "center",
             fontFamily: "Inter",
+            textAlign: "center",
             mt: 8,
             children: "The service we offer is specifically designed to meet your needs."
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
           mt: 5,
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_17__["default"], {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_21__["default"], {
               container: true,
               spacing: 2,
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], {
-                item: true,
-                xs: 12,
-                sm: 4,
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
-                  display: "flex",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("img", {
-                      src: _assets_icons_archive_png__WEBPACK_IMPORTED_MODULE_5__["default"],
-                      height: "50"
-                    })
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
-                    ml: 1,
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
-                      textAlign: "left",
-                      variant: "h5",
-                      children: "ARCHICO"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
-                      variant: "h4",
-                      lineHeight: 1.5,
-                      textAlign: "left",
-                      fontFamily: "Inter-Regular",
-                      fontSize: 14,
-                      sx: {
-                        display: "-webkit-box",
-                        overflow: "hidden",
-                        WebkitBoxOrient: "vertical",
-                        WebkitLineClamp: 3
-                      },
-                      children: "Num\xE9riser et archiver vos informations, permet de s\u2019assurer d\u2019avoir une m\xE9moire organisationnelle en cas de sinistre (feu, inondation, ouragan, tremblement de terre, etc.) et aussi s\u2019assurer de la continuit\xE9 des affaires."
+              children: data.map(function (service, index) {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_21__["default"], {
+                  item: true,
+                  xs: 12,
+                  sm: 4,
+                  mb: 5,
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                    display: "flex",
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_16__.InertiaLink, {
+                        href: "/service/".concat(service.id),
+                        children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("img", {
+                          src: "../img/services/".concat(service.image1),
+                          style: {
+                            maxHeight: 100,
+                            maxWidth: 150,
+                            borderRadius: 10
+                          },
+                          alt: service.title.fr
+                        })]
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                      ml: 1,
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
+                        textAlign: "left",
+                        variant: "h5",
+                        color: "error",
+                        fontFamily: "Inter-Medium",
+                        children: service.title.fr
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
+                        variant: "h4",
+                        lineHeight: 1.5,
+                        textAlign: "left",
+                        fontFamily: "Inter-Medium",
+                        fontSize: 16,
+                        sx: {
+                          display: "-webkit-box",
+                          overflow: "hidden",
+                          WebkitBoxOrient: "vertical",
+                          WebkitLineClamp: 3
+                        },
+                        children: service.extrait.fr
+                      })]
                     })]
-                  })]
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], {
-                item: true,
-                xs: 12,
-                sm: 4,
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
-                  display: "flex",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("img", {
-                      src: _assets_icons_collab_png__WEBPACK_IMPORTED_MODULE_6__["default"],
-                      height: "50"
-                    })
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
-                    ml: 1,
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
-                      textAlign: "left",
-                      variant: "h5",
-                      children: "COLLAB"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
-                      variant: "h4",
-                      lineHeight: 1.5,
-                      textAlign: "left",
-                      fontFamily: "Inter-Regular",
-                      fontSize: 14,
-                      sx: {
-                        display: "-webkit-box",
-                        overflow: "hidden",
-                        WebkitBoxOrient: "vertical",
-                        WebkitLineClamp: 3
-                      },
-                      children: "Le lorem ipsum (\xE9galement appel\xE9 faux-texte, lipsum, ou bolo bolo) est, en imprimerie, une suite de mots sans signification utilis\xE9e \xE0 ."
-                    })]
-                  })]
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], {
-                item: true,
-                xs: 12,
-                sm: 4,
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
-                  display: "flex",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
-                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("img", {
-                      src: _assets_icons_crm_png__WEBPACK_IMPORTED_MODULE_7__["default"],
-                      height: "50"
-                    })
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
-                    ml: 1,
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
-                      textAlign: "left",
-                      variant: "h5",
-                      children: "CRM"
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
-                      variant: "h4",
-                      lineHeight: 1.5,
-                      textAlign: "left",
-                      fontFamily: "Inter-Regular",
-                      fontSize: 14,
-                      sx: {
-                        display: "-webkit-box",
-                        overflow: "hidden",
-                        WebkitBoxOrient: "vertical",
-                        WebkitLineClamp: 3
-                      },
-                      children: "Le lorem ipsum (\xE9galement appel\xE9 faux-texte, lipsum, ou bolo bolo) est, en imprimerie, une suite de mots sans signification utilis\xE9e \xE0 ."
-                    })]
-                  })]
-                })
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], {
+                  })
+                });
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_21__["default"], {
               container: true,
               spacing: 5,
               my: 5,
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_21__["default"], {
                 item: true,
                 xs: 12,
                 sm: 6,
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
                   flex: 1,
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_22__["default"], {
                     component: "img",
                     image: _assets_images_ebiosmanager_png__WEBPACK_IMPORTED_MODULE_12__["default"],
                     sx: {
@@ -2114,121 +2085,121 @@ function Services() {
                     }
                   })
                 })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_21__["default"], {
                 item: true,
                 xs: 12,
                 sm: 6,
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
                     variant: "h4",
                     textAlign: "left",
                     children: "We bring solutions to make life easier for our customers."
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
                     lineHeight: 2,
                     textAlign: "left",
                     variant: "body1",
                     fontFamily: "Inter-Regular",
                     children: "Les organisations modernes savent que la gestion du risque et conformit\xE9 (lorsqu\u2019applicable) font partie de la gouvernance de l'organisation."
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
                     display: "flex",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_21__["default"], {
-                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_22__["default"], {
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("svg", {
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_23__["default"], {
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_24__["default"], {
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("svg", {
                             xmlns: "http://www.w3.org/2000/svg",
                             "class": "w-8 h-8 text-blue-500",
                             viewBox: "0 0 20 20",
                             fill: "red",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("path", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("path", {
                               "fill-rule": "evenodd",
                               d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z",
                               "clip-rule": "evenodd"
                             })
-                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
                             textAlign: "left",
                             ml: 1,
                             children: "Acrchivage electronique"
                           })]
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_22__["default"], {
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("svg", {
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_24__["default"], {
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("svg", {
                             xmlns: "http://www.w3.org/2000/svg",
                             "class": "w-8 h-8 text-blue-500",
                             viewBox: "0 0 20 20",
                             fill: "red",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("path", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("path", {
                               "fill-rule": "evenodd",
                               d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z",
                               "clip-rule": "evenodd"
                             })
-                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
                             textAlign: "left",
                             ml: 1,
                             children: "Acrchivage electronique"
                           })]
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_22__["default"], {
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("svg", {
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_24__["default"], {
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("svg", {
                             xmlns: "http://www.w3.org/2000/svg",
                             "class": "w-8 h-8 text-blue-500",
                             viewBox: "0 0 20 20",
                             fill: "red",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("path", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("path", {
                               "fill-rule": "evenodd",
                               d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z",
                               "clip-rule": "evenodd"
                             })
-                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
                             textAlign: "left",
                             ml: 1,
                             children: "Acrchivage electronique"
                           })]
                         })]
                       })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_21__["default"], {
-                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_22__["default"], {
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("svg", {
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_23__["default"], {
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_24__["default"], {
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("svg", {
                             xmlns: "http://www.w3.org/2000/svg",
                             "class": "w-8 h-8 text-blue-500",
                             viewBox: "0 0 20 20",
                             fill: "red",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("path", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("path", {
                               "fill-rule": "evenodd",
                               d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z",
                               "clip-rule": "evenodd"
                             })
-                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
                             textAlign: "left",
                             ml: 1,
                             children: "Acrchivage electronique"
                           })]
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_22__["default"], {
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("svg", {
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_24__["default"], {
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("svg", {
                             xmlns: "http://www.w3.org/2000/svg",
                             "class": "w-8 h-8 text-blue-500",
                             viewBox: "0 0 20 20",
                             fill: "red",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("path", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("path", {
                               "fill-rule": "evenodd",
                               d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z",
                               "clip-rule": "evenodd"
                             })
-                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
                             textAlign: "left",
                             ml: 1,
                             children: "Acrchivage electronique"
                           })]
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_22__["default"], {
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("svg", {
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_24__["default"], {
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("svg", {
                             xmlns: "http://www.w3.org/2000/svg",
                             "class": "w-8 h-8 text-blue-500",
                             viewBox: "0 0 20 20",
                             fill: "red",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("path", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("path", {
                               "fill-rule": "evenodd",
                               d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z",
                               "clip-rule": "evenodd"
                             })
-                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
                             textAlign: "left",
                             variant: "body1",
                             fontFamily: "Inter-Regular",
@@ -2241,125 +2212,125 @@ function Services() {
                   })]
                 })
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_21__["default"], {
               container: true,
               spacing: 5,
               my: 5,
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_21__["default"], {
                 item: true,
                 xs: 12,
                 sm: 6,
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
                     variant: "h4",
                     textAlign: "left",
                     children: "We bring solutions to make life easier for our customers."
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
                     lineHeight: 2,
                     textAlign: "left",
                     variant: "body1",
                     fontFamily: "Inter-Regular",
                     children: "Les organisations modernes savent que la gestion du risque et conformit\xE9 (lorsqu\u2019applicable) font partie de la gouvernance de l'organisation."
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
                     display: "flex",
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_21__["default"], {
-                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_22__["default"], {
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("svg", {
+                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_23__["default"], {
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_24__["default"], {
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("svg", {
                             xmlns: "http://www.w3.org/2000/svg",
                             "class": "w-8 h-8 text-blue-500",
                             viewBox: "0 0 20 20",
                             fill: "red",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("path", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("path", {
                               "fill-rule": "evenodd",
                               d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z",
                               "clip-rule": "evenodd"
                             })
-                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
                             textAlign: "left",
                             ml: 1,
                             children: "Acrchivage electronique"
                           })]
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_22__["default"], {
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("svg", {
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_24__["default"], {
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("svg", {
                             xmlns: "http://www.w3.org/2000/svg",
                             "class": "w-8 h-8 text-blue-500",
                             viewBox: "0 0 20 20",
                             fill: "red",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("path", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("path", {
                               "fill-rule": "evenodd",
                               d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z",
                               "clip-rule": "evenodd"
                             })
-                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
                             textAlign: "left",
                             ml: 1,
                             children: "Acrchivage electronique"
                           })]
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_22__["default"], {
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("svg", {
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_24__["default"], {
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("svg", {
                             xmlns: "http://www.w3.org/2000/svg",
                             "class": "w-8 h-8 text-blue-500",
                             viewBox: "0 0 20 20",
                             fill: "red",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("path", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("path", {
                               "fill-rule": "evenodd",
                               d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z",
                               "clip-rule": "evenodd"
                             })
-                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
                             textAlign: "left",
                             ml: 1,
                             children: "Acrchivage electronique"
                           })]
                         })]
                       })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_21__["default"], {
-                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_22__["default"], {
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("svg", {
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_23__["default"], {
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_24__["default"], {
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("svg", {
                             xmlns: "http://www.w3.org/2000/svg",
                             "class": "w-8 h-8 text-blue-500",
                             viewBox: "0 0 20 20",
                             fill: "red",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("path", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("path", {
                               "fill-rule": "evenodd",
                               d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z",
                               "clip-rule": "evenodd"
                             })
-                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
                             textAlign: "left",
                             ml: 1,
                             children: "Acrchivage electronique"
                           })]
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_22__["default"], {
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("svg", {
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_24__["default"], {
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("svg", {
                             xmlns: "http://www.w3.org/2000/svg",
                             "class": "w-8 h-8 text-blue-500",
                             viewBox: "0 0 20 20",
                             fill: "red",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("path", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("path", {
                               "fill-rule": "evenodd",
                               d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z",
                               "clip-rule": "evenodd"
                             })
-                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
                             textAlign: "left",
                             ml: 1,
                             children: "Acrchivage electronique"
                           })]
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_22__["default"], {
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("svg", {
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_24__["default"], {
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("svg", {
                             xmlns: "http://www.w3.org/2000/svg",
                             "class": "w-8 h-8 text-blue-500",
                             viewBox: "0 0 20 20",
                             fill: "red",
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)("path", {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("path", {
                               "fill-rule": "evenodd",
                               d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z",
                               "clip-rule": "evenodd"
                             })
-                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
                             textAlign: "left",
                             variant: "body1",
                             fontFamily: "Inter-Regular",
@@ -2371,13 +2342,13 @@ function Services() {
                     })]
                   })]
                 })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_21__["default"], {
                 item: true,
                 xs: 12,
                 sm: 6,
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_16__["default"], {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
                   flex: 1,
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_15__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_22__["default"], {
                     component: "img",
                     image: _assets_images_archivage_png__WEBPACK_IMPORTED_MODULE_10__["default"]
                   })
@@ -3195,6 +3166,20 @@ var Data = {
   }]
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Data);
+
+/***/ }),
+
+/***/ "./public/img/services/image11657065011.png":
+/*!**************************************************!*\
+  !*** ./public/img/services/image11657065011.png ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/image11657065011.png?30ad80f6ea3af1518a50febc097fb394");
 
 /***/ }),
 
