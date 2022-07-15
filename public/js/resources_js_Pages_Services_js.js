@@ -2009,7 +2009,7 @@ function Services(_ref) {
           justifyContent: "center",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
             fontSize: 32,
-            fontFamily: "Inter",
+            fontFamily: "Inter-Roman",
             textAlign: "center",
             mt: 8,
             children: "The service we offer is specifically designed to meet your needs."
@@ -2019,7 +2019,7 @@ function Services(_ref) {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_19__["default"], {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_21__["default"], {
               container: true,
-              spacing: 2,
+              spacing: 1,
               children: data.map(function (service, index) {
                 return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_21__["default"], {
                   item: true,
@@ -2027,8 +2027,27 @@ function Services(_ref) {
                   sm: 4,
                   mb: 5,
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
-                    display: "flex",
+                    mx: "5%",
+                    sx: {
+                      width: {
+                        xs: 250,
+                        sm: 380
+                      },
+                      display: {
+                        xs: 'block',
+                        sm: 'flex'
+                      }
+                    },
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                      sx: {
+                        px: {
+                          xs: 1,
+                          sm: 1
+                        },
+                        mb: {
+                          xs: 3
+                        }
+                      },
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_16__.InertiaLink, {
                         href: "/service/".concat(service.id),
                         children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("img", {
@@ -2042,7 +2061,11 @@ function Services(_ref) {
                         })]
                       })
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
-                      ml: 1,
+                      sx: {
+                        px: {
+                          xs: 1
+                        }
+                      },
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
                         textAlign: "left",
                         variant: "h5",
@@ -2077,6 +2100,7 @@ function Services(_ref) {
                 sm: 6,
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
                   flex: 1,
+                  mx: "10%",
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_22__["default"], {
                     component: "img",
                     image: _assets_images_ebiosmanager_png__WEBPACK_IMPORTED_MODULE_12__["default"],
@@ -2090,6 +2114,7 @@ function Services(_ref) {
                 xs: 12,
                 sm: 6,
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                  mx: "10%",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
                     variant: "h4",
                     textAlign: "left",
@@ -2103,6 +2128,8 @@ function Services(_ref) {
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
                     display: "flex",
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_18__["default"], {
+                      xs: 12,
+                      mx: true,
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_23__["default"], {
                         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_24__["default"], {
                           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_17__.jsx)("svg", {

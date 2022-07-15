@@ -1,4 +1,4 @@
-import { Box } from "@mui/material"
+import { Box, Typography } from "@mui/material"
 
 /*
   This example requires Tailwind CSS v2.0+ 
@@ -108,7 +108,7 @@ const navigation = {
   
   export default function Footer2() {
     return (
-     <Box mt={20}>
+     <Box mt={40}>
          <footer className="bg-gray-900" aria-labelledby="footer-heading">
         <h2 id="footer-heading" className="sr-only">
           Footer
@@ -118,25 +118,22 @@ const navigation = {
             <div className="grid grid-cols-2 gap-8 xl:col-span-2">
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Solutions</h3>
+                  <h3 className="text-sm font-semibold text-red-400 tracking-wider uppercase">Solutions</h3>
                   <ul role="list" className="mt-4 space-y-4">
                     {navigation.solutions.map((item) => (
                       <li key={item.name}>
-                        <a href={item.href} className="text-base text-gray-300 hover:text-white">
-                          {item.name}
-                        </a>
+                        
+                        <Typography color="white" fontFamily="Inter-Roman" >{item.name} </Typography>
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div className="mt-12 md:mt-0">
-                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Support</h3>
+                  <h3 className="text-sm font-semibold text-red-400 tracking-wider uppercase">Support</h3>
                   <ul role="list" className="mt-4 space-y-4">
                     {navigation.support.map((item) => (
                       <li key={item.name}>
-                        <a href={item.href} className="text-base text-gray-300 hover:text-white">
-                          {item.name}
-                        </a>
+                        <Typography color="white" fontFamily="Inter-Roman" >{item.name} </Typography>
                       </li>
                     ))}
                   </ul>
@@ -144,25 +141,21 @@ const navigation = {
               </div>
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
+                  <h3 className="text-sm font-semibold text-red-400 tracking-wider uppercase">Company</h3>
                   <ul role="list" className="mt-4 space-y-4">
                     {navigation.company.map((item) => (
                       <li key={item.name}>
-                        <a href={item.href} className="text-base text-gray-300 hover:text-white">
-                          {item.name}
-                        </a>
+                       <Typography color="white" fontFamily="Inter-Roman" >{item.name} </Typography>
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div className="mt-12 md:mt-0">
-                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h3>
+                  <h3 className="text-sm font-semibold text-red-400 tracking-wider uppercase">Legal</h3>
                   <ul role="list" className="mt-4 space-y-4">
                     {navigation.legal.map((item) => (
                       <li key={item.name}>
-                        <a href={item.href} className="text-base text-gray-300 hover:text-white">
-                          {item.name}
-                        </a>
+                       <Typography color="white" fontFamily="Inter-Roman" >{item.name} </Typography>
                       </li>
                     ))}
                   </ul>

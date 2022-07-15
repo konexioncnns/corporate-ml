@@ -388,6 +388,7 @@ function Login(_ref) {
           },
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_share__WEBPACK_IMPORTED_MODULE_13__["default"], {})
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
+          href: route("linkedinRedirect"),
           variant: "outlined",
           fontSize: 22,
           sx: {

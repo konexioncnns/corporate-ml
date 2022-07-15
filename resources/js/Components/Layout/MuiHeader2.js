@@ -34,12 +34,13 @@ import {
 import messages from "../../../../public/messages";
 import Lang from "lang.js";
 import { InertiaLink } from "@inertiajs/inertia-react";
-import { AccountCircleOutlined, Call, LoginOutlined, ShoppingCart, ShoppingCartCheckoutOutlined, ShoppingCartTwoTone, VerifiedUser } from "@mui/icons-material";
+import { AccountCircleOutlined, Call, KeyboardArrowDown, LoginOutlined, ShoppingCart, ShoppingCartCheckoutOutlined, ShoppingCartTwoTone, VerifiedUser } from "@mui/icons-material";
 import { useDispatch, useSelector } from "react-redux";
 import FrFlag from "../../assets/icons/fr.png";
 import EnFlag from "../../assets/icons/en.png";
 import { ArrowSmDownIcon, ChevronDownIcon, UserCircleIcon } from "@heroicons/react/outline";
 import { UserIcon } from "@heroicons/react/solid";
+import { red } from "@mui/material/colors";
 const lang = new Lang({ messages });
 const currentLang = new Lang();
 
@@ -82,17 +83,23 @@ ElevationScroll.propTypes = {
 
 const MuiHeader = (props) => {
     const [anchorEl, setAnchorEl] = React.useState(null);
+    const [anchorElS, setAnchorElS] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const openS = Boolean(anchorElS);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
 
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
+  const handleClickS = (event) => {
+    setAnchorElS(event.currentTarget);
+  };
 
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
-
-    const open = Boolean(anchorEl);
-    const id = open ? "simple-popover" : undefined;
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  const handleCloseS = () => {
+    setAnchorElS(null);
+  };
 
     const [state, setState] = React.useState({
         right: false,
@@ -129,68 +136,7 @@ const MuiHeader = (props) => {
                         </ListItem>
                     </Link>
                 ))}
-                <ListItem>
-                <Typography
-                                    aria-describedby={id}
-                                    onClick={handleClick}
-                                    sx={{
-                                        fontSize: 16,
-                                    fontWeight:"bold",
-                                        color: "black",
-                                        display: "block",
-                                        fontFamily: "Inter-Roman",
-                                        cursor: "pointer",
-                                    }}
-                                >
-                                    <InertiaLink
-                                        href="/service/1"
-                                        underline="none"
-                                    >
-                                        Demo
-                                    </InertiaLink>
-                                </Typography>
-                                
-                                
-
-                               
-                </ListItem> <Popover
-                                    id={id}
-                                    open={open}
-                                    anchorEl={anchorEl}
-                                    onClose={handleClose}
-                                    anchorOrigin={{
-                                        vertical: "bottom",
-                                        horizontal: "left",
-                                    }}
-                                >
-                                    <List>
-                                        <ListItem>
-                                            <InertiaLink
-                                                href="/service/1"
-                                                underline="none"
-                                                onClick={handleClose}
-                                            >
-                                                ITSM BM
-                                            </InertiaLink>
-                                        </ListItem>
-                                        <ListItem>
-                                            <InertiaLink
-                                                href="/service/2"
-                                                underline="none"
-                                            >
-                                                Placement Ti
-                                            </InertiaLink>
-                                        </ListItem>
-                                        <ListItem>
-                                            <InertiaLink
-                                                href="/service/1"
-                                                underline="none"
-                                            >
-                                                ITSM BM
-                                            </InertiaLink>
-                                        </ListItem>
-                                    </List>
-                                </Popover>
+                
             </List>
         </Box>
     );
@@ -217,21 +163,22 @@ const MuiHeader = (props) => {
             <ElevationScroll {...props}>
                 <AppBar>
                     <Box
-                        bgcolor="red"
-                        display="flex"
+                    display={{xs:'none',sm:"flex"}}
+                        bgcolor={red[100]}
                         justifyContent="space-around"
                         alignItems="center"
                         height="5vh"
                     >
                         <Box>
-                            <Typography>
-                                Pour plus d'information :
-                                <a
+                            <Typography color='black' fontSize={12} fontFamily="Inter-Roman">
+                                Pour plus d'infos : 
+                               <a
                                     href="tel:+223 20
                             20 20 20"
                                 >
-                                    <Call /> contacter nous
-                                </a>
+                                    <Call /> +223 20
+                            20 20 20
+                                </a> 
                             </Typography>
                         </Box>
 
@@ -346,187 +293,141 @@ const MuiHeader = (props) => {
                                     flexGrow: 0.3,
                                 }}
                             >
-                               
-                              <Typography
-                                sx={{
-                                    fontSize: 16,
-                                    fontWeight:"bold",
-                                    color: "black",
-                                    display: "block",
-                                    fontFamily: "Inter-Roman",
-                                    cursor: "pointer",
-                                }}
-                               >
-                                      <InertiaLink> <InertiaLink href="/formation"> {lang.get("messages.training")}</InertiaLink></InertiaLink>
-                              </Typography>
-                              <Typography
-                                sx={{
-                                    fontSize: 14,
-                                    fontWeight:"600",
-                                    color: "black",
-                                    display: "block",
-                                    fontFamily: "Inter-Roman",
-                                    cursor: "pointer",
-                                }}
-                               >
-                                      <InertiaLink href="/catalogue"> {lang.get("messages.catalog")}</InertiaLink>
-                              </Typography>
-                              <Typography
-                                sx={{
-                                    fontSize: 14,
-                                    fontWeight:"600",
-                                    color: "black",
-                                    display: "block",
-                                    fontFamily: "Inter-Roman",
-                                    cursor: "pointer",
-                                }}
-                               >
-                                      <InertiaLink href="/services"> {lang.get("messages.services")}</InertiaLink>
-                              </Typography>
-                              <Typography
-                             aria-describedby="solutions"
-                             onClick={handleClick}
-                                sx={{
-                                    fontSize: 14,
-                                    fontWeight:"600",
-                                    color: "black",
-                                    display: "block",
-                                    fontFamily: "Inter-Roman",
-                                    cursor: "pointer",
-                                }}
-                               >
-                                      <InertiaLink href="/services"> {lang.get("messages.solutions")}</InertiaLink>
-                              </Typography>
-                              <Popover
-                                    id="solutions"
-                                    open={open}
-                                    anchorEl={anchorEl}
-                                    onClose={handleClose}
-                                    anchorOrigin={{
-                                        vertical: "bottom",
-                                        horizontal: "left",
+                                <Typography
+                                    sx={{
+                                        fontSize: 16,
+                                        fontWeight: "bold",
+                                        color: "black",
+                                        display: "block",
+                                        fontFamily: "Inter-Roman",
+                                        cursor: "pointer",
                                     }}
                                 >
-                                    <List>
-                                        <ListItem>
-                                            <InertiaLink
-                                                href="/service/1"
-                                                underline="none"
-                                                onClick={handleClose}
-                                            >
-                                                ITSM BM
-                                            </InertiaLink>
-                                        </ListItem>
-                                        <ListItem>
-                                            <InertiaLink
-                                                href="/service/2"
-                                                underline="none"
-                                            >
-                                               Archico
-                                            </InertiaLink>
-                                        </ListItem>
-                                        <ListItem>
-                                            <InertiaLink
-                                                href="/service/1"
-                                                underline="none"
-                                            >
-                                               Collab
-                                            </InertiaLink>
-                                        </ListItem>
-                                        <ListItem>
-                                            <InertiaLink
-                                                href="/service/1"
-                                                underline="none"
-                                            >
-                                                ITSM BM
-                                            </InertiaLink>
-                                        </ListItem>
-                                    </List>
-                                </Popover>
-                              <Typography
-                              aria-describedby="posts"
-                              onClick={handleClick}
-                                sx={{
-                                    fontSize: 14,
-                                    fontWeight:"600",
-                                    color: "black",
-                                    display: "block",
-                                    fontFamily: "Inter-Roman",
-                                    cursor: "pointer",
-                                }}
-                               >
-                                      <InertiaLink href="/articles">{lang.get("messages.posts")}</InertiaLink>
-                              </Typography>
-                                    <Popover
-                                          id="posts"
-                                          
-                                            open={open}
-                                            anchorEl={anchorEl}
-                                            onClose={handleClose}
-                                            anchorOrigin={{
-                                                vertical: "bottom",
-                                                horizontal: "left",
-                                            }}
-                                        >
-                                            <List>
-                                                <ListItem>
-                                                    <InertiaLink
-                                                        href="/posts"
-                                                        underline="none"
-                                                        onClick={handleClose}
-                                                    >
-                                                    Nouvelles
-                                                    </InertiaLink>
-                                                </ListItem>
-                                                <ListItem>
-                                                    <InertiaLink
-                                                        href="/service/2"
-                                                        underline="none"
-                                                    >
-                                                        Placement Ti
-                                                    </InertiaLink>
-                                                </ListItem>
-                                                <ListItem>
-                                                    <InertiaLink
-                                                        href="/service/1"
-                                                        underline="none"
-                                                    >
-                                                        ITSM BM
-                                                    </InertiaLink>
-                                                </ListItem>
-                                            </List>
-                                    </Popover>
-                              <Typography
-                                sx={{
-                                    fontSize: 14,
-                                    fontWeight:"600",
-                                    color: "black",
-                                    display: "block",
-                                    fontFamily: "Inter-Roman",
-                                    cursor: "pointer",
-                                }}
-                               >
-                                      <InertiaLink>Partenaires</InertiaLink>
-                              </Typography>
-                              <Typography
-                                sx={{
-                                    fontSize: 14,
-                                    fontWeight:"600",
-                                    color: "black",
-                                    display: "block",
-                                    fontFamily: "Inter-Roman",
-                                    cursor: "pointer",
-                                }}
-                               >
-                                      <InertiaLink>{lang.get("messages.contact-us")}</InertiaLink>
-                              </Typography>
-                                 
-                               <Typography
-                                    aria-describedby={id}
+                                    <InertiaLink>
+                                        {" "}
+                                        <a href="/formation">
+                                            {" "}
+                                            {lang.get("messages.training")}
+                                        </a>
+                                    </InertiaLink>
+                                </Typography>
+                                <Typography
+                                    sx={{
+                                        fontSize: 14,
+                                        fontWeight: "600",
+                                        color: "black",
+                                        display: "block",
+                                        fontFamily: "Inter-Roman",
+                                        cursor: "pointer",
+                                    }}
+                                >
+                                    <a href="/catalogue">
+                                        {" "}
+                                        {lang.get("messages.catalog")}
+                                    </a>
+                                </Typography>
+                                <Typography
+                                    sx={{
+                                        fontSize: 14,
+                                        fontWeight: "600",
+                                        color: "black",
+                                        display: "block",
+                                        fontFamily: "Inter-Roman",
+                                        cursor: "pointer",
+                                    }}
+                                >
+                                    <InertiaLink href="/services">
+                                        {" "}
+                                        {lang.get("messages.services")}
+                                    </InertiaLink>
+                                </Typography>
+                                <Typography
+                                    id="solution-menu"
+                                    aria-controls={
+                                        openS ? "solution-menu" : undefined
+                                    }
+                                    aria-haspopup="true"
+                                    aria-expanded={openS ? "true" : undefined}
+                                   
+                                    onClick={handleClickS} 
+                                    sx={{
+                                        fontSize: 14,
+                                        fontWeight: "600",
+                                        color: "black",
+                                        display: "block",
+                                        fontFamily: "Inter-Roman",
+                                        cursor: "pointer",
+                                         
+                                    }}
+                                >
+                                    <a href="/services">
+                                        {" "}
+                                        {lang.get("messages.solutions")}
+                                    </a>
+                                </Typography>
+
+                                <Typography
+                                    aria-describedby="posts"
+                                    onClick={handleClick}
+                                    sx={{
+                                        fontSize: 14,
+                                        fontWeight: "600",
+                                        color: "black",
+                                        display: "block",
+                                        fontFamily: "Inter-Roman",
+                                        cursor: "pointer",
+                                    }}
+                                >
+                                    <a href="/articles">
+                                        {lang.get("messages.posts")}
+                                    </a>
+                                </Typography>
+
+                                <Typography
+                                    sx={{
+                                        fontSize: 14,
+                                        fontWeight: "600",
+                                        color: "black",
+                                        display: "block",
+                                        fontFamily: "Inter-Roman",
+                                        cursor: "pointer",
+                                    }}
+                                >
+                                    <InertiaLink href="/contactus">
+                                        {lang.get("messages.contact-us")}
+                                    </InertiaLink>
+                                </Typography>
+
+                                <Typography
+                                    sx={{
+                                        fontSize: 16,
+                                        fontWeight: "bold",
+                                        color: "black",
+                                        display: "block",
+                                        fontFamily: "Inter-Roman",
+                                        cursor: "pointer",
+                                    }}
+                                >
+                                    <a
+                                    
+                                        href={route("langue")}
+                                        underline="none"
+                                    >
+                                        Demo
+                                    </a>
+                                </Typography>
+
+                                <Typography
+                                    id="a-propos"
+                                    aria-controls={
+                                        open ? "basic-menu" : undefined
+                                    }
+                                    aria-haspopup="true"
+                                    aria-expanded={open ? "true" : undefined}
                                     onClick={handleClick}
                                     sx={{
                                         fontSize: 16,
-                                    fontWeight:"bold",
+                                        fontWeight: "bold",
                                         color: "black",
                                         display: "block",
                                         fontFamily: "Inter-Roman",
@@ -537,85 +438,73 @@ const MuiHeader = (props) => {
                                         href="/service/1"
                                         underline="none"
                                     >
-                                        Demo
+                                        A propos
                                     </InertiaLink>
                                 </Typography>
-                                
-                                
+                                <Typography>
 
-                                <Popover
-                                    id={id}
-                                    open={open}
-                                    anchorEl={anchorEl}
-                                    onClose={handleClose}
-                                    anchorOrigin={{
-                                        vertical: "bottom",
-                                        horizontal: "left",
+                                </Typography>
+                                <Menu
+                                    id="solution-menu"
+                                    anchorEl={anchorElS}
+                                    open={openS}
+                                    onClose={handleCloseS}
+                                    MenuListProps={{
+                                        "aria-labelledby": "basic-button",
                                     }}
                                 >
-                                    <List>
-                                        <ListItem>
-                                            <InertiaLink
-                                                href="/service/1"
-                                                underline="none"
-                                                onClick={handleClose}
-                                            >
-                                                ITSM BM
-                                            </InertiaLink>
-                                        </ListItem>
-                                        <ListItem>
-                                            <InertiaLink
-                                                href="/service/2"
-                                                underline="none"
-                                            >
-                                                Placement Ti
-                                            </InertiaLink>
-                                        </ListItem>
-                                        <ListItem>
-                                            <InertiaLink
-                                                href="/service/1"
-                                                underline="none"
-                                            >
-                                                ITSM BM
-                                            </InertiaLink>
-                                        </ListItem>
-                                    </List>
-                                </Popover>
+                                    <MenuItem onClick={handleCloseS}>
+                                        Archico
+                                    </MenuItem>
+                                    <MenuItem onClick={handleCloseS}>
+                                        Collab
+                                    </MenuItem>
+                                    <MenuItem onClick={handleCloseS}>
+                                      CRM
+                                    </MenuItem>
+                                </Menu>
+                                <Menu
+                                    id="basic-menu"
+                                    anchorEl={anchorEl}
+                                    open={open}
+                                    onClose={handleClose}
+                                    MenuListProps={{
+                                        "aria-labelledby": "basic-button",
+                                    }}
+                                >
+                                    <MenuItem onClick={handleClose}>
+                                        Profile
+                                    </MenuItem>
+                                    <MenuItem onClick={handleClose}>
+                                        My account
+                                    </MenuItem>
+                                    <MenuItem onClick={handleClose}>
+                                        Logout
+                                    </MenuItem>
+                                </Menu>
                             </Box>
                         )}
 
                         <Box sx={{ flexGrow: 0 }}>
-                            <Tooltip title="Votre panier" sx={{mr:'5px'}}>
+                            <Tooltip title="Votre panier" sx={{ mr: "5px" }}>
                                 <IconButton sx={{ p: 0 }}>
                                     <InertiaLink href="/cart">
-                                        <Badge
-                                            badgeContent={qty}
-                                            color="error"
-                                        >
+                                        <Badge badgeContent={qty} color="error">
                                             <ShoppingCartTwoTone size="small" />
                                         </Badge>
                                     </InertiaLink>
                                 </IconButton>
                             </Tooltip>
-                           
                         </Box>
-                        <Box  sx={{ flexGrow: 0 }}>
-                        <Tooltip title="Open settings">
+                        <Box sx={{ flexGrow: 0 }}>
+                            <Tooltip title="Open settings">
                                 <IconButton sx={{ p: 0 }}>
                                     <InertiaLink href="/user/orders">
-                                       
-                                          <AccountCircleOutlined/>
-                                       
+                                        <AccountCircleOutlined />
                                     </InertiaLink>
                                 </IconButton>
                             </Tooltip>
                         </Box>
-
-
-
-                        
-
-  
                     </Toolbar>
                 </AppBar>
             </ElevationScroll>

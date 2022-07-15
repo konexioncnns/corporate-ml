@@ -50,10 +50,17 @@ Route::get('indexform', [FormationController::class,'index'])->name('indexform')
 
 Route::get('langue/{code}', [LanguageController::class,'switchLang'])->name('langue');
 //Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
-Route::get('/profile',[HomeController::class,'profileDetail'])->name('profile');
+//Route::get('/profile',[HomeController::class,'profileDetail'])->name('profile');
+
+
+Route::resource('profiles', ProfileController::class);
+
+
 Route::inertia('/profile/order','Profile/MyOrder')->name('profile/order') ;
 
 Route::get('/profile',[ProfileController::class,'getUser'])->name('profile')->middleware("auth");
+
+
 Route::inertia('/user/edit','Profile/MyProfile')->name('user-profile');
 
 Route::inertia('/user/setting','Profile/Setting')->name('profile/setting') ;

@@ -58,7 +58,7 @@ export default function Services({services}) {
                     <Box mt={5} mx="25%" justifyContent="center">
                         <Typography
                         fontSize={32}
-                         fontFamily="Inter"
+                         fontFamily="Inter-Roman"
                             textAlign="center"
                           
                             mt={8}
@@ -69,7 +69,7 @@ export default function Services({services}) {
                     </Box>
                     <Box mt={5}>
                         <Container>
-                            <Grid container spacing={2}>
+                            <Grid container spacing={1}>
                                 {/*  <Grid item xs={12} sm={4}>
                             <Typography variant="h4">Archico</Typography>
                             <CardMedia
@@ -102,11 +102,14 @@ export default function Services({services}) {
 
                               
                                 <Grid item xs={12} sm={4} mb={5}>
-                                    <Box display="flex">
-                                        <Box>
+                                    <Box mx="5%" sx={{
+                                        width:{xs:250,sm:380},
+                                        display:{xs:'block',sm:'flex'}
+                                    }}>
+                                        <Box sx={{ px:{xs:1,sm:1},mb:{xs:3} }}>
                                            <InertiaLink href={`/service/${service.id}`}> <img src={`../img/services/${service.image1}`}  style={{maxHeight:100,maxWidth:150,borderRadius:10}} alt={service.title.fr} /></InertiaLink>
                                         </Box>
-                                        <Box ml={1}>
+                                        <Box sx={{px:{xs:1}}}>
                                             <Typography
                                                 textAlign="left"
                                                 variant="h5"
@@ -117,6 +120,7 @@ export default function Services({services}) {
                                                {service.title.fr}
                                             </Typography>
                                             <Typography
+                                            
                                                 variant="h4"
                                                 lineHeight={1.5}
                                                 textAlign="left"
@@ -208,16 +212,19 @@ export default function Services({services}) {
                             </Grid>
                             <Grid container spacing={5} my={5}>
                                 <Grid item xs={12} sm={6}>
-                                    <Box flex={1}>
+                                    <Box flex={1} mx="10%">
                                         <CardMedia
                                             component="img"
                                             image={ebiosmanager}
-                                            sx={{borderRadius:5}}
+                                            sx={{borderRadius:5
+                                                
+                                            
+                                            }}
                                         />
                                     </Box>
                                 </Grid>
                                 <Grid item xs={12} sm={6}>
-                                    <Box>
+                                    <Box mx="10%">
                                         <Typography
                                             variant="h4"
                                             textAlign="left"
@@ -237,7 +244,7 @@ export default function Services({services}) {
                                             partie de la gouvernance de l'organisation.</Typography>
 
                                             <Box display="flex">
-                                            <Box>
+                                            <Box xs={12} mx>
                                                 <List>
                                                 <ListItem>
                                                     <svg

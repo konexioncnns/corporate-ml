@@ -176,7 +176,17 @@ const FormationDetail = ({ data }) => {
                 <Grid container spacing={2}>
                     <Grid item xs={12} sm={8}>
                         {matches ? (
-                            <Box>
+                            <Box mx={2}>
+                                <Typography
+                                    mt={3}
+                                    textAlign="left"
+                                    variant="body2"
+                                    fontFamily="Inter-Regular"
+                                    lineHeight={2}
+                                    letterSpacing={1}
+                                >
+                                    <ul>{parse(data.description)}</ul>
+                                </Typography>
                                 <Accordion>
                                     <AccordionSummary
                                         expandIcon={<ExpandMore />}
@@ -187,6 +197,12 @@ const FormationDetail = ({ data }) => {
 
                                     </AccordionSummary>
                                     <AccordionDetails>
+                                    <ul
+                                                    className="accordion"
+                                                    dangerouslySetInnerHTML={{
+                                                        __html: data.overview,
+                                                    }}
+                                                ></ul>
 
                                     </AccordionDetails>
                                 </Accordion>
@@ -196,10 +212,34 @@ const FormationDetail = ({ data }) => {
                                         aria-controls="panel1a-content"
                                         id="panel1a-header"
                                     >
-                                        Objectifs
+                                        Programme
 
                                     </AccordionSummary>
                                     <AccordionDetails>
+                                    <ul
+                                                    className="accordion"
+                                                    dangerouslySetInnerHTML={{
+                                                        __html: data.programme,
+                                                    }}
+                                                ></ul>
+                                    </AccordionDetails>
+                                </Accordion>
+                                <Accordion>
+                                    <AccordionSummary
+                                        expandIcon={<ExpandMore />}
+                                        aria-controls="panel1a-content"
+                                        id="panel1a-header"
+                                    >
+                                        Prérequis
+
+                                    </AccordionSummary>
+                                    <AccordionDetails>
+                                    <ul
+                                                    className="accordion"
+                                                    dangerouslySetInnerHTML={{
+                                                        __html: data.overview,
+                                                    }}
+                                                ></ul>
                                         
                                     </AccordionDetails>
                                 </Accordion>
@@ -209,23 +249,11 @@ const FormationDetail = ({ data }) => {
                                         aria-controls="panel1a-content"
                                         id="panel1a-header"
                                     >
-                                        Objectifs
+                                        Formateur
 
                                     </AccordionSummary>
                                     <AccordionDetails>
-                                        
-                                    </AccordionDetails>
-                                </Accordion>
-                                <Accordion>
-                                    <AccordionSummary
-                                        expandIcon={<ExpandMore />}
-                                        aria-controls="panel1a-content"
-                                        id="panel1a-header"
-                                    >
-                                        Objectifs
-
-                                    </AccordionSummary>
-                                    <AccordionDetails>
+                                    {`${data.formateur.firstname} ${data.formateur.lastname}`}
                                         
                                     </AccordionDetails>
                                 </Accordion>

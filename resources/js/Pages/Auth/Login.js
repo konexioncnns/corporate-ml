@@ -116,7 +116,7 @@ export default function Login({ status, canResetPassword }) {
          <Box display="flex" justifyContent='space-between'>
           <Btn  href={route("googleRedirect")} variant="contained" color="error"><Google/> </Btn>
           <Btn variant="outlined" sx={{ border:'none' }}><FacebookIcon/></Btn>
-          <Btn variant="outlined" fontSize={22} sx={{ border:'none' }} ><LinkedinIcon/> </Btn>
+          <Btn href={route("linkedinRedirect")} variant="outlined" fontSize={22} sx={{ border:'none' }} ><LinkedinIcon/> </Btn>
 
          </Box>
             </form>

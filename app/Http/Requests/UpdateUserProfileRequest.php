@@ -13,7 +13,7 @@ class UpdateUserProfileRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,8 +23,13 @@ class UpdateUserProfileRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            //
+        return [ 
+            'email'=> ['required', 'string', 'email'],
+            'lastname'=> ['required', 'string'],
+            'address'=> ['required', 'string'],
+            'country'=> ['required', 'string'],
+            'profession'=> ['required', 'string'],
+            'phone'=>['required','regex:/^([0-9\s\-\+\(\)]*)$/'],
         ];
     }
 }

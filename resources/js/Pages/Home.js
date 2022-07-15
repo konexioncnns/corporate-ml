@@ -20,33 +20,8 @@ import { Navigation } from '@mui/icons-material'
   return (
  
    
-      <>
-     {/*
-
-      <Posts />
-      <Banner label="L'actualités des formations & des certifications" />
-
-      <SelectSection /> */} <Carousels />  <SelectSection />
-     <Typography>TITRE:{form.title}</Typography>
-     <Typography>Price:
-     {parse(`${codes}`)}</Typography>
-    
-     <Typography>DESCRIPTION:{parse(form.description)}</Typography>
-     <Typography>Objectif:{parse(form.overview)}</Typography>
-     <Typography>Prix:{device}</Typography>
-     <Typography textAlign="left">Programme:<ul>{parse(`${form.programme}`)}</ul></Typography>
-
-     { console.log("IIIIINERTIA:",{form})}
-    
-    
-
-     
-     <Typography> { lang.get('messages.slogan')} en { lang.getFallback}</Typography>
-     <Fab sx={{ }} variant="extended" aria-label="Demo">
-  <Navigation  sx={{ mr: 1 }} />
-  Navigate
-</Fab>
-
+      <> <Carousels />  <SelectSection />
+      
       </>
 
   )

@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\ConfirmablePasswordController;
 use App\Http\Controllers\Auth\EmailVerificationNotificationController;
 use App\Http\Controllers\Auth\EmailVerificationPromptController;
 use App\Http\Controllers\Auth\GoogleController;
+use App\Http\Controllers\Auth\LinkedinController;
 use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
@@ -15,12 +16,18 @@ Route::middleware('guest')->group(function () {
     Route::get('register', [RegisteredUserController::class, 'create'])
                 ->name('register');
 
-                //Socialate beigin/
+                //Socialate google begin/
                 Route::get('/auth/google/redirect', [GoogleController::class, 'handleGoogleRedirect'])
                 ->name('googleRedirect');
 
                 Route::get('/auth/google/callback', [GoogleController::class, 'handleGoogleCallback'])
                 ->name('googleCallback');
+                //Socialate linkedin begin/
+                Route::get('/auth/linkedin/redirect', [LinkedinController::class, 'handleLinkedinRedirect'])
+                ->name('linkedinRedirect');
+                                                                                    
+                Route::get('/auth/linkedin/callback', [LinkedinController::class, 'handleLinkedinCallback'])
+                ->name('linkedinCallback');
 
 
     Route::post('register', [RegisteredUserController::class, 'store']);

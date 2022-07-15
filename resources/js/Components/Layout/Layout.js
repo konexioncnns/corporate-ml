@@ -116,8 +116,7 @@ export default function Layout({children}) {
     {children}
 
    </Box>
-
-{/* <Footer2/> */}
+      <Footer2/> 
 </Box>
 
 
