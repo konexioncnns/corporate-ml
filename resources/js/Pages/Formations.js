@@ -39,7 +39,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { InertiaLink, usePage } from "@inertiajs/inertia-react";
 
 /*Fin slideformationCard*/
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Accordions from "../components/Accordion";
 import { Carousels } from "../components/Carousel";
 import Section from "../components/Section";
@@ -74,6 +74,14 @@ export default function Formations({ data }) {
     console.log("Formation: ", data);
   
    const [loading, setLoading] = useState(true)
+   useEffect(() => {
+    const fetchData = async () => {
+       setTimeout(() => {
+         setLoading(false);
+       }, 2000); } 
+       fetchData();
+   }, [])
+   
     return (
         <Box>
 {loading ? (
