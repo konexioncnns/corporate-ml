@@ -302,7 +302,7 @@ const MuiHeader = (props) => {
                                         cursor: "pointer",
                                     }}
                                 >
-                                    <InertiaLink  href={(route("formations"))}>
+                                    <InertiaLink showProgress="true" method="get"  href={(route("formations"))}>
                                             {" "}
                                             {lang.get("messages.training")}
                                         </InertiaLink>
