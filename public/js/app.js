@@ -37982,9 +37982,9 @@ var MuiHeader = function MuiHeader(props) {
                 cursor: "pointer"
               },
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_5__.InertiaLink, {
-                showProgress: "true",
-                method: "get",
-                href: route("formations"),
+                onClick: function onClick() {
+                  return window.location.href = "/formation";
+                },
                 children: [" ", lang.get("messages.training")]
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
