@@ -16,8 +16,7 @@ class TrainingController extends Controller
     $domaineData = Domaine::all();
     $formationData = Formation::all();
   
-
-    sleep(seconds:1);
+ 
        return Inertia::render('Formations',['data'=>$data,"domaines"=>$domaineData,"formations"=>$formationData ,]);
    }
 

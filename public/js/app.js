@@ -38277,7 +38277,15 @@ var appName = ((_window$document$getE = window.document.getElementsByTagName('ti
     }), el, Ziggy);
   }
 });
-_inertiajs_progress__WEBPACK_IMPORTED_MODULE_6__.InertiaProgress.init();
+_inertiajs_progress__WEBPACK_IMPORTED_MODULE_6__.InertiaProgress.init({
+  delay: 250,
+  // The color of the progress bar.
+  color: '#29d',
+  // Whether to include the default NProgress styles.
+  includeCSS: true,
+  // Whether the NProgress spinner will be shown.
+  showSpinner: true
+});
 
 /***/ }),
 
