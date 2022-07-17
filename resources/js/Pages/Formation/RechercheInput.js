@@ -91,9 +91,9 @@ useEffect(() => {
                               fontFamily: "Inter",
                           }}
                       >
-                          <InertiaLink href="/search">
+                          <a href="/search">
                               Recherhe
-                          </InertiaLink>
+                          </a>
                       </Button>
                   </Box>
               </Box>

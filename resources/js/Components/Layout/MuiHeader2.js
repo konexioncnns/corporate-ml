@@ -332,10 +332,10 @@ const MuiHeader = (props) => {
                                         cursor: "pointer",
                                     }}
                                 >
-                                    <InertiaLink href={route("services")}>
+                                    <a href={route("services")}>
                                         {" "}
                                         {lang.get("messages.services")}
-                                    </InertiaLink>
+                                    </a>
                                 </Typography>
                                 <Typography
                                     id="solution-menu"
@@ -389,9 +389,9 @@ const MuiHeader = (props) => {
                                         cursor: "pointer",
                                     }}
                                 >
-                                    <InertiaLink preserveScroll={true} href={route("contactus")}>
+                                    <a  href={route("contactus")}>
                                         {lang.get("messages.contact-us")}
-                                    </InertiaLink>
+                                    </a>
                                 </Typography>
 
                                  
@@ -412,12 +412,12 @@ const MuiHeader = (props) => {
                                         cursor: "pointer",
                                     }}
                                 >
-                                    <InertiaLink
+                                    <a
                                         href={route("about")}
                                         underline="none"
                                     >
                                         A propos
-                                    </InertiaLink>
+                                    </a>
                                 </Typography>
                                 <Typography>
 

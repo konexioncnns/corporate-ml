@@ -38008,7 +38008,7 @@ var MuiHeader = function MuiHeader(props) {
                 fontFamily: "Inter-Roman",
                 cursor: "pointer"
               },
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_5__.InertiaLink, {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("a", {
                 href: route("services"),
                 children: [" ", lang.get("messages.services")]
               })
