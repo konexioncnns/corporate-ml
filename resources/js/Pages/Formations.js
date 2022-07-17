@@ -73,8 +73,12 @@ export default function Formations({ data }) {
     };
     console.log("Formation: ", data);
   
-   
+   const [loading, setLoading] = useState(true)
     return (
+        <Box>
+{loading ? (
+    <>Loading.....</>
+):
         <Box mt={-11}>
             <PageHeader
                 title=" Nos offres de formation professionnelle"
@@ -362,6 +366,8 @@ export default function Formations({ data }) {
             <Box>
                 <Statistique />
             </Box>
+        </Box>}
+
         </Box>
     );
 }

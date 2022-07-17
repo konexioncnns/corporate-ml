@@ -4920,6 +4920,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Formation_Recherche__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./Formation/Recherche */ "./resources/js/Pages/Formation/Recherche.js");
 /* harmony import */ var _Formation_RechercheInput__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./Formation/RechercheInput */ "./resources/js/Pages/Formation/RechercheInput.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 /*Start slideformationCard*/
 
@@ -4959,6 +4971,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var currentLang = new (lang_js__WEBPACK_IMPORTED_MODULE_24___default())();
 var FormationData = [{
   id: 1
@@ -4973,219 +4986,229 @@ function Formations(_ref) {
   };
 
   console.log("Formation: ", data);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
-    mt: -11,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_Components_PageHeader__WEBPACK_IMPORTED_MODULE_25__["default"], {
-      title: " Nos offres de formation professionnelle",
-      subtitle: " Nos offres de formation professionnelle et continue"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_Formation_RechercheInput__WEBPACK_IMPORTED_MODULE_28__["default"], {
-      dataForm: data
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_AccodionDomaine__WEBPACK_IMPORTED_MODULE_26__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_31__["default"], {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_32__["default"], {
-          fontFamily: "Inter-Roman",
-          color: "red",
-          variant: "h5",
-          children: "Nos formation \xE0 la une !"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_1__.Swiper, {
-          modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Scrollbar, swiper__WEBPACK_IMPORTED_MODULE_0__.A11y],
-          spaceBetween: 50,
-          slidesPerView: 4,
-          navigation: {
-            clickable: true
-          },
-          onSwiper: function onSwiper(swiper) {
-            return console.log(swiper);
-          },
-          onSlideChange: function onSlideChange() {
-            return console.log("slide change");
-          },
-          autoplay: {
-            delay: 2500,
-            disableOnInteraction: false
-          },
-          breakpoints: {
-            360: {
-              // width: 360,
-              slidesPerView: 1
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_9__.useState)(true),
+      _useState2 = _slicedToArray(_useState, 2),
+      loading = _useState2[0],
+      setLoading = _useState2[1];
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
+    children: loading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.Fragment, {
+      children: "Loading....."
+    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
+      mt: -11,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_Components_PageHeader__WEBPACK_IMPORTED_MODULE_25__["default"], {
+        title: " Nos offres de formation professionnelle",
+        subtitle: " Nos offres de formation professionnelle et continue"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_Formation_RechercheInput__WEBPACK_IMPORTED_MODULE_28__["default"], {
+        dataForm: data
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_AccodionDomaine__WEBPACK_IMPORTED_MODULE_26__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_31__["default"], {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_32__["default"], {
+            fontFamily: "Inter-Roman",
+            color: "red",
+            variant: "h5",
+            children: "Nos formation \xE0 la une !"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_1__.Swiper, {
+            modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Scrollbar, swiper__WEBPACK_IMPORTED_MODULE_0__.A11y],
+            spaceBetween: 50,
+            slidesPerView: 4,
+            navigation: {
+              clickable: true
             },
-            480: {
-              // width: 480,
-              slidesPerView: 1
+            onSwiper: function onSwiper(swiper) {
+              return console.log(swiper);
             },
-            576: {
-              // width: 576,
-              slidesPerView: 2
+            onSlideChange: function onSlideChange() {
+              return console.log("slide change");
             },
-            768: {
-              // width: 768,
-              slidesPerView: 4
-            }
-          },
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_33__["default"], {
-            container: true,
-            alignItems: "center",
-            children: [data.map(function (item, index) {
-              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_1__.SwiperSlide, {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_33__["default"], {
-                  mt: 5,
-                  item: true,
-                  xs: 12,
-                  sm: 3,
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_34__["default"], {
-                    elevation: 3,
-                    sx: {
-                      xs: {
-                        minWidth: 250
-                      },
-                      maxWidth: 350,
-                      maxHeight: 450
-                    },
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_35__["default"], {
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_8__.InertiaLink, {
-                        href: "/formation/".concat(item.id),
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_36__["default"], {
-                          component: "img",
-                          sx: {
-                            maxHeight: 140
-                          },
-                          image: "../img/formations/".concat(item.image),
-                          alt: "green iguana"
-                        })
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_37__["default"], {
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
-                        position: "relative",
-                        width: "100%",
-                        mt: -4,
-                        display: "flex",
-                        justifyContent: "center",
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
-                          href: "http:1simple1.com",
-                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_36__["default"], {
-                            component: "img",
-                            image: "../img/".concat(item.formateur.image),
-                            sx: {
-                              width: 50,
-                              height: 50,
-                              borderRadius: 20
-                            }
-                          })
-                        })
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
-                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
-                          textAlign: "center",
-                          mb: 1,
-                          children: [currentLang.getLocale() === "en" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_32__["default"], {
-                            mb: 2,
-                            gutterBottom: true,
-                            variant: "h7",
-                            fontWeight: "700",
-                            fontFamily: "inter-Regular",
-                            color: "red",
-                            textAlign: "center",
-                            children: [" ", item.domaine.title.en]
-                          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_32__["default"], {
-                            mb: 2,
-                            gutterBottom: true,
-                            variant: "h7",
-                            fontWeight: "700",
-                            fontFamily: "inter-Regular",
-                            color: "red",
-                            textAlign: "center",
-                            children: [" ", item.domaine.title.fr]
-                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)("br", {})]
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
-                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_32__["default"], {
-                            textAlign: "center",
-                            my: 2,
-                            gutterBottom: true,
-                            variant: "h7",
-                            fontWeight: "600",
-                            fontFamily: "inter-Regular",
-                            color: "black",
-                            noWrap: true,
-                            children: [" ", item.title.fr]
-                          })
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
-                          children: [currentLang.getLocale() === "en" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_32__["default"], {
-                            textAlign: "left",
-                            sx: {
-                              display: "-webkit-box",
-                              overflow: "hidden",
-                              WebkitBoxOrient: "vertical",
-                              WebkitLineClamp: 2
-                            },
-                            fontFamily: "Inter-Regular",
-                            children: item.description.en
-                          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_32__["default"], {
-                            textAlign: "left",
-                            sx: {
-                              display: "-webkit-box",
-                              overflow: "hidden",
-                              WebkitBoxOrient: "vertical",
-                              WebkitLineClamp: 3
-                            },
-                            fontFamily: "Inter-Regular",
-                            children: item.description.fr
-                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
-                            display: "flex",
-                            justifyContent: "space-between"
-                          })]
-                        })]
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_38__["default"], {
-                        position: "relative",
-                        sx: {
-                          bgcolor: "red",
-                          borderRadius: 10
+            autoplay: {
+              delay: 2500,
+              disableOnInteraction: false
+            },
+            breakpoints: {
+              360: {
+                // width: 360,
+                slidesPerView: 1
+              },
+              480: {
+                // width: 480,
+                slidesPerView: 1
+              },
+              576: {
+                // width: 576,
+                slidesPerView: 2
+              },
+              768: {
+                // width: 768,
+                slidesPerView: 4
+              }
+            },
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_33__["default"], {
+              container: true,
+              alignItems: "center",
+              children: [data.map(function (item, index) {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(swiper_react__WEBPACK_IMPORTED_MODULE_1__.SwiperSlide, {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_33__["default"], {
+                    mt: 5,
+                    item: true,
+                    xs: 12,
+                    sm: 3,
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_34__["default"], {
+                      elevation: 3,
+                      sx: {
+                        xs: {
+                          minWidth: 250
                         },
-                        mt: 5,
+                        maxWidth: 350,
+                        maxHeight: 450
+                      },
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_35__["default"], {
                         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_8__.InertiaLink, {
                           href: "/formation/".concat(item.id),
-                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_39__["default"], {
-                            mt: 2,
-                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_32__["default"], {
-                              color: "white",
-                              variant: "body2",
-                              fontFamily: "inter-Regular",
-                              children: "Voir la formation"
-                            })
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_36__["default"], {
+                            component: "img",
+                            sx: {
+                              maxHeight: 140
+                            },
+                            image: "../img/formations/".concat(item.image),
+                            alt: "green iguana"
                           })
                         })
-                      })]
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_40__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
-                      bgcolor: "#f6f6f6",
-                      display: "flex",
-                      sx: {
-                        justifyContent: "space-between"
-                      },
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
-                        display: "flex",
-                        mr: 3,
-                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_icons_material__WEBPACK_IMPORTED_MODULE_41__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_32__["default"], {
-                          fontSize: 12,
-                          children: "172"
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_37__["default"], {
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
+                          position: "relative",
+                          width: "100%",
+                          mt: -4,
+                          display: "flex",
+                          justifyContent: "center",
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
+                            href: "http:1simple1.com",
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_36__["default"], {
+                              component: "img",
+                              image: "../img/".concat(item.formateur.image),
+                              sx: {
+                                width: 50,
+                                height: 50,
+                                borderRadius: 20
+                              }
+                            })
+                          })
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
+                            textAlign: "center",
+                            mb: 1,
+                            children: [currentLang.getLocale() === "en" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_32__["default"], {
+                              mb: 2,
+                              gutterBottom: true,
+                              variant: "h7",
+                              fontWeight: "700",
+                              fontFamily: "inter-Regular",
+                              color: "red",
+                              textAlign: "center",
+                              children: [" ", item.domaine.title.en]
+                            }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_32__["default"], {
+                              mb: 2,
+                              gutterBottom: true,
+                              variant: "h7",
+                              fontWeight: "700",
+                              fontFamily: "inter-Regular",
+                              color: "red",
+                              textAlign: "center",
+                              children: [" ", item.domaine.title.fr]
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)("br", {})]
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_32__["default"], {
+                              textAlign: "center",
+                              my: 2,
+                              gutterBottom: true,
+                              variant: "h7",
+                              fontWeight: "600",
+                              fontFamily: "inter-Regular",
+                              color: "black",
+                              noWrap: true,
+                              children: [" ", item.title.fr]
+                            })
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
+                            children: [currentLang.getLocale() === "en" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_32__["default"], {
+                              textAlign: "left",
+                              sx: {
+                                display: "-webkit-box",
+                                overflow: "hidden",
+                                WebkitBoxOrient: "vertical",
+                                WebkitLineClamp: 2
+                              },
+                              fontFamily: "Inter-Regular",
+                              children: item.description.en
+                            }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_32__["default"], {
+                              textAlign: "left",
+                              sx: {
+                                display: "-webkit-box",
+                                overflow: "hidden",
+                                WebkitBoxOrient: "vertical",
+                                WebkitLineClamp: 3
+                              },
+                              fontFamily: "Inter-Regular",
+                              children: item.description.fr
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
+                              display: "flex",
+                              justifyContent: "space-between"
+                            })]
+                          })]
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_38__["default"], {
+                          position: "relative",
+                          sx: {
+                            bgcolor: "red",
+                            borderRadius: 10
+                          },
+                          mt: 5,
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_8__.InertiaLink, {
+                            href: "/formation/".concat(item.id),
+                            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_39__["default"], {
+                              mt: 2,
+                              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_32__["default"], {
+                                color: "white",
+                                variant: "body2",
+                                fontFamily: "inter-Regular",
+                                children: "Voir la formation"
+                              })
+                            })
+                          })
                         })]
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_40__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
+                        bgcolor: "#f6f6f6",
                         display: "flex",
-                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_32__["default"], {
-                          fontSize: 12,
-                          children: "0"
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_icons_material__WEBPACK_IMPORTED_MODULE_42__["default"], {
-                          size: "small"
+                        sx: {
+                          justifyContent: "space-between"
+                        },
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
+                          display: "flex",
+                          mr: 3,
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_icons_material__WEBPACK_IMPORTED_MODULE_41__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_32__["default"], {
+                            fontSize: 12,
+                            children: "172"
+                          })]
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
+                          display: "flex",
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_32__["default"], {
+                            fontSize: 12,
+                            children: "0"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_icons_material__WEBPACK_IMPORTED_MODULE_42__["default"], {
+                            size: "small"
+                          })]
                         })]
                       })]
-                    })]
-                  })
-                }, index)
-              });
-            }), " "]
-          })
-        })]
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_components_Statistique__WEBPACK_IMPORTED_MODULE_19__["default"], {})
-    })]
+                    })
+                  }, index)
+                });
+              }), " "]
+            })
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_30__["default"], {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_29__.jsx)(_components_Statistique__WEBPACK_IMPORTED_MODULE_19__["default"], {})
+      })]
+    })
   });
 }
 
