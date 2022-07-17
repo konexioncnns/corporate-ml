@@ -124,7 +124,7 @@ const MuiHeader = (props) => {
         >
             <List>
                 {menus.map((menu, i) => (
-                    <Link
+                    <a
                         key={i}
                         underline="none"
                         color="black"
@@ -133,7 +133,7 @@ const MuiHeader = (props) => {
                         <ListItem button key={menu.id}>
                             <ListItemText primary={menu.title} />
                         </ListItem>
-                    </Link>
+                    </a>
                 ))}
                 
             </List>
@@ -188,28 +188,28 @@ const MuiHeader = (props) => {
 
                                 {currentLang.getLocale() === "en" ? (
                                     <MenuItem>
-                                        <Link href={route("langue", "fr")}>
+                                        <a href={route("langue", "fr")}>
                                             <img
                                                 src={FrFlag}
                                                 height={20}
                                                 width={20}
                                             />
-                                        </Link>
+                                        </a>
                                     </MenuItem>
                                 ) : (
                                     <MenuItem>
-                                        <Link href={route("langue", "en")}>
+                                        <a href={route("langue", "en")}>
                                             {" "}
                                             <img
                                                 src={EnFlag}
                                                 height={20}
                                                 width={20}
                                             />
-                                        </Link>
+                                        </a>
                                     </MenuItem>
                                 )}
                             </Box>
-                            <InertiaLink sx={{}} href={route("login")} >
+                            <a sx={{}} href={route("login")} >
                                 <Typography
                                     sx={{
                                         fontSize: 14,
@@ -223,8 +223,8 @@ const MuiHeader = (props) => {
                                 >
                                     {lang.get("messages.login")}
                                 </Typography>
-                            </InertiaLink>
-                            <InertiaLink href={route("register")}>
+                            </a>
+                            <a href={route("register")}>
                                 <Typography
                                     sx={{
                                         fontSize: 14,
@@ -237,7 +237,7 @@ const MuiHeader = (props) => {
                                 >
                                     {lang.get("messages.register")}
                                 </Typography>
-                            </InertiaLink>
+                            </a>
                             <Select onChange={handleCurrencyChange}>
                                 <MenuItem value="XOF">FCFA</MenuItem>
                                 <MenuItem value="CAD">Dollar Cad</MenuItem>
@@ -254,7 +254,7 @@ const MuiHeader = (props) => {
                             backgroundColor: "white",
                         }}
                     >
-                        <Link href={route("/")} underline="none">
+                        <a href={route("/")} underline="none">
                             <CardMedia
                                 component="img"
                                 height="60"
@@ -262,7 +262,7 @@ const MuiHeader = (props) => {
                                 image={logo}
                                 alt="Logo 1s1"
                             />
-                        </Link>
+                        </a>
 
                         {matches ? (
                             <Box mx={10}>
@@ -466,20 +466,20 @@ const MuiHeader = (props) => {
                         <Box display={{xs:"none",sm:"flex"}} sx={{ flexGrow: 0 }}>
                             <Tooltip title="Votre panier" sx={{ mr: "5px" }}>
                                 <IconButton sx={{ p: 0 }}>
-                                    <InertiaLink href={route("cart")}>
+                                    <a href={route("cart")}>
                                         <Badge badgeContent={qty} color="error">
                                             <ShoppingCartTwoTone size="small" />
                                         </Badge>
-                                    </InertiaLink>
+                                    </a>
                                 </IconButton>
                             </Tooltip>
                         </Box>
                         <Box  display={{xs:"none",sm:"flex"}}  sx={{ flexGrow: 0 }}>
                             <Tooltip title="Open settings">
                                 <IconButton sx={{ p: 0 }}>
-                                    <InertiaLink href={route("getorders")}>
+                                    <a href={route("getorders")}>
                                         <AccountCircleOutlined />
-                                    </InertiaLink>
+                                    </a>
                                 </IconButton>
                             </Tooltip>
                         </Box>
