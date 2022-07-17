@@ -209,7 +209,7 @@ const MuiHeader = (props) => {
                                     </MenuItem>
                                 )}
                             </Box>
-                            <a sx={{}} href="/login">
+                            <InertiaLink sx={{}} href={route("login")} >
                                 <Typography
                                     sx={{
                                         fontSize: 14,
@@ -223,8 +223,8 @@ const MuiHeader = (props) => {
                                 >
                                     {lang.get("messages.login")}
                                 </Typography>
-                            </a>
-                            <a href="/register">
+                            </InertiaLink>
+                            <InertiaLink href={route("register")}>
                                 <Typography
                                     sx={{
                                         fontSize: 14,
@@ -237,7 +237,7 @@ const MuiHeader = (props) => {
                                 >
                                     {lang.get("messages.register")}
                                 </Typography>
-                            </a>
+                            </InertiaLink>
                             <Select onChange={handleCurrencyChange}>
                                 <MenuItem value="XOF">FCFA</MenuItem>
                                 <MenuItem value="CAD">Dollar Cad</MenuItem>
@@ -254,7 +254,7 @@ const MuiHeader = (props) => {
                             backgroundColor: "white",
                         }}
                     >
-                        <Link href="/" underline="none">
+                        <Link href={route("/")} underline="none">
                             <CardMedia
                                 component="img"
                                 height="60"
@@ -302,7 +302,7 @@ const MuiHeader = (props) => {
                                         cursor: "pointer",
                                     }}
                                 >
-                                    <Link  href="/formation">
+                                    <Link  href={route("formation")}>
                                             {" "}
                                             {lang.get("messages.training")}
                                         </Link>
@@ -317,10 +317,10 @@ const MuiHeader = (props) => {
                                         cursor: "pointer",
                                     }}
                                 >
-                                    <Link href="/catalogue">
+                                    <InertiaLink href={route("catalogue")}>
                                         {" "}
                                         {lang.get("messages.catalog")}
-                                    </Link>
+                                    </InertiaLink>
                                 </Typography>
                                 <Typography
                                     sx={{
@@ -332,10 +332,10 @@ const MuiHeader = (props) => {
                                         cursor: "pointer",
                                     }}
                                 >
-                                    <a href="/services">
+                                    <InertiaLink href={route("services")}>
                                         {" "}
                                         {lang.get("messages.services")}
-                                    </a>
+                                    </InertiaLink>
                                 </Typography>
                                 <Typography
                                     id="solution-menu"
@@ -356,7 +356,7 @@ const MuiHeader = (props) => {
                                          
                                     }}
                                 >
-                                    <Link href="/services">
+                                    <Link  href={route("services")} >
                                         {" "}
                                         {lang.get("messages.solutions")}
                                     </Link>
@@ -374,7 +374,7 @@ const MuiHeader = (props) => {
                                         cursor: "pointer",
                                     }}
                                 >
-                                    <Link href="/articles">
+                                    <Link href={route("articles")}>
                                         {lang.get("messages.posts")}
                                     </Link>
                                 </Typography>
@@ -389,30 +389,12 @@ const MuiHeader = (props) => {
                                         cursor: "pointer",
                                     }}
                                 >
-                                    <a href="/contactus">
+                                    <InertiaLink href={route("contactus")}>
                                         {lang.get("messages.contact-us")}
-                                    </a>
+                                    </InertiaLink>
                                 </Typography>
 
-                                <Typography
-                                    sx={{
-                                        fontSize: 16,
-                                        fontWeight: "bold",
-                                        color: "black",
-                                        display: "block",
-                                        fontFamily: "Inter-Roman",
-                                        cursor: "pointer",
-                                    }}
-                                >
-                                    <Link
-                                    
-                                        href={route("demo")}
-                                        underline="none"
-                                    >
-                                        Demo
-                                    </Link>
-                                </Typography>
-
+                                 
                                 <Typography
                                     id="a-propos"
                                     aria-controls={
@@ -430,12 +412,12 @@ const MuiHeader = (props) => {
                                         cursor: "pointer",
                                     }}
                                 >
-                                    <a
-                                        href="/service/1"
+                                    <InertiaLink
+                                        href={route("about")}
                                         underline="none"
                                     >
                                         A propos
-                                    </a>
+                                    </InertiaLink>
                                 </Typography>
                                 <Typography>
 
@@ -484,20 +466,20 @@ const MuiHeader = (props) => {
                         <Box display={{xs:"none",sm:"flex"}} sx={{ flexGrow: 0 }}>
                             <Tooltip title="Votre panier" sx={{ mr: "5px" }}>
                                 <IconButton sx={{ p: 0 }}>
-                                    <a href="/cart">
+                                    <InertiaLink href={route("cart")}>
                                         <Badge badgeContent={qty} color="error">
                                             <ShoppingCartTwoTone size="small" />
                                         </Badge>
-                                    </a>
+                                    </InertiaLink>
                                 </IconButton>
                             </Tooltip>
                         </Box>
                         <Box  display={{xs:"none",sm:"flex"}}  sx={{ flexGrow: 0 }}>
                             <Tooltip title="Open settings">
                                 <IconButton sx={{ p: 0 }}>
-                                    <a href="/user/orders">
+                                    <InertiaLink href={route("getorders")}>
                                         <AccountCircleOutlined />
-                                    </a>
+                                    </InertiaLink>
                                 </IconButton>
                             </Tooltip>
                         </Box>

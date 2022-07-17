@@ -79,7 +79,7 @@ Route::get('/articles', [BlogController::class,'index'])->name('articles');
 Route::get('/article/{id}', [BlogController::class,'getOne'])->name('ArticleDetail');
 Route::inertia('/demo','Demo')->name('demo') ;
 Route::inertia('/catalogue','Catalogue')->name('catalogue') ;
-Route::inertia('/home','Home')->name('home') ;
+Route::inertia('/','Home')->name('/') ;
 //Route::inertia('/search','SearchPage')->name('search') ;
 
 Route::get('/services',[ServiceController::class,'getAll'])->name('services');
