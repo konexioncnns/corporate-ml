@@ -11,13 +11,13 @@ use Inertia\Inertia;
 class TrainingController extends Controller
 {
    public function getAll(){
-      sleep(seconds:3);
+     
     $data = Formation::all()->toArray();
     $domaineData = Domaine::all();
     $formationData = Formation::all();
   
 
-
+    sleep(seconds:1);
        return Inertia::render('Formations',['data'=>$data,"domaines"=>$domaineData,"formations"=>$formationData ,]);
    }
 
