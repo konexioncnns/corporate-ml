@@ -68,7 +68,7 @@ Route::inertia('/user/setting','Profile/Setting')->name('profile/setting') ;
 Route::inertia('/admins','Admin/Dashboard')->name('admins') ;
 Route::inertia('/profile/training','Profile/Formation')->name('profile/training') ;
 Route::inertia('/myProfile','ProfileLayout')->name('myProfile') ;
-Route::get('/',[FormationController::class,'index']);
+Route::inertia('/','Home');
 Route::inertia('/about','About')->name('about') ;
 Route::inertia('/contact','Contact')->name('contact') ;
 Route::inertia('/contactus','ContactUs2')->name('contactus') ;
