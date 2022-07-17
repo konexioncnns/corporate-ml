@@ -302,7 +302,7 @@ const MuiHeader = (props) => {
                                         cursor: "pointer",
                                     }}
                                 >
-                                    <InertiaLink onClick={()=>window.location.href=  "/formation" }>
+                                    <InertiaLink preserveScroll={true} href={route("formations")}>
                                             {" "}
                                             {lang.get("messages.training")}
                                         </InertiaLink>
@@ -374,7 +374,7 @@ const MuiHeader = (props) => {
                                         cursor: "pointer",
                                     }}
                                 >
-                                    <Link href={route("articles")}>
+                                    <Link preserveScroll={true} href={route("articles")}>
                                         {lang.get("messages.posts")}
                                     </Link>
                                 </Typography>
@@ -389,7 +389,7 @@ const MuiHeader = (props) => {
                                         cursor: "pointer",
                                     }}
                                 >
-                                    <InertiaLink href={route("contactus")}>
+                                    <InertiaLink preserveScroll={true} href={route("contactus")}>
                                         {lang.get("messages.contact-us")}
                                     </InertiaLink>
                                 </Typography>

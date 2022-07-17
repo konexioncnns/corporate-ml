@@ -37982,9 +37982,8 @@ var MuiHeader = function MuiHeader(props) {
                 cursor: "pointer"
               },
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_5__.InertiaLink, {
-                onClick: function onClick() {
-                  return window.location.href = "/formation";
-                },
+                preserveScroll: true,
+                href: route("formations"),
                 children: [" ", lang.get("messages.training")]
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_20__["default"], {
@@ -38043,6 +38042,7 @@ var MuiHeader = function MuiHeader(props) {
                 cursor: "pointer"
               },
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_5__.Link, {
+                preserveScroll: true,
                 href: route("articles"),
                 children: lang.get("messages.posts")
               })
@@ -38056,6 +38056,7 @@ var MuiHeader = function MuiHeader(props) {
                 cursor: "pointer"
               },
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_5__.InertiaLink, {
+                preserveScroll: true,
                 href: route("contactus"),
                 children: lang.get("messages.contact-us")
               })
@@ -38278,7 +38279,7 @@ var appName = ((_window$document$getE = window.document.getElementsByTagName('ti
   }
 });
 _inertiajs_progress__WEBPACK_IMPORTED_MODULE_6__.InertiaProgress.init({
-  delay: 250,
+  delay: 550,
   // The color of the progress bar.
   color: '#29d',
   // Whether to include the default NProgress styles.
