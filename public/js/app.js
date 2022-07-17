@@ -37981,7 +37981,7 @@ var MuiHeader = function MuiHeader(props) {
                 fontFamily: "Inter-Roman",
                 cursor: "pointer"
               },
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_5__.Link, {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_5__.InertiaLink, {
                 href: route("formations"),
                 children: [" ", lang.get("messages.training")]
               })
@@ -38275,9 +38275,7 @@ var appName = ((_window$document$getE = window.document.getElementsByTagName('ti
     }), el, Ziggy);
   }
 });
-_inertiajs_progress__WEBPACK_IMPORTED_MODULE_6__.InertiaProgress.init({
-  color: '#4B5563'
-});
+_inertiajs_progress__WEBPACK_IMPORTED_MODULE_6__.InertiaProgress.init();
 
 /***/ }),
 

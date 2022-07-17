@@ -11,6 +11,7 @@ use Inertia\Inertia;
 class TrainingController extends Controller
 {
    public function getAll(){
+      sleep(seconds:3);
     $data = Formation::all()->toArray();
     $domaineData = Domaine::all();
     $formationData = Formation::all();
