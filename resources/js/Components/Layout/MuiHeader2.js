@@ -209,7 +209,7 @@ const MuiHeader = (props) => {
                                     </MenuItem>
                                 )}
                             </Box>
-                            <InertiaLink sx={{}} href="/login">
+                            <a sx={{}} href="/login">
                                 <Typography
                                     sx={{
                                         fontSize: 14,
@@ -223,8 +223,8 @@ const MuiHeader = (props) => {
                                 >
                                     {lang.get("messages.login")}
                                 </Typography>
-                            </InertiaLink>
-                            <InertiaLink href="/register">
+                            </a>
+                            <a href="/register">
                                 <Typography
                                     sx={{
                                         fontSize: 14,
@@ -237,7 +237,7 @@ const MuiHeader = (props) => {
                                 >
                                     {lang.get("messages.register")}
                                 </Typography>
-                            </InertiaLink>
+                            </a>
                             <Select onChange={handleCurrencyChange}>
                                 <MenuItem value="XOF">FCFA</MenuItem>
                                 <MenuItem value="CAD">Dollar Cad</MenuItem>
@@ -332,10 +332,10 @@ const MuiHeader = (props) => {
                                         cursor: "pointer",
                                     }}
                                 >
-                                    <InertiaLink href="/services">
+                                    <a href="/services">
                                         {" "}
                                         {lang.get("messages.services")}
-                                    </InertiaLink>
+                                    </a>
                                 </Typography>
                                 <Typography
                                     id="solution-menu"
@@ -389,9 +389,9 @@ const MuiHeader = (props) => {
                                         cursor: "pointer",
                                     }}
                                 >
-                                    <InertiaLink href="/contactus">
+                                    <a href="/contactus">
                                         {lang.get("messages.contact-us")}
-                                    </InertiaLink>
+                                    </a>
                                 </Typography>
 
                                 <Typography
@@ -430,12 +430,12 @@ const MuiHeader = (props) => {
                                         cursor: "pointer",
                                     }}
                                 >
-                                    <InertiaLink
+                                    <a
                                         href="/service/1"
                                         underline="none"
                                     >
                                         A propos
-                                    </InertiaLink>
+                                    </a>
                                 </Typography>
                                 <Typography>
 
@@ -484,20 +484,20 @@ const MuiHeader = (props) => {
                         <Box display={{xs:"none",sm:"flex"}} sx={{ flexGrow: 0 }}>
                             <Tooltip title="Votre panier" sx={{ mr: "5px" }}>
                                 <IconButton sx={{ p: 0 }}>
-                                    <InertiaLink href="/cart">
+                                    <a href="/cart">
                                         <Badge badgeContent={qty} color="error">
                                             <ShoppingCartTwoTone size="small" />
                                         </Badge>
-                                    </InertiaLink>
+                                    </a>
                                 </IconButton>
                             </Tooltip>
                         </Box>
                         <Box  display={{xs:"none",sm:"flex"}}  sx={{ flexGrow: 0 }}>
                             <Tooltip title="Open settings">
                                 <IconButton sx={{ p: 0 }}>
-                                    <InertiaLink href="/user/orders">
+                                    <a href="/user/orders">
                                         <AccountCircleOutlined />
-                                    </InertiaLink>
+                                    </a>
                                 </IconButton>
                             </Tooltip>
                         </Box>
