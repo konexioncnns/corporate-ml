@@ -251,7 +251,7 @@ const MuiHeader = (props) => {
                         </Link>
 
                         {matches ? (
-                            <Box>
+                            <Box mx={10} >
                                 <IconButton
                                     size="large"
                                     edge="end"

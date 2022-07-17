@@ -21,6 +21,7 @@ use App\Http\Controllers\Admin\SolutionController;
 use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Frontend\CheckoutController;
 use App\Http\Controllers\Frontend\ProfileController;
+use App\Http\Controllers\Frontend\SearchController;
 use App\Http\Controllers\Frontend\TrainingController;
 /*
 |--------------------------------------------------------------------------
@@ -51,7 +52,7 @@ Route::get('indexform', [FormationController::class,'index'])->name('indexform')
 Route::get('langue/{code}', [LanguageController::class,'switchLang'])->name('langue');
 //Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
 //Route::get('/profile',[HomeController::class,'profileDetail'])->name('profile');
-
+Route::get("searchText",[SearchController::class,'search']);
 
 Route::resource('profiles', ProfileController::class);
 

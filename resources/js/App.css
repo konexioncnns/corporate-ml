@@ -7,7 +7,7 @@ font-weight: bold;
 @font-face {
   font-family: "Inter-Roman";
   src: local("Inter-Roman"),
-url("./assets/fonts/Inter-roman.var.woff2");
+url("./assets/fonts/Inter-roman.woff2");
 font-weight: "700";
 }
 @font-face {

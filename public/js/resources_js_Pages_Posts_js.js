@@ -1313,32 +1313,63 @@ var FilterPost = function FilterPost(_ref) {
     setFilteredPost(filtered);
   }, [active]);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    display: "flex",
+    display: {
+      xs: "block",
+      sm: "flex"
+    },
     justifyContent: "space-between",
     width: 300,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      onClick: function onClick() {
-        return setActive(0);
+    mx: {
+      xs: 10,
+      sm: 8
+    },
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      alignItems: "center",
+      xs: 12,
+      my: {
+        xs: 1
       },
-      mr: 2,
-      variant: active === 0 ? 'contained' : 'outlined',
-      color: "error",
-      children: "Tout"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      onClick: function onClick() {
-        return setActive(1);
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        onClick: function onClick() {
+          return setActive(0);
+        },
+        mr: 2,
+        variant: active === 0 ? "contained" : "outlined",
+        color: "error",
+        children: "Tout"
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      alignItems: "center",
+      xs: 12,
+      my: {
+        xs: 1
       },
-      mr: 2,
-      variant: active === 1 ? 'contained' : 'outlined',
-      color: "error",
-      children: "Videos"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      onClick: function onClick() {
-        return setActive(2);
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        sx: {
+          textAlign: 'left'
+        },
+        onClick: function onClick() {
+          return setActive(1);
+        },
+        mr: 2,
+        variant: active === 1 ? "contained" : "outlined",
+        color: "error",
+        children: "Videos"
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      alignItems: "center",
+      xs: 12,
+      my: {
+        xs: 1
       },
-      variant: active === 2 ? 'contained' : 'outlined',
-      color: "error",
-      children: "Archives"
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        onClick: function onClick() {
+          return setActive(2);
+        },
+        variant: active === 2 ? "contained" : "outlined",
+        color: "error",
+        children: "Archives"
+      })
     })]
   });
 };
@@ -1453,18 +1484,23 @@ var Posts = function Posts(_ref) {
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
     mb: 20,
+    mx: {
+      xs: 4,
+      sm: 8
+    },
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      xs: 12,
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
         color: "red",
-        variant: "h4",
-        fontFamily: "Inter",
+        fontFamily: "Inter-Roman",
+        fontSize: {
+          xs: 12,
+          sm: 18
+        },
         children: "Retrouvez notre selection de publications TI \xE9labor\xE9es par notre equipe"
       })
-    }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
-      justifyContent: "center",
-      width: "100%"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      children: ["   ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
         height: "10vh",
         justifyContent: "flex-start",
         my: 5,
@@ -1474,23 +1510,28 @@ var Posts = function Posts(_ref) {
         alignItems: "center"
         /* bgcolor="#ed8484" */
         ,
-        display: "flex",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
-          textAlign: "left",
-          fontFamily: "Inter",
-          color: "red",
-          variant: "h6",
-          mx: 2,
-          children: "Filtrer par"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_FilterPost__WEBPACK_IMPORTED_MODULE_6__["default"], {
-          post: post,
-          setFilteredPost: setFilteredPost,
-          active: active,
-          setActive: setActive
-        })]
+        display: {
+          xs: "block",
+          sm: "flex"
+        },
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+          xs: 12,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
+            textAlign: "left",
+            fontFamily: "Inter",
+            color: "red",
+            variant: "h6",
+            mx: 2,
+            children: "Filtrer par"
+          })
+        })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
         container: true,
         spacing: 5,
+        mt: {
+          xs: 10,
+          sm: 3
+        },
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(framer_motion__WEBPACK_IMPORTED_MODULE_12__.AnimatePresence, {
           children: filteredPost ? filteredPost.map(function (item, i) {
             return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -1505,6 +1546,10 @@ var Posts = function Posts(_ref) {
               item: true,
               xs: 12,
               sm: 3,
+              px: {
+                xs: 3,
+                sm: 1
+              },
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_ribbons__WEBPACK_IMPORTED_MODULE_1__.RibbonContainer, {
                 className: "custom-class",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_ribbons__WEBPACK_IMPORTED_MODULE_1__.RightCornerLargeRibbon, {

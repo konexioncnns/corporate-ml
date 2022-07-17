@@ -1,7 +1,6 @@
 import {
     AppBar,
-    Typography,
-    Link,
+    Typography, 
     Box,
     Toolbar,
     List,
@@ -33,7 +32,7 @@ import {
 } from "@/redux/featured/formation/formationSlice";
 import messages from "../../../../public/messages";
 import Lang from "lang.js";
-import { InertiaLink } from "@inertiajs/inertia-react";
+import { InertiaLink, Link } from "@inertiajs/inertia-react";
 import { AccountCircleOutlined, Call, KeyboardArrowDown, LoginOutlined, ShoppingCart, ShoppingCartCheckoutOutlined, ShoppingCartTwoTone, VerifiedUser } from "@mui/icons-material";
 import { useDispatch, useSelector } from "react-redux";
 import FrFlag from "../../assets/icons/fr.png";
@@ -189,24 +188,24 @@ const MuiHeader = (props) => {
 
                                 {currentLang.getLocale() === "en" ? (
                                     <MenuItem>
-                                        <a href={route("langue", "fr")}>
+                                        <Link href={route("langue", "fr")}>
                                             <img
                                                 src={FrFlag}
                                                 height={20}
                                                 width={20}
                                             />
-                                        </a>
+                                        </Link>
                                     </MenuItem>
                                 ) : (
                                     <MenuItem>
-                                        <a href={route("langue", "en")}>
+                                        <Link href={route("langue", "en")}>
                                             {" "}
                                             <img
                                                 src={EnFlag}
                                                 height={20}
                                                 width={20}
                                             />
-                                        </a>
+                                        </Link>
                                     </MenuItem>
                                 )}
                             </Box>
@@ -255,7 +254,7 @@ const MuiHeader = (props) => {
                             backgroundColor: "white",
                         }}
                     >
-                        <Link href="#" underline="none">
+                        <Link href="/" underline="none">
                             <CardMedia
                                 component="img"
                                 height="60"
@@ -266,7 +265,7 @@ const MuiHeader = (props) => {
                         </Link>
 
                         {matches ? (
-                            <Box>
+                            <Box mx={10}>
                                 <IconButton
                                     size="large"
                                     edge="end"
@@ -303,13 +302,10 @@ const MuiHeader = (props) => {
                                         cursor: "pointer",
                                     }}
                                 >
-                                    <InertiaLink>
-                                        {" "}
-                                        <a href="/formation">
+                                    <Link  href="/formation">
                                             {" "}
                                             {lang.get("messages.training")}
-                                        </a>
-                                    </InertiaLink>
+                                        </Link>
                                 </Typography>
                                 <Typography
                                     sx={{
@@ -321,10 +317,10 @@ const MuiHeader = (props) => {
                                         cursor: "pointer",
                                     }}
                                 >
-                                    <a href="/catalogue">
+                                    <Link href="/catalogue">
                                         {" "}
                                         {lang.get("messages.catalog")}
-                                    </a>
+                                    </Link>
                                 </Typography>
                                 <Typography
                                     sx={{
@@ -360,10 +356,10 @@ const MuiHeader = (props) => {
                                          
                                     }}
                                 >
-                                    <a href="/services">
+                                    <Link href="/services">
                                         {" "}
                                         {lang.get("messages.solutions")}
-                                    </a>
+                                    </Link>
                                 </Typography>
 
                                 <Typography
@@ -378,9 +374,9 @@ const MuiHeader = (props) => {
                                         cursor: "pointer",
                                     }}
                                 >
-                                    <a href="/articles">
+                                    <Link href="/articles">
                                         {lang.get("messages.posts")}
-                                    </a>
+                                    </Link>
                                 </Typography>
 
                                 <Typography
@@ -408,13 +404,13 @@ const MuiHeader = (props) => {
                                         cursor: "pointer",
                                     }}
                                 >
-                                    <a
+                                    <Link
                                     
-                                        href={route("langue")}
+                                        href={route("demo")}
                                         underline="none"
                                     >
                                         Demo
-                                    </a>
+                                    </Link>
                                 </Typography>
 
                                 <Typography
@@ -485,7 +481,7 @@ const MuiHeader = (props) => {
                             </Box>
                         )}
 
-                        <Box sx={{ flexGrow: 0 }}>
+                        <Box display={{xs:"none",sm:"flex"}} sx={{ flexGrow: 0 }}>
                             <Tooltip title="Votre panier" sx={{ mr: "5px" }}>
                                 <IconButton sx={{ p: 0 }}>
                                     <InertiaLink href="/cart">
@@ -496,7 +492,7 @@ const MuiHeader = (props) => {
                                 </IconButton>
                             </Tooltip>
                         </Box>
-                        <Box sx={{ flexGrow: 0 }}>
+                        <Box  display={{xs:"none",sm:"flex"}}  sx={{ flexGrow: 0 }}>
                             <Tooltip title="Open settings">
                                 <IconButton sx={{ p: 0 }}>
                                     <InertiaLink href="/user/orders">

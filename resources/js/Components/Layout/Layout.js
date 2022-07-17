@@ -24,7 +24,7 @@ export default function Layout({children}) {
  
 
     <Box bgcolor="#fff">
-    <MuiHeader2/>
+    <MuiHeader2 />
 
 
    <Box mt={20}  bgcolor="#F9FAFB"  className='App'>
