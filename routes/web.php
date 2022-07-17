@@ -45,7 +45,7 @@ Route::get('/catalogue/download', [CheckoutController::class,'download'])->name(
 Route::inertia('/thankyou','Thankyou')->name('paymentsuccess') ;
 Route::inertia('/test','Test')->name('test') ;
 
-Route::get('/formation', [TrainingController::class,'getAll'])->name('getAll');
+Route::get('/formation', [TrainingController::class,'getAll'])->name('formations');
 Route::get('/formation/{id}', [TrainingController::class,'getOne'])->name('formationDetail');
 Route::get('indexform', [FormationController::class,'index'])->name('indexform');
 
