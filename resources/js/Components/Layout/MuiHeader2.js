@@ -302,10 +302,10 @@ const MuiHeader = (props) => {
                                         cursor: "pointer",
                                     }}
                                 >
-                                    <InertiaLink preserveScroll={true} href={route("formations")}>
+                                    <a preserveScroll={true} href={route("formations")}>
                                             {" "}
                                             {lang.get("messages.training")}
-                                        </InertiaLink>
+                                        </a>
                                 </Typography>
                                 <Typography
                                     sx={{
@@ -317,10 +317,10 @@ const MuiHeader = (props) => {
                                         cursor: "pointer",
                                     }}
                                 >
-                                    <InertiaLink href={route("catalogue")}>
+                                    <a href={route("catalogue")}>
                                         {" "}
                                         {lang.get("messages.catalog")}
-                                    </InertiaLink>
+                                    </a>
                                 </Typography>
                                 <Typography
                                     sx={{
@@ -356,10 +356,10 @@ const MuiHeader = (props) => {
                                          
                                     }}
                                 >
-                                    <Link  href={route("services")} >
+                                    <a  href={route("services")} >
                                         {" "}
                                         {lang.get("messages.solutions")}
-                                    </Link>
+                                    </a>
                                 </Typography>
 
                                 <Typography
@@ -374,9 +374,9 @@ const MuiHeader = (props) => {
                                         cursor: "pointer",
                                     }}
                                 >
-                                    <Link preserveScroll={true} href={route("articles")}>
+                                    <a  href={route("articles")}>
                                         {lang.get("messages.posts")}
-                                    </Link>
+                                    </a>
                                 </Typography>
 
                                 <Typography

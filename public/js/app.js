@@ -37981,7 +37981,7 @@ var MuiHeader = function MuiHeader(props) {
                 fontFamily: "Inter-Roman",
                 cursor: "pointer"
               },
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_5__.InertiaLink, {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("a", {
                 preserveScroll: true,
                 href: route("formations"),
                 children: [" ", lang.get("messages.training")]
@@ -37995,7 +37995,7 @@ var MuiHeader = function MuiHeader(props) {
                 fontFamily: "Inter-Roman",
                 cursor: "pointer"
               },
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_5__.InertiaLink, {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("a", {
                 href: route("catalogue"),
                 children: [" ", lang.get("messages.catalog")]
               })
@@ -38026,7 +38026,7 @@ var MuiHeader = function MuiHeader(props) {
                 fontFamily: "Inter-Roman",
                 cursor: "pointer"
               },
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_5__.Link, {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("a", {
                 href: route("services"),
                 children: [" ", lang.get("messages.solutions")]
               })
@@ -38041,8 +38041,7 @@ var MuiHeader = function MuiHeader(props) {
                 fontFamily: "Inter-Roman",
                 cursor: "pointer"
               },
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_5__.Link, {
-                preserveScroll: true,
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("a", {
                 href: route("articles"),
                 children: lang.get("messages.posts")
               })
