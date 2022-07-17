@@ -10,8 +10,6 @@ import {
     Grid,
     List,
     ListItem,
-    ListItemIcon,
-    Stack,
     Typography,
 } from "@mui/material";
 import React from "react";
